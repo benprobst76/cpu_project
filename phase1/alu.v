@@ -1,63 +1,56 @@
+`timescale 1ns/10ps
+
 module alu (
-    input wire [31:0] A,  // Operand A
-    input wire [31:0] B,  // Operand B
-    input wire [3:0] Op,  // Operation selector
-    input wire [31:0] Y_reg; // Temp register
-	 output reg [63:0] Z_Reg, // Z_Reg of operation
-	 
-    output reg [31:0] Hi, // High Z_Reg (for mul/div)
-    output reg [31:0] Lo, // Low Z_Reg (for mul/div)
-    output reg Zero       // Zero flag
+	 input wire clock, clear,
+    input wire [31:0] RA,  	  // Operand A
+    input wire [31:0] RB,  	  // Operand B
+    input wire [4:0]  Op,  	  // Operation selector	 
+    output reg [31:0] ResultHi, // High Z_Reg (for mul/div)
+    output reg [31:0] ResultLo  // Low Z_Reg
 );
+    parameter ADD = 5'b00011, SUB = 5'b00100, AND = 5'b00101, OR = 5'b00110, ROR = 5'b00111,
+				  ROL = 5'b01000, SHR = 5'b01001, SHRA = 5'b01010, SHL = 5'b01011, ADDI = 5'b01100,
+				  ANDI = 5'b01101, ORI = 5'b01110, DIV = 5'b01111, MUL = 5'b10000, NEG = 5'b10001,
+				  NOT = 5'b10010;
 
     // Wires for multiplication and division Z_Regs
-    wire [63:0] mul_Z_Reg;
-    wire [31:0] div_quotient, div_remainder, adder_sum. adder_cout;
+    wire [31:0] div_quotient, div_remainder, adder_sum;
+	 wire adder_cout;
 
     // Instantiate Booth's Multiplier
-    booth_multiplier mul_unit (
-        .A(A),
-        .B(B),
-        .Z_Reg(mul_Z_Reg)
-    );
-
-    // Instantiate Division Unit
-    division div_unit (
-        .A(A),
-        .B(B),
-        .Quotient(div_quotient),
-        .Remainder(div_remainder)
-    );
+//    booth_multiplier mul_unit (
+//        .A(A),
+//        .B(B),
+//        .Z_Reg(mul_Z_Reg)
+//    );
+//
+//    // Instantiate Division Unit
+//    division div_unit (
+//        .A(A),
+//        .B(B),
+//        .Quotient(div_quotient),
+//        .Remainder(div_remainder)
+//    );
 	 
-	 addition adder_unit(
-		  .A(A),
-		  .B(B),
+	 addition adder(
+		  .RA(RA),
+		  .RB(RB),
 		  .cin({1'd0}),
-		  .sum(adder_sum)
+		  .sum(adder_sum),
 		  .cout(adder_cout)
 	 );
 
     always @(*) begin
         case (Op)
-            4'b0000: Z_Reg = A & B;            // AND
-            4'b0001: Z_Reg = A | B;            // OR
-            4'b0010: Z_Reg = ~A;               // NOT
-            4'b0011: begin							  // ADD
-					Z_reg[31:0] <= adder_sum;
-					Z_reg[63:32] <= 32'd0;
-				end 
-            4'b0100: Z_Reg = A - B;            // SUB
-            4'b0101: begin                      // MUL
-                Hi = mul_Z_Reg[63:32];         // High 32 bits
-                Lo = mul_Z_Reg[31:0];          // Low 32 bits
-            end
-            4'b0110: begin                      // DIV
-                Hi = div_remainder;             // Remainder
-                Lo = div_quotient;              // Quotient
-            end
-            default: Z_Reg = 32'b0;            // Default case
+		  		ADD: begin
+					ResultLo[31:0] <= adder_sum[31:0];
+					ResultHi[31:0] <= 32'd0;
+				end
+            default: begin 
+					ResultHi = 32'b0;
+					ResultLo = 32'b0;			// Default case
+				end
         endcase
-        Zero = (Z_Reg == 32'b0) ? 1'b1 : 1'b0;
     end
 
 endmodule

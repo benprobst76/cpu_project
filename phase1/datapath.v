@@ -1,107 +1,128 @@
+`timescale 1ns/10ps
+
 module datapath (
     input wire clock, clear,
-    input wire [31:0] A, B,              // Inputs to ALU
-    input wire [3:0] Op,                 // ALU operation selector
-    input wire RZin, RZout,              // Control signals for Z register
-    input wire RAin, RAout,              // Control signals for A register
-    input wire RBin, RBout,              // Control signals for B register
-    input wire HIin, HIout,              // Control signals for HI register
-    input wire LOin, LOout,              // Control signals for LO register
-	 input wire R0in, R0out,              // Control signals for R0 register
-	 input wire R1in, R1out,              // Control signals for R0 register
-	 input wire R2in, R2out,              // Control signals for R0 register
-	 input wire R3in, R3out,              // Control signals for R0 register
-	 input wire R4in, R4out,              // Control signals for R0 register
-	 input wire R5in, R5out,              // Control signals for R0 register
-	 input wire R6in, R6out,              // Control signals for R0 register
-	 input wire R7in, R7out,              // Control signals for R0 register
-	 input wire R8in, R8out,              // Control signals for R0 register
-	 input wire R9in, R9out,              // Control signals for R0 register
-	 input wire R10in, R10out,              // Control signals for R0 register
-	 input wire R11in, R11out,              // Control signals for R0 register
-	 input wire R12in, R12out,              // Control signals for R0 register
-	 input wire R13in, R13out,              // Control signals for R0 register
-	 input wire R14in, R14out,              // Control signals for R0 register
-	 input wire R15in, R15out,              // Control signals for R0 register
+	 //ALU 
+//    input wire RAin, RAout,              // Control signals for A register
+//    input wire RBin, RBout,              // Control signals for B register
+	 //Dedicated registers
+    input wire RZinLo, RZoutLo,          // Control signals for Z register
+	 input wire IRin, IRout,				  // Instruction register
+	 input wire RYin, RYout,					  // Temp registeter to hold ALU input A
+	 //General purpose registers
+	 input wire R3in, R3out,              // Control signals for R3 register
+	 input wire R4in, R4out,              // Control signals for R4 register
+	 input wire R7in, R7out,              // Control signals for R7 register
+    // I/O registers
+	 
+	 input wire	PCout, PCin,
+	 input wire IncPC,
+	 //MDR unit
+	 input wire MDRin, MDRout, MDRread,
+	 input wire [31:0] Mdatain,
+	 // MAR unit
+	 input wire MARin, MARout
 
-    output wire [31:0] BusMuxOut,        // Bus output
-    output wire [31:0] ALUResult         // ALU result for basic operations
 );
+	 wire R0in = 0, R0out = 0;              // Control signals for R0 register
+	 wire R1in = 0, R1out = 0;              // Control signals for R1 register
+	 wire R2in = 0, R2out = 0;              // Control signals for R2 register
+	 wire R5in = 0, R5out = 0;              // Control signals for R5 register
+	 wire R6in = 0, R6out = 0;              // Control signals for R6 register
+	 wire R8in = 0, R8out = 0;              // Control signals for R8 aka return address register
+	 wire R9in = 0, R9out = 0;              // Control signals for R9 aka stack pointer register
+	 wire R10in = 0, R10out = 0;            // Control signals for R10 aka argument register
+	 wire R11in = 0, R11out = 0;            // Control signals for R11 aka argument register
+	 wire R12in = 0, R12out = 0;            // Control signals for R12 aka argument register
+	 wire R13in = 0, R13out = 0;            // Control signals for R13 aka argument register
+	 wire R14in = 0, R14out = 0;            // Control signals for R14 aka return value register
+	 wire R15in = 0, R15out = 0;            // Control signals for R15 aka return value register
+	 wire HIin = 0, HIout = 0;              // Control signals for HI register
+    wire LOin = 0, LOout = 0;              // Control signals for LO register
+	 wire RZinHi = 0, RZoutHi = 0;          // Control signals for Z register
+	 wire InPortIn = 0, InPortOut = 0;
+	 wire OutPortIn = 0, OutPortOut = 0;
+	 wire RCin = 0, RCout = 0;              // Control signals for C register
 
-	wire MDRIn, MDROut;
+	 wire [31:0] BusMuxOut;        // Bus output
+    // Internal wire inputs to the bus's 32-to_1 multiplexer
+    wire [31:0] BusMuxInRZHi, BusMuxInRZLo, BusMuxInHI, BusMuxInLO;
+	 wire [31:0] BusMuxInPC, BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4;
+	 wire [31:0] BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, BusMuxInR10;
+	 wire [31:0] BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, MDRmuxOut;
+	 wire [31:0] BusMuxInMDR, BusMuxInInPort, BusMuxInCSignExtn, BusMuxInIR;
+	 // ALU wires
+	 wire [31:0] ALUInRA, ALUInRB, RYOutput, RZHiOut, RZLoOut;
+	 // Encoder 
+	 wire [4:0] BusEncoderControl;
 
-    // Internal wires
-    wire [31:0] BusMuxInRZ, BusMuxInRA, BusMuxInRB;
-    reg [31:0] BusMuxInHI, BusMuxInLO;
-    wire [31:0] Hi, Lo;                  // High and Low results from ALU
-	 wire [31:0] MDR_Mux_Out;
-	 wire [31:0] MDR_Data_Out;
-
-    // Instantiate Registers
-    register RZ (.clear(clear), .clock(clock), .enable(RZin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInRZ));
-    register RA (.clear(clear), .clock(clock), .enable(RAin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInRA));
-    register RB (.clear(clear), .clock(clock), .enable(RBin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInRB));
+    // Instantiate Dedicated Registers
+    register RZHi (.clear(clear), .clock(clock), .enable(RZinHi), .BusMuxOut(RZHiOut), .BusMuxIn(BusMuxInRZHi));
+	 register RZLo (.clear(clear), .clock(clock), .enable(RZinLo), .BusMuxOut(RZLoOut), .BusMuxIn(BusMuxInRZLo));
+	 register RY (.clear(clear), .clock(clock), .enable(RYin), .BusMuxOut(BusMuxOut), .BusMuxIn(RYOutput));
+//    register RA (.clear(clear), .clock(clock), .enable(RAin), .BusMuxOut(RYOutput), .BusMuxIn(ALUInRA));
+//    register RB (.clear(clear), .clock(clock), .enable(RBin), .BusMuxOut(BusMuxOut), .BusMuxIn(ALUInRB));
     register HI (.clear(clear), .clock(clock), .enable(HIin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInHI));
     register LO (.clear(clear), .clock(clock), .enable(LOin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInLO));
-	 register R0 (.clear(clear), .clock(clock), .enable(0), .BusMuxOut(BusMuxOut), .BusMuxIn(R0in));
-	 register R1 (.clear(clear), .clock(clock), .enable(1), .BusMuxOut(BusMuxOut), .BusMuxIn(R1in));
-	 register R2 (.clear(clear), .clock(clock), .enable(2), .BusMuxOut(BusMuxOut), .BusMuxIn(R2in));
-	 register R3 (.clear(clear), .clock(clock), .enable(3), .BusMuxOut(BusMuxOut), .BusMuxIn(R3in));
-	 register R4 (.clear(clear), .clock(clock), .enable(4), .BusMuxOut(BusMuxOut), .BusMuxIn(R4in));
-	 register R5 (.clear(clear), .clock(clock), .enable(5), .BusMuxOut(BusMuxOut), .BusMuxIn(R5in));
-	 register R6 (.clear(clear), .clock(clock), .enable(6), .BusMuxOut(BusMuxOut), .BusMuxIn(R6in));
-	 register R7 (.clear(clear), .clock(clock), .enable(7), .BusMuxOut(BusMuxOut), .BusMuxIn(R7in));
-	 register R8 (.clear(clear), .clock(clock), .enable(8), .BusMuxOut(BusMuxOut), .BusMuxIn(R8in));
-	 register R9 (.clear(clear), .clock(clock), .enable(9), .BusMuxOut(BusMuxOut), .BusMuxIn(R9in));
-	 register R10 (.clear(clear), .clock(clock), .enable(10), .BusMuxOut(BusMuxOut), .BusMuxIn(R10in));
-	 register R11 (.clear(clear), .clock(clock), .enable(11), .BusMuxOut(BusMuxOut), .BusMuxIn(R11in));
-	 register R12 (.clear(clear), .clock(clock), .enable(12), .BusMuxOut(BusMuxOut), .BusMuxIn(R12in));
-	 register R13 (.clear(clear), .clock(clock), .enable(13), .BusMuxOut(BusMuxOut), .BusMuxIn(R13in));
-	 register R14 (.clear(clear), .clock(clock), .enable(14), .BusMuxOut(BusMuxOut), .BusMuxIn(R14in));
-	 register R15 (.clear(clear), .clock(clock), .enable(15), .BusMuxOut(BusMuxOut), .BusMuxIn(R15in));
-	 
-	 //instatiate MDR Mux
-	//EDIT LINE Mux_2_to_1 MDMux(BusMuxOut, ALUResult, Read, MDR_Mux_Out);
-	
-	//INIT MDR
-	register MDR_reg(clock, clear, MDRIn, MDR_Mux_Out, MDR_Data_Out);
-	 
-
-    // Instantiate Bus
+	 register PC (.clear(IncPC), .clock(clock), .enable(PCin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInPC));
+	 register IR (.clear(IncPC), .clock(clock), .enable(IRin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInIR));
+	 //register MAR (.clear(clear), .clock(clock), .enable(MARin), .BusMuxOut(BusMuxOut), .BusMuxIn());
+	 // Instantiate General Purpose Registers
+	 register R0 (.clear(clear), .clock(clock), .enable(R0in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR0));
+	 register R1 (.clear(clear), .clock(clock), .enable(R1in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR1));
+	 register R2 (.clear(clear), .clock(clock), .enable(R2in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR2));
+	 register R3 (.clear(clear), .clock(clock), .enable(R3in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR3));
+	 register R4 (.clear(clear), .clock(clock), .enable(R4in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR4));
+	 register R5 (.clear(clear), .clock(clock), .enable(R5in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR5));
+	 register R6 (.clear(clear), .clock(clock), .enable(R6in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR6));
+	 register R7 (.clear(clear), .clock(clock), .enable(R7in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR7));
+	 register R8 (.clear(clear), .clock(clock), .enable(R8in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR8));
+	 register R9 (.clear(clear), .clock(clock), .enable(R9in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR9));
+	 register R10 (.clear(clear), .clock(clock), .enable(R10in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR10));
+	 register R11 (.clear(clear), .clock(clock), .enable(R11in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR11));
+	 register R12 (.clear(clear), .clock(clock), .enable(R12in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR12));
+	 register R13 (.clear(clear), .clock(clock), .enable(R13in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR13));
+	 register R14 (.clear(clear), .clock(clock), .enable(R14in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR14));
+	 register R15 (.clear(clear), .clock(clock), .enable(R15in), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR15));
+	 //instantiate MDR
+	 mux_2_1  MDRmux (.MuxIn1(BusMuxOut), .MuxIn2(Mdatain), .control(MDRread), .MuxOut(MDRmuxOut));
+	 register MDRreg (.clear(clear), .clock(clock), .enable(MDRin), .BusMuxOut(MDRmuxOut), .BusMuxIn(BusMuxInMDR));
+	 //instantiate encoder
+	 encoder_32_5 BusEncoder (
+		  .EncoderIn({{8{1'b0}}, R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out, HIout, LOout, RZoutHi, RZoutLo, PCout, MDRout, InPortOut, RCout}), 
+		  .EncoderOut(BusEncoderControl)
+	 );
+	 // Instantiate Bus
     bus Bus (
-        .BusMuxInRZ(BusMuxInRZ), .BusMuxInRA(BusMuxInRA), .BusMuxInRB(BusMuxInRB),
-        .BusMuxInHI(BusMuxInHI), .BusMuxInLO(BusMuxInLO),
-		  .BusMuxInR0(BusMuxInR0), .BusMuxInR1(BusMuxInR1), .BusMuxInR2(BusMuxInR2), .BusMuxInR3(BusMuxInR3), .BusMuxInR4(BusMuxInR4),
+	 	  .BusMuxInR0(BusMuxInR0), .BusMuxInR1(BusMuxInR1), .BusMuxInR2(BusMuxInR2), .BusMuxInR3(BusMuxInR3), .BusMuxInR4(BusMuxInR4),
 		  .BusMuxInR5(BusMuxInR5), .BusMuxInR6(BusMuxInR6), .BusMuxInR7(BusMuxInR7), .BusMuxInR8(BusMuxInR8), .BusMuxInR9(BusMuxInR9),
-		  .BusMuxInR10(BusMuxInR10), .BusMuxInR11(BusMuxInR11), .BusMuxInR12(BusMuxInR12), .BusMuxInR13(BusMuxInR13), .BusMuxInR14(BusMuxInR14),
-		  .BusMuxInR15(BusMuxInR15),
-        .RZout(RZout), .RAout(RAout), .RBout(RBout),
-        .HIout(HIout), .LOout(LOout),
-        .BusMuxOut(BusMuxOut)
+		  .BusMuxInR10(BusMuxInR10), .BusMuxInR11(BusMuxInR11), .BusMuxInR12(BusMuxInR12), .BusMuxInR13(BusMuxInR13), .BusMuxInR14(BusMuxInR14), .BusMuxInR15(BusMuxInR15),
+        .BusMuxInRZLo(BusMuxInRZLo), .BusMuxInRZHi(BusMuxInRZHi), .BusMuxInHI(BusMuxInHI), .BusMuxInLO(BusMuxInLO), .BusMuxInPC(BusMuxInPC),
+		  .BusMuxInMDR(BusMuxInMDR), .BusMuxInInPort(BusMuxInInPort), .BusMuxInCSignExtn(BusMuxInCSignExtn),
+        .BusMuxControl(BusEncoderControl), .BusMuxOut(BusMuxOut)
     );
 
     // Instantiate ALU
     alu ALU (
 		  .clock(clock),
 		  .clear(clear),
-        .A(A),
-        .B(B),
-        .Op(Op),
-        .Result(ALUResult),
-        .Hi(Hi),   // High part of result (for mul/div)
-        .Lo(Lo),   // Low part of result (for mul/div)
+        .RA(RYOutput),
+        .RB(BusMuxOut),
+        .Op(BusMuxInIR[31:27]),
+        .ResultHi(RZHiOut),
+		  .ResultLo(RZLoOut)
     );
 
     // Handle multiplication and division results
-    always @(posedge clock) begin
-        if (clear) begin
-			BusMuxInHI <= 32'b0;
-			BusMuxInLO <= 32'b0;
-            // Reset registers
-        end else begin
-            if (HIin) BusMuxInHI <= Hi; // Load Hi result into HI register
-            if (LOin) BusMuxInLO <= Lo; // Load Lo result into LO register
-        end
-    end
+//    always @(posedge clock) begin
+//        if (clear) begin
+//			BusMuxInHI <= 32'b0;
+//			BusMuxInLO <= 32'b0;
+//            // Reset registers
+//        end else begin
+//            if (HIin) BusMuxInHI <= Hi; // Load Hi result into HI register
+//            if (LOin) BusMuxInLO <= Lo; // Load Lo result into LO register
+//        end
+//    end
 
 endmodule
