@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Jan 26 17:12:35 2025
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Mon Jan 27 13:15:03 2025
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : cpu_phase1
 Top-level Entity Name : datapath
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 54
+Total pins : 56
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

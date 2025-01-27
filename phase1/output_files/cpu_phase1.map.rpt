@@ -1,6 +1,6 @@
 Analysis & Synthesis report for cpu_phase1
-Sun Jan 26 17:12:35 2025
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Mon Jan 27 13:15:03 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
 ---------------------
@@ -39,18 +39,18 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  31. Parameter Settings for User Entity Instance: register:R15
  32. Parameter Settings for User Entity Instance: register:MDRreg
  33. Parameter Settings for User Entity Instance: alu:ALU
- 34. Port Connectivity Checks: "alu:ALU|addition:adder"
- 35. Port Connectivity Checks: "encoder_32_5:BusEncoder"
- 36. Port Connectivity Checks: "register:R15"
- 37. Port Connectivity Checks: "register:R14"
- 38. Port Connectivity Checks: "register:R13"
- 39. Port Connectivity Checks: "register:R12"
- 40. Port Connectivity Checks: "register:R11"
- 41. Port Connectivity Checks: "register:R10"
- 42. Port Connectivity Checks: "register:R9"
- 43. Port Connectivity Checks: "register:R8"
- 44. Port Connectivity Checks: "register:R6"
- 45. Port Connectivity Checks: "register:R5"
+ 34. Port Connectivity Checks: "alu:ALU|negate_bits:negate|addition:add_op"
+ 35. Port Connectivity Checks: "alu:ALU|addition:adder"
+ 36. Port Connectivity Checks: "encoder_32_5:BusEncoder"
+ 37. Port Connectivity Checks: "register:R15"
+ 38. Port Connectivity Checks: "register:R14"
+ 39. Port Connectivity Checks: "register:R13"
+ 40. Port Connectivity Checks: "register:R12"
+ 41. Port Connectivity Checks: "register:R11"
+ 42. Port Connectivity Checks: "register:R10"
+ 43. Port Connectivity Checks: "register:R9"
+ 44. Port Connectivity Checks: "register:R8"
+ 45. Port Connectivity Checks: "register:R6"
  46. Port Connectivity Checks: "register:R2"
  47. Port Connectivity Checks: "register:R1"
  48. Port Connectivity Checks: "register:R0"
@@ -84,27 +84,27 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jan 26 17:12:35 2025       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; cpu_phase1                                  ;
-; Top-level Entity Name           ; datapath                                    ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 54                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Jan 27 13:15:03 2025           ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                   ; cpu_phase1                                      ;
+; Top-level Entity Name           ; datapath                                        ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 0                                               ;
+; Total pins                      ; 56                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -199,8 +199,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -215,13 +215,15 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                     ; Library ;
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
-; register.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/register.v     ;         ;
-; bus.v                            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/bus.v          ;         ;
-; alu.v                            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v          ;         ;
-; datapath.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v     ;         ;
-; addition.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v     ;         ;
-; mux_2_1.v                        ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/mux_2_1.v      ;         ;
-; encoder_32_5.v                   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/encoder_32_5.v ;         ;
+; register.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20jw49/Downloads/cpu_project-main/phase1/register.v     ;         ;
+; bus.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20jw49/Downloads/cpu_project-main/phase1/bus.v          ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20jw49/Downloads/cpu_project-main/phase1/alu.v          ;         ;
+; datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v     ;         ;
+; addition.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20jw49/Downloads/cpu_project-main/phase1/addition.v     ;         ;
+; mux_2_1.v                        ; yes             ; User Verilog HDL File  ; C:/Users/20jw49/Downloads/cpu_project-main/phase1/mux_2_1.v      ;         ;
+; encoder_32_5.v                   ; yes             ; User Verilog HDL File  ; C:/Users/20jw49/Downloads/cpu_project-main/phase1/encoder_32_5.v ;         ;
+; negate_bits.v                    ; yes             ; User Verilog HDL File  ; C:/Users/20jw49/Downloads/cpu_project-main/phase1/negate_bits.v  ;         ;
+; not_bits.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20jw49/Downloads/cpu_project-main/phase1/not_bits.v     ;         ;
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
 
 
@@ -241,13 +243,13 @@ refer to the applicable agreement for further details.
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 54    ;
+; I/O pins                                    ; 56    ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; clock ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 54    ;
+; Total fan-out                               ; 56    ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -257,7 +259,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |datapath                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 54   ; 0            ; |datapath           ; datapath    ; work         ;
+; |datapath                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 56   ; 0            ; |datapath           ; datapath    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -566,6 +568,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:ALU|negate_bits:negate|addition:add_op"                                              ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; RB[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; RB[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cin       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "alu:ALU|addition:adder"                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -582,9 +596,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port              ; Type  ; Severity ; Details      ;
 +-------------------+-------+----------+--------------+
 ; EncoderIn[31..21] ; Input ; Info     ; Stuck at GND ;
-; EncoderIn[18..17] ; Input ; Info     ; Stuck at GND ;
 ; EncoderIn[15..5]  ; Input ; Info     ; Stuck at GND ;
 ; EncoderIn[1..0]   ; Input ; Info     ; Stuck at GND ;
+; EncoderIn[17]     ; Input ; Info     ; Stuck at GND ;
 +-------------------+-------+----------+--------------+
 
 
@@ -670,15 +684,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------+
-; Port Connectivity Checks: "register:R5"  ;
-+--------+-------+----------+--------------+
-; Port   ; Type  ; Severity ; Details      ;
-+--------+-------+----------+--------------+
-; enable ; Input ; Info     ; Stuck at GND ;
-+--------+-------+----------+--------------+
-
-
-+------------------------------------------+
 ; Port Connectivity Checks: "register:R2"  ;
 +--------+-------+----------+--------------+
 ; Port   ; Type  ; Severity ; Details      ;
@@ -746,7 +751,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+---------------------------------+
 ; Type              ; Count                           ;
 +-------------------+---------------------------------+
-; boundary_port     ; 54                              ;
+; boundary_port     ; 56                              ;
 ;                   ;                                 ;
 ; Max LUT depth     ; 0.00                            ;
 ; Average LUT depth ; 0.00                            ;
@@ -767,121 +772,133 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Jan 26 17:12:16 2025
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Mon Jan 27 13:14:53 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu_phase1 -c cpu_phase1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/register.v Line: 3
+    Info (12023): Found entity 1: register File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/register.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file bus.v
-    Info (12023): Found entity 1: bus File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/bus.v Line: 3
+    Info (12023): Found entity 1: bus File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/bus.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: alu File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 3
+    Info (12023): Found entity 1: alu File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/alu.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: datapath File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 3
+    Info (12023): Found entity 1: datapath File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_tb.v
-    Info (12023): Found entity 1: datapath_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath_tb.v Line: 1
+    Info (12023): Found entity 1: datapath_tb File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath_tb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file booth_multiplier.v
-    Info (12023): Found entity 1: booth_multiplier File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/booth_multiplier.v Line: 1
+    Info (12023): Found entity 1: booth_multiplier File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/booth_multiplier.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file division.v
-    Info (12023): Found entity 1: division File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/division.v Line: 1
+    Info (12023): Found entity 1: division File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/division.v Line: 1
 Info (12021): Found 3 design units, including 3 entities, in source file addition.v
-    Info (12023): Found entity 1: addition File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v Line: 4
-    Info (12023): Found entity 2: CLA16 File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v Line: 33
-    Info (12023): Found entity 3: CLA4 File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v Line: 78
+    Info (12023): Found entity 1: addition File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/addition.v Line: 4
+    Info (12023): Found entity 2: CLA16 File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/addition.v Line: 33
+    Info (12023): Found entity 3: CLA4 File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/addition.v Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file addition_tb.v
-    Info (12023): Found entity 1: addition_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition_tb.v Line: 2
+    Info (12023): Found entity 1: addition_tb File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/addition_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2_1.v
-    Info (12023): Found entity 1: mux_2_1 File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/mux_2_1.v Line: 3
+    Info (12023): Found entity 1: mux_2_1 File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/mux_2_1.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file encoder_32_5.v
-    Info (12023): Found entity 1: encoder_32_5 File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/encoder_32_5.v Line: 3
+    Info (12023): Found entity 1: encoder_32_5 File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/encoder_32_5.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file negate_bits.v
+    Info (12023): Found entity 1: negate_bits File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/negate_bits.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file not_bits.v
+    Info (12023): Found entity 1: not_bits File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/not_bits.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file negate_tb.v
+    Info (12023): Found entity 1: negate_tb File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/negate_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file not_tb.v
+    Info (12023): Found entity 1: not_tb File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/not_tb.v Line: 2
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at datapath.v(43): object "InPortIn" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 43
-Warning (10036): Verilog HDL or VHDL warning at datapath.v(44): object "OutPortIn" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 44
-Warning (10036): Verilog HDL or VHDL warning at datapath.v(44): object "OutPortOut" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 44
-Warning (10036): Verilog HDL or VHDL warning at datapath.v(45): object "RCin" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 45
-Info (12128): Elaborating entity "register" for hierarchy "register:RZHi" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 60
-Info (12128): Elaborating entity "mux_2_1" for hierarchy "mux_2_1:MDRmux" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 88
-Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:BusEncoder" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 94
-Warning (10762): Verilog HDL Case Statement warning at encoder_32_5.v(6): can't check case statement for completeness because the case expression has too many possible states File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/encoder_32_5.v Line: 6
-Info (10264): Verilog HDL Case Statement information at encoder_32_5.v(6): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/encoder_32_5.v Line: 6
-Info (12128): Elaborating entity "bus" for hierarchy "bus:Bus" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 103
-Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 114
-Info (12128): Elaborating entity "addition" for hierarchy "alu:ALU|addition:adder" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 41
-Info (12128): Elaborating entity "CLA16" for hierarchy "alu:ALU|addition:adder|CLA16:CLA_lower" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v Line: 20
-Info (12128): Elaborating entity "CLA4" for hierarchy "alu:ALU|addition:adder|CLA16:CLA_lower|CLA4:CLA_lower" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v Line: 49
-Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/output_files/cpu_phase1.map.smsg
+Warning (10036): Verilog HDL or VHDL warning at datapath.v(43): object "InPortIn" assigned a value but never read File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 43
+Warning (10036): Verilog HDL or VHDL warning at datapath.v(44): object "OutPortIn" assigned a value but never read File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 44
+Warning (10036): Verilog HDL or VHDL warning at datapath.v(44): object "OutPortOut" assigned a value but never read File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 44
+Warning (10036): Verilog HDL or VHDL warning at datapath.v(45): object "RCin" assigned a value but never read File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 45
+Info (12128): Elaborating entity "register" for hierarchy "register:RZHi" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 60
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "mux_2_1:MDRmux" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 88
+Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:BusEncoder" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 94
+Warning (10762): Verilog HDL Case Statement warning at encoder_32_5.v(6): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/encoder_32_5.v Line: 6
+Info (10264): Verilog HDL Case Statement information at encoder_32_5.v(6): all case item expressions in this case statement are onehot File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/encoder_32_5.v Line: 6
+Info (12128): Elaborating entity "bus" for hierarchy "bus:Bus" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 103
+Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 114
+Info (12128): Elaborating entity "addition" for hierarchy "alu:ALU|addition:adder" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/alu.v Line: 41
+Info (12128): Elaborating entity "CLA16" for hierarchy "alu:ALU|addition:adder|CLA16:CLA_lower" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/addition.v Line: 20
+Info (12128): Elaborating entity "CLA4" for hierarchy "alu:ALU|addition:adder|CLA16:CLA_lower|CLA4:CLA_lower" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/addition.v Line: 49
+Info (12128): Elaborating entity "negate_bits" for hierarchy "alu:ALU|negate_bits:negate" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/alu.v Line: 46
+Info (12128): Elaborating entity "not_bits" for hierarchy "alu:ALU|negate_bits:negate|not_bits:not_op" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/negate_bits.v Line: 9
+Info (144001): Generated suppressed messages file C:/Users/20jw49/Downloads/cpu_project-main/phase1/output_files/cpu_phase1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 54 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "clear" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RZinLo" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 9
-    Warning (15610): No output dependent on input pin "RZoutLo" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 9
-    Warning (15610): No output dependent on input pin "IRin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 10
-    Warning (15610): No output dependent on input pin "IRout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 10
-    Warning (15610): No output dependent on input pin "RYin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 11
-    Warning (15610): No output dependent on input pin "RYout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 11
-    Warning (15610): No output dependent on input pin "R3in" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 13
-    Warning (15610): No output dependent on input pin "R3out" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 13
-    Warning (15610): No output dependent on input pin "R4in" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 14
-    Warning (15610): No output dependent on input pin "R4out" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 14
-    Warning (15610): No output dependent on input pin "R7in" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 15
-    Warning (15610): No output dependent on input pin "R7out" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 15
-    Warning (15610): No output dependent on input pin "PCout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 18
-    Warning (15610): No output dependent on input pin "PCin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 18
-    Warning (15610): No output dependent on input pin "IncPC" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 19
-    Warning (15610): No output dependent on input pin "MDRin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 21
-    Warning (15610): No output dependent on input pin "MDRout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 21
-    Warning (15610): No output dependent on input pin "MDRread" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 21
-    Warning (15610): No output dependent on input pin "Mdatain[0]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[1]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[2]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[3]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[4]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[5]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[6]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[7]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[8]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[9]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[10]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[11]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[12]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[13]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[14]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[15]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[16]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[17]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[18]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[19]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[20]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[21]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[22]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[23]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[24]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[25]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[26]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[27]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[28]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[29]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[30]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "Mdatain[31]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "MARin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 24
-    Warning (15610): No output dependent on input pin "MARout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 26
-Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 54 input pins
+Warning (21074): Design contains 56 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clock" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "clear" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "RZinLo" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 9
+    Warning (15610): No output dependent on input pin "RZoutLo" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 9
+    Warning (15610): No output dependent on input pin "IRin" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "IRout" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RYin" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 11
+    Warning (15610): No output dependent on input pin "RYout" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 11
+    Warning (15610): No output dependent on input pin "R3in" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 13
+    Warning (15610): No output dependent on input pin "R3out" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 13
+    Warning (15610): No output dependent on input pin "R4in" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 14
+    Warning (15610): No output dependent on input pin "R4out" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 14
+    Warning (15610): No output dependent on input pin "R7in" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 15
+    Warning (15610): No output dependent on input pin "R7out" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 15
+    Warning (15610): No output dependent on input pin "R5in" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 16
+    Warning (15610): No output dependent on input pin "R5out" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 16
+    Warning (15610): No output dependent on input pin "PCout" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 19
+    Warning (15610): No output dependent on input pin "PCin" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 19
+    Warning (15610): No output dependent on input pin "IncPC" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 20
+    Warning (15610): No output dependent on input pin "MDRin" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 22
+    Warning (15610): No output dependent on input pin "MDRout" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 22
+    Warning (15610): No output dependent on input pin "MDRread" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 22
+    Warning (15610): No output dependent on input pin "Mdatain[0]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[1]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[2]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[3]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[4]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[5]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[6]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[7]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[8]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[9]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[10]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[11]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[12]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[13]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[14]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[15]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[16]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[17]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[18]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[19]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[20]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[21]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[22]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[23]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[24]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[25]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[26]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[27]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[28]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[29]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[30]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "Mdatain[31]" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "MARin" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 25
+    Warning (15610): No output dependent on input pin "MARout" File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v Line: 27
+Info (21057): Implemented 56 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 56 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 61 warnings
-    Info: Peak virtual memory: 4804 megabytes
-    Info: Processing ended: Sun Jan 26 17:12:35 2025
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 4810 megabytes
+    Info: Processing ended: Mon Jan 27 13:15:03 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/output_files/cpu_phase1.map.smsg.
+The suppressed messages can be found in C:/Users/20jw49/Downloads/cpu_project-main/phase1/output_files/cpu_phase1.map.smsg.
 
 

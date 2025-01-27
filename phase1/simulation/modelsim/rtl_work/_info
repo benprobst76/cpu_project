@@ -7,91 +7,69 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/simulation/modelsim
+Z0 dC:/Users/20jw49/Downloads/cpu_project-main/phase1/simulation/modelsim
 vaddition
-Z1 !s110 1737929608
+Z1 !s110 1738004022
 !i10b 1
 !s100 kl1<>5@I1dgl<EXPNd4i:0
-I9O]=>o2jJQo8<Wa[0fZl`2
+IOWd5jPAF1jOBD65liiiKL3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1737929506
-Z4 8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v
-Z5 FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v
+Z3 w1737996370
+Z4 8C:/Users/20jw49/Downloads/cpu_project-main/phase1/addition.v
+Z5 FC:/Users/20jw49/Downloads/cpu_project-main/phase1/addition.v
 L0 4
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1737929608.000000
-Z8 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v|
-Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v|
+Z7 !s108 1738004022.000000
+Z8 !s107 C:/Users/20jw49/Downloads/cpu_project-main/phase1/addition.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20jw49/Downloads/cpu_project-main/phase1|C:/Users/20jw49/Downloads/cpu_project-main/phase1/addition.v|
 !i113 1
 Z10 o-vlog01compat -work work
-Z11 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1
+Z11 !s92 -vlog01compat -work work +incdir+C:/Users/20jw49/Downloads/cpu_project-main/phase1
 Z12 tCvgOpt 0
-vaddition_tb
+valu
 R1
 !i10b 1
-!s100 cJ[STimGo[Mol`:Jb9gkO3
-IkF5ZEIiO48FDYAKki_l`O1
+!s100 0jWQBl66903IEl>cU57Q[0
+IZS6]dAGSY;ZZnTda9R[AL0
 R2
 R0
-w1737927284
-8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition_tb.v
-FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition_tb.v
-L0 2
+w1738002470
+8C:/Users/20jw49/Downloads/cpu_project-main/phase1/alu.v
+FC:/Users/20jw49/Downloads/cpu_project-main/phase1/alu.v
+L0 3
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition_tb.v|
-!i113 1
-R10
-R11
-R12
-valu
-R1
-!i10b 1
-!s100 `^9z<2GXc;IU9XFo[2YQ51
-IoWUa2nICeVnY0Yi6GSTJg2
-R2
-R0
-w1737676799
-8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v
-FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v
-L0 3
-R6
-r1
-!s85 0
-31
-Z13 !s108 1737929607.000000
-!s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v|
+!s107 C:/Users/20jw49/Downloads/cpu_project-main/phase1/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20jw49/Downloads/cpu_project-main/phase1|C:/Users/20jw49/Downloads/cpu_project-main/phase1/alu.v|
 !i113 1
 R10
 R11
 R12
 vbus
-Z14 !s110 1737929607
+R1
 !i10b 1
 !s100 hN`^6gjcI:kc0HdO<@hYA0
-IfV<Ym:3Yj599lNg3B]=gH3
+IK@cdL=Qf=BQK=`M:5[1dg1
 R2
 R0
-w1737860107
-8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/bus.v
-FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/bus.v
+R3
+8C:/Users/20jw49/Downloads/cpu_project-main/phase1/bus.v
+FC:/Users/20jw49/Downloads/cpu_project-main/phase1/bus.v
 L0 3
 R6
 r1
 !s85 0
 31
-R13
-!s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/bus.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/bus.v|
+Z13 !s108 1738004021.000000
+!s107 C:/Users/20jw49/Downloads/cpu_project-main/phase1/bus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20jw49/Downloads/cpu_project-main/phase1|C:/Users/20jw49/Downloads/cpu_project-main/phase1/bus.v|
 !i113 1
 R10
 R11
@@ -100,7 +78,7 @@ vCLA16
 R1
 !i10b 1
 !s100 X^m<;S5:Ge[L^BXI>XRz82
-I9WM@iC71ZfdjPe]mHz<lk3
+IIQ6h35`FT0WkfDA7l_Mcn0
 R2
 R0
 R3
@@ -123,7 +101,7 @@ vCLA4
 R1
 !i10b 1
 !s100 bW9>h_1HZd4<:PYZboV8^2
-I@lN[6RM^=mb]AeS3fPIj90
+I7U^jm:B`_]bE3]`9E@]m:3
 R2
 R0
 R3
@@ -145,21 +123,21 @@ n@c@l@a4
 vdatapath
 R1
 !i10b 1
-!s100 3o8I_Q[HJLbWi<RA_]>6f3
-IjE>b6=MjGzE25H@oMFHdj3
+!s100 Sdj@@ZLW2GjcB;I5Nf=RX2
+I^[EYR?0o8nb<Z3a1Y:6fD1
 R2
 R0
-w1737928052
-8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v
-FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v
+w1737998773
+8C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v
+FC:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v
 L0 3
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v|
+!s107 C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20jw49/Downloads/cpu_project-main/phase1|C:/Users/20jw49/Downloads/cpu_project-main/phase1/datapath.v|
 !i113 1
 R10
 R11
@@ -168,20 +146,20 @@ vencoder_32_5
 R1
 !i10b 1
 !s100 =]CQS@AejHaZE8Xa2L6J;2
-IcW8nBf7Xz[FLLl6:aC6g83
+IJkM6X7go[L68m@NejYDG03
 R2
 R0
-w1737665221
-8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/encoder_32_5.v
-FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/encoder_32_5.v
+Z14 w1737996371
+8C:/Users/20jw49/Downloads/cpu_project-main/phase1/encoder_32_5.v
+FC:/Users/20jw49/Downloads/cpu_project-main/phase1/encoder_32_5.v
 L0 3
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/encoder_32_5.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/encoder_32_5.v|
+!s107 C:/Users/20jw49/Downloads/cpu_project-main/phase1/encoder_32_5.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20jw49/Downloads/cpu_project-main/phase1|C:/Users/20jw49/Downloads/cpu_project-main/phase1/encoder_32_5.v|
 !i113 1
 R10
 R11
@@ -190,42 +168,108 @@ vmux_2_1
 R1
 !i10b 1
 !s100 2LY<F;?N0T0ZBLD]XKVd;3
-IU8WQFT;hT=D0bYYDI@76I1
+IoE08:GnKh:?4=DF47bG7c3
 R2
 R0
-w1737647495
-8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/mux_2_1.v
-FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/mux_2_1.v
+R14
+8C:/Users/20jw49/Downloads/cpu_project-main/phase1/mux_2_1.v
+FC:/Users/20jw49/Downloads/cpu_project-main/phase1/mux_2_1.v
 L0 3
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/mux_2_1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/mux_2_1.v|
+!s107 C:/Users/20jw49/Downloads/cpu_project-main/phase1/mux_2_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20jw49/Downloads/cpu_project-main/phase1|C:/Users/20jw49/Downloads/cpu_project-main/phase1/mux_2_1.v|
+!i113 1
+R10
+R11
+R12
+vnegate_bits
+R1
+!i10b 1
+!s100 deElGO3gzi?0EEE5`[CA^3
+IC5jVlH6mXVV3TiEBeN>?51
+R2
+R0
+w1737999321
+8C:/Users/20jw49/Downloads/cpu_project-main/phase1/negate_bits.v
+FC:/Users/20jw49/Downloads/cpu_project-main/phase1/negate_bits.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/20jw49/Downloads/cpu_project-main/phase1/negate_bits.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20jw49/Downloads/cpu_project-main/phase1|C:/Users/20jw49/Downloads/cpu_project-main/phase1/negate_bits.v|
+!i113 1
+R10
+R11
+R12
+vnot_bits
+R1
+!i10b 1
+!s100 I;ZeZbShBXWE6=L_]L?LI3
+IePl0P1BA94K2lNNN@l6Vd0
+R2
+R0
+w1737999244
+8C:/Users/20jw49/Downloads/cpu_project-main/phase1/not_bits.v
+FC:/Users/20jw49/Downloads/cpu_project-main/phase1/not_bits.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/20jw49/Downloads/cpu_project-main/phase1/not_bits.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20jw49/Downloads/cpu_project-main/phase1|C:/Users/20jw49/Downloads/cpu_project-main/phase1/not_bits.v|
+!i113 1
+R10
+R11
+R12
+vnot_tb
+R1
+!i10b 1
+!s100 UE:EG7i;^;EThVzMHEHXU3
+I@B4?eeRLT_T4^oF<Wf5nz2
+R2
+R0
+w1738003971
+8C:/Users/20jw49/Downloads/cpu_project-main/phase1/not_tb.v
+FC:/Users/20jw49/Downloads/cpu_project-main/phase1/not_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/20jw49/Downloads/cpu_project-main/phase1/not_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20jw49/Downloads/cpu_project-main/phase1|C:/Users/20jw49/Downloads/cpu_project-main/phase1/not_tb.v|
 !i113 1
 R10
 R11
 R12
 vregister
-R14
+!s110 1738004021
 !i10b 1
 !s100 >fdYhNo]:=XkeSdmfXiX=1
-ISF4zc=S?T@3_Lb6^WR_VK0
+IiMzAmEB6SjmfkCP@Wjn`?3
 R2
 R0
-w1737407314
-8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/register.v
-FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/register.v
+R14
+8C:/Users/20jw49/Downloads/cpu_project-main/phase1/register.v
+FC:/Users/20jw49/Downloads/cpu_project-main/phase1/register.v
 L0 3
 R6
 r1
 !s85 0
 31
 R13
-!s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/register.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/register.v|
+!s107 C:/Users/20jw49/Downloads/cpu_project-main/phase1/register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20jw49/Downloads/cpu_project-main/phase1|C:/Users/20jw49/Downloads/cpu_project-main/phase1/register.v|
 !i113 1
 R10
 R11

@@ -12,7 +12,8 @@ module datapath (
 	 //General purpose registers
 	 input wire R3in, R3out,              // Control signals for R3 register
 	 input wire R4in, R4out,              // Control signals for R4 register
-	 input wire R7in, R7out,              // Control signals for R7 register
+	 input wire R7in, R7out,  
+	 input wire R5in, R5out,	 // Control signals for R7 register
     // I/O registers
 	 
 	 input wire	PCout, PCin,
@@ -27,7 +28,6 @@ module datapath (
 	 wire R0in = 0, R0out = 0;              // Control signals for R0 register
 	 wire R1in = 0, R1out = 0;              // Control signals for R1 register
 	 wire R2in = 0, R2out = 0;              // Control signals for R2 register
-	 wire R5in = 0, R5out = 0;              // Control signals for R5 register
 	 wire R6in = 0, R6out = 0;              // Control signals for R6 register
 	 wire R8in = 0, R8out = 0;              // Control signals for R8 aka return address register
 	 wire R9in = 0, R9out = 0;              // Control signals for R9 aka stack pointer register
