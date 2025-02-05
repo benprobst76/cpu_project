@@ -7,13 +7,18 @@ module datapath (
 //    input wire RBin, RBout,              // Control signals for B register
 	 //Dedicated registers
     input wire RZinLo, RZoutLo,          // Control signals for Z register
+	 input wire RZinHi, RZoutHi,          // Control signals for Z register
 	 input wire IRin, IRout,				  // Instruction register
-	 input wire RYin, RYout,					  // Temp registeter to hold ALU input A
+	 input wire RYin, RYout,
+	 input wire HIin, LOin,
+	 // Temp registeter to hold ALU input A
 	 //General purpose registers
 	 input wire R3in, R3out,              // Control signals for R3 register
 	 input wire R4in, R4out,              // Control signals for R4 register
 	 input wire R7in, R7out,  
-	 input wire R5in, R5out,	 // Control signals for R7 register
+	 input wire R5in, R5out,
+	 input wire R2in, R2out,
+	 input wire R6in, R6out,
     // I/O registers
 	 
 	 input wire	PCout, PCin,
@@ -27,8 +32,6 @@ module datapath (
 );
 	 wire R0in = 0, R0out = 0;              // Control signals for R0 register
 	 wire R1in = 0, R1out = 0;              // Control signals for R1 register
-	 wire R2in = 0, R2out = 0;              // Control signals for R2 register
-	 wire R6in = 0, R6out = 0;              // Control signals for R6 register
 	 wire R8in = 0, R8out = 0;              // Control signals for R8 aka return address register
 	 wire R9in = 0, R9out = 0;              // Control signals for R9 aka stack pointer register
 	 wire R10in = 0, R10out = 0;            // Control signals for R10 aka argument register
@@ -37,9 +40,8 @@ module datapath (
 	 wire R13in = 0, R13out = 0;            // Control signals for R13 aka argument register
 	 wire R14in = 0, R14out = 0;            // Control signals for R14 aka return value register
 	 wire R15in = 0, R15out = 0;            // Control signals for R15 aka return value register
-	 wire HIin = 0, HIout = 0;              // Control signals for HI register
-    wire LOin = 0, LOout = 0;              // Control signals for LO register
-	 wire RZinHi = 0, RZoutHi = 0;          // Control signals for Z register
+	 wire HIout = 0;              // Control signals for HI register
+    wire LOout = 0;              // Control signals for LO register
 	 wire InPortIn = 0, InPortOut = 0;
 	 wire OutPortIn = 0, OutPortOut = 0;
 	 wire RCin = 0, RCout = 0;              // Control signals for C register

@@ -15,14 +15,16 @@ module alu (
 
     // Wires for multiplication and division Z_Regs
     wire [31:0] div_quotient, div_remainder, adder_sum, negate_out, not_out;
+	 wire [63:0] mul_out;
 	 wire adder_cout;
 
     // Instantiate Booth's Multiplier
-//    booth_multiplier mul_unit (
-//        .A(A),
-//        .B(B),
-//        .Z_Reg(mul_Z_Reg)
-//    );
+    booth_multiplier mul_unit(
+	     .clk(clock),
+        .RA(RA),
+        .RB(RB),
+        .RZ(mul_out)
+    );
 //
 //    // Instantiate Division Unit
 //    division div_unit (
@@ -62,14 +64,18 @@ module alu (
 				NEG: begin
 					ResultLo[31:0] <= negate_out[31:0];
 					ResultHi[31:0] <= 32'd0;
-				
 				end
 			
 				NOT: begin
 					ResultLo[31:0] <= not_out[31:0];
 					ResultHi[31:0] <= 32'd0;
-				
 				end
+				
+				MUL: begin 
+					ResultLo[31:0] <= mul_out[31:0];
+					ResultHi[31:0] <= mul_out[63:32];
+				end
+					
             default: begin 
 					ResultHi = 32'b0;
 					ResultLo = 32'b0;			// Default case

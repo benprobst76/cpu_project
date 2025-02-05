@@ -1,4 +1,5 @@
-Warning (10268): Verilog HDL information at alu.v(56): always construct contains both blocking and non-blocking assignments File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/alu.v Line: 56
-Warning (10268): Verilog HDL information at addition_tb.v(70): always construct contains both blocking and non-blocking assignments File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/addition_tb.v Line: 70
-Warning (10268): Verilog HDL information at negate_tb.v(68): always construct contains both blocking and non-blocking assignments File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/negate_tb.v Line: 68
-Warning (10268): Verilog HDL information at not_tb.v(68): always construct contains both blocking and non-blocking assignments File: C:/Users/20jw49/Downloads/cpu_project-main/phase1/not_tb.v Line: 68
+Warning (10268): Verilog HDL information at alu.v(58): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 58
+Warning (10268): Verilog HDL information at addition_tb.v(70): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition_tb.v Line: 70
+Warning (10268): Verilog HDL information at negate_tb.v(68): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/negate_tb.v Line: 68
+Warning (10268): Verilog HDL information at not_tb.v(68): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/not_tb.v Line: 68
+Warning (10268): Verilog HDL information at multiplication_tb.v(81): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/multiplication_tb.v Line: 81
