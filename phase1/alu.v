@@ -14,8 +14,8 @@ module alu (
 				  NOT = 5'b10010;
 
     // Wires for multiplication and division Z_Regs
-    wire [31:0] div_quotient, div_remainder, adder_sum, negate_out, not_out;
-	 wire [63:0] mul_out;
+    wire [31:0]adder_sum, negate_out, not_out;
+	 wire [63:0] mul_out, div_out;
 	 wire adder_cout;
 
     // Instantiate Booth's Multiplier
@@ -27,12 +27,11 @@ module alu (
     );
 //
 //    // Instantiate Division Unit
-//    division div_unit (
-//        .A(A),
-//        .B(B),
-//        .Quotient(div_quotient),
-//        .Remainder(div_remainder)
-//    );
+    division div_unit (
+        .RA(RA),
+        .RB(RB),
+        .RZ(div_out)
+    );
 	 
 	 addition adder(
 		  .RA(RA),
@@ -75,7 +74,12 @@ module alu (
 					ResultLo[31:0] <= mul_out[31:0];
 					ResultHi[31:0] <= mul_out[63:32];
 				end
-					
+				
+				DIV: begin
+					ResultLo[31:0] <= div_out[31:0];
+					ResultHi[31:0] <= div_out[63:32];
+				end
+				
             default: begin 
 					ResultHi = 32'b0;
 					ResultLo = 32'b0;			// Default case

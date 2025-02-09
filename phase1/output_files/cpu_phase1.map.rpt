@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cpu_phase1
-Wed Feb 05 16:54:53 2025
+Sun Feb 09 10:36:24 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -82,7 +82,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Feb 05 16:54:53 2025       ;
+; Analysis & Synthesis Status     ; Successful - Sun Feb 09 10:36:24 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; cpu_phase1                                  ;
 ; Top-level Entity Name           ; datapath                                    ;
@@ -215,6 +215,7 @@ refer to the applicable agreement for further details.
 ; alu.v                            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v              ;         ;
 ; datapath.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v         ;         ;
 ; booth_multiplier.v               ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/booth_multiplier.v ;         ;
+; division.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/division.v         ;         ;
 ; addition.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v         ;         ;
 ; mux_2_1.v                        ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/mux_2_1.v          ;         ;
 ; encoder_32_5.v                   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/encoder_32_5.v     ;         ;
@@ -723,7 +724,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 05 16:54:44 2025
+    Info: Processing started: Sun Feb 09 10:36:15 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu_phase1 -c cpu_phase1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -761,6 +762,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file not_tb.
     Info (12023): Found entity 1: not_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/not_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file multiplication_tb.v
     Info (12023): Found entity 1: multiplication_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/multiplication_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file division_tb.v
+    Info (12023): Found entity 1: division_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/division_tb.v Line: 2
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at datapath.v(45): object "InPortIn" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 45
 Warning (10036): Verilog HDL or VHDL warning at datapath.v(46): object "OutPortIn" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 46
@@ -781,6 +784,7 @@ Info (12128): Elaborating entity "not_bits" for hierarchy "alu:ALU|booth_multipl
 Info (12128): Elaborating entity "addition" for hierarchy "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/negate_bits.v Line: 10
 Info (12128): Elaborating entity "CLA16" for hierarchy "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op|CLA16:CLA_lower" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v Line: 20
 Info (12128): Elaborating entity "CLA4" for hierarchy "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op|CLA16:CLA_lower|CLA4:CLA_lower" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v Line: 49
+Info (12128): Elaborating entity "division" for hierarchy "alu:ALU|division:div_unit" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 34
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/output_files/cpu_phase1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -853,10 +857,10 @@ Info (21057): Implemented 64 device resources after synthesis - the final resour
     Info (21058): Implemented 64 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 73 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Wed Feb 05 16:54:53 2025
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Sun Feb 09 10:36:24 2025
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +------------------------------------------+

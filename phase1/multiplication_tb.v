@@ -82,7 +82,7 @@ module multiplication_tb;
 	begin
 		case (Present_state)              //assert the required signals in each clock cycle
 			Default: begin
-					PCout <= 0;   ZLowOut <= 0; ZHighout <= 0;  MDRout<= 0;   //initialize the signals
+					PCout <= 0;   ZLowOut <= 0; ZHighout <= 0;  ZHighIn <= 0; MDRout<= 0;   //initialize the signals
 					R3out <= 0;  R4out <= 0; R7out <= 0; R5out <= 0; R2out <= 0; R6out <= 0; MARin <= 0;   ZLowIn <= 0;  
 					PCin <=0;   MDRin <= 0;   IRin  <= 0;   Yin <= 0; Yout <= 0;  
 					IncPC <= 0;   Read <= 0; MARout <= 0; IRout <= 0; LOin <= 0; HIin <= 0;

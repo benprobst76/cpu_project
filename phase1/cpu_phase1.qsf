@@ -66,7 +66,7 @@ set_global_assignment -name VERILOG_FILE encoder_32_5.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH multiplication_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH division_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME addition_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id addition_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME addition_tb -section_id addition_tb
@@ -85,11 +85,17 @@ set_global_assignment -name VERILOG_FILE multiplication_tb.v
 set_global_assignment -name EDA_TEST_BENCH_NAME multiplication_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id multiplication_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME multiplication_tb -section_id multiplication_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE addition_tb.v -section_id addition_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "400 ns" -section_id negate_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE negate_tb.v -section_id negate_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "400 ns" -section_id not_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE not_tb.v -section_id not_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "400 ns" -section_id multiplication_tb
+set_global_assignment -name VERILOG_FILE division_tb.v
+set_global_assignment -name EDA_TEST_BENCH_FILE addition_tb.v -section_id addition_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE negate_tb.v -section_id negate_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE not_tb.v -section_id not_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE multiplication_tb.v -section_id multiplication_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME division_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id division_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "400 ns" -section_id division_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME division_tb -section_id division_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE division_tb.v -section_id division_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
