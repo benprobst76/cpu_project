@@ -1,5 +1,5 @@
 Flow report for cpu_phase1
-Mon Feb 10 13:34:03 2025
+Sat Feb 22 20:03:19 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Feb 10 13:34:03 2025       ;
+; Flow Status                     ; Successful - Sat Feb 22 20:03:19 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; cpu_phase1                                  ;
 ; Top-level Entity Name           ; datapath                                    ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/10/2025 13:33:46 ;
+; Start date & time ; 02/22/2025 20:03:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cpu_phase1          ;
 +-------------------+---------------------+
@@ -78,9 +78,12 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
-; COMPILER_SIGNATURE_ID                ; 91768217310.173921242519488            ; --            ; --          ; --                ;
+; COMPILER_SIGNATURE_ID                ; 91770278239.174027257929032            ; --            ; --          ; --                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; or_tb             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; subtraction_tb    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; shla_tb           ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ror_tb            ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; and_tb            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; multiplication_tb ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; not_tb            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; shr_tb            ;
@@ -90,12 +93,15 @@ refer to the applicable agreement for further details.
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; negate_tb         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; shra_tb           ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; addition_tb       ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; rol_tb                                 ; --            ; --          ; eda_simulation    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; or_tb                                  ; --            ; --          ; eda_simulation    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation    ;
+; EDA_TEST_BENCH_FILE                  ; or_tb.v                                ; --            ; --          ; or_tb             ;
+; EDA_TEST_BENCH_FILE                  ; subtraction_tb.v                       ; --            ; --          ; subtraction_tb    ;
 ; EDA_TEST_BENCH_FILE                  ; shla_tb.v                              ; --            ; --          ; shla_tb           ;
 ; EDA_TEST_BENCH_FILE                  ; ror_tb.v                               ; --            ; --          ; ror_tb            ;
+; EDA_TEST_BENCH_FILE                  ; and_tb.v                               ; --            ; --          ; and_tb            ;
 ; EDA_TEST_BENCH_FILE                  ; multiplication_tb.v                    ; --            ; --          ; multiplication_tb ;
 ; EDA_TEST_BENCH_FILE                  ; not_tb.v                               ; --            ; --          ; not_tb            ;
 ; EDA_TEST_BENCH_FILE                  ; shr_tb.v                               ; --            ; --          ; shr_tb            ;
@@ -105,8 +111,11 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; negate_tb.v                            ; --            ; --          ; negate_tb         ;
 ; EDA_TEST_BENCH_FILE                  ; shra_tb.v                              ; --            ; --          ; shra_tb           ;
 ; EDA_TEST_BENCH_FILE                  ; addition_tb.v                          ; --            ; --          ; addition_tb       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; or_tb                                  ; --            ; --          ; or_tb             ;
+; EDA_TEST_BENCH_MODULE_NAME           ; subtraction_tb                         ; --            ; --          ; subtraction_tb    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; shla_tb                                ; --            ; --          ; shla_tb           ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; ror_tb                                 ; --            ; --          ; ror_tb            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; and_tb                                 ; --            ; --          ; and_tb            ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; multiplication_tb                      ; --            ; --          ; multiplication_tb ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; not_tb                                 ; --            ; --          ; not_tb            ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; shr_tb                                 ; --            ; --          ; shr_tb            ;
@@ -127,8 +136,14 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_NAME                  ; shla_tb                                ; --            ; --          ; eda_simulation    ;
 ; EDA_TEST_BENCH_NAME                  ; ror_tb                                 ; --            ; --          ; eda_simulation    ;
 ; EDA_TEST_BENCH_NAME                  ; rol_tb                                 ; --            ; --          ; eda_simulation    ;
+; EDA_TEST_BENCH_NAME                  ; subtraction_tb                         ; --            ; --          ; eda_simulation    ;
+; EDA_TEST_BENCH_NAME                  ; and_tb                                 ; --            ; --          ; eda_simulation    ;
+; EDA_TEST_BENCH_NAME                  ; or_tb                                  ; --            ; --          ; eda_simulation    ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; or_tb             ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; subtraction_tb    ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; shla_tb           ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; ror_tb            ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; and_tb            ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; multiplication_tb ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; not_tb            ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; shr_tb            ;
@@ -137,7 +152,7 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; division_tb       ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; negate_tb         ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; shra_tb           ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; addition_tb       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; addition_tb       ;
 ; EDA_TIME_SCALE                       ; 1 ns                                   ; --            ; --          ; eda_simulation    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                ;
@@ -156,8 +171,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4796 MB             ; 00:00:21                           ;
-; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:21                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4796 MB             ; 00:00:19                           ;
+; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -166,7 +181,7 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-7TOIQRJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Bens-HP          ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

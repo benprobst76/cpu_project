@@ -14,7 +14,7 @@ module alu (
 				  NOT = 5'b10010, SHLA = 5'b10011;
 
     // Wires for multiplication and division Z_Regs
-    wire [31:0]adder_sum, negate_out, not_out, shr_out, shra_out, shl_out, shla_out, ror_out, rol_out;
+    wire [31:0]adder_sum, sub_diff, and_out, or_out, negate_out, not_out, shr_out, shra_out, shl_out, shla_out, ror_out, rol_out;
 	 wire [63:0] mul_out, div_out;
 	 wire adder_cout;
 
@@ -41,6 +41,26 @@ module alu (
 		  .cout(adder_cout)
 	 );
 	 
+	 subtraction sub(
+	 	  .RA(RA),
+		  .RB(RB),
+		  .cin({1'd0}),
+		  .diff(sub_diff),
+		  .cout(sub_cout)
+	 );
+	 
+	 and_bits and_(
+	 	  .Ra(RA),
+		  .Rb(RB),
+		  .Rz(and_out)
+		);
+		
+	or_bits or_(
+		  .RA(RA),
+		  .RB(RB),
+		  .RZ(or_out)
+		);
+		
 	 negate_bits negate(
 		.Ra(RB),
 		.Rz(negate_out)
@@ -91,6 +111,21 @@ module alu (
         case (Op)
 		  		ADD: begin
 					ResultLo[31:0] <= adder_sum[31:0];
+					ResultHi[31:0] <= 32'd0;
+				end
+				
+				SUB: begin
+					ResultLo[31:0] <= sub_diff[31:0];
+					ResultHi[31:0] <= 32'd0;
+				end
+				
+				AND: begin
+					ResultLo[31:0] <= and_out[31:0];
+					ResultHi[31:0] <= 32'd0;
+				end
+				
+				OR: begin
+					ResultLo[31:0] <= or_out[31:0];
 					ResultHi[31:0] <= 32'd0;
 				end
 				

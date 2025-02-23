@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cpu_phase1
-Mon Feb 10 13:34:03 2025
+Sat Feb 22 20:03:19 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -39,24 +39,25 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  31. Parameter Settings for User Entity Instance: register:R15
  32. Parameter Settings for User Entity Instance: register:MDRreg
  33. Parameter Settings for User Entity Instance: alu:ALU
- 34. Port Connectivity Checks: "alu:ALU|addition:adder"
- 35. Port Connectivity Checks: "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op"
- 36. Port Connectivity Checks: "encoder_32_5:BusEncoder"
- 37. Port Connectivity Checks: "register:R15"
- 38. Port Connectivity Checks: "register:R14"
- 39. Port Connectivity Checks: "register:R13"
- 40. Port Connectivity Checks: "register:R12"
- 41. Port Connectivity Checks: "register:R11"
- 42. Port Connectivity Checks: "register:R10"
- 43. Port Connectivity Checks: "register:R9"
- 44. Port Connectivity Checks: "register:R8"
- 45. Port Connectivity Checks: "register:R1"
- 46. Port Connectivity Checks: "register:R0"
- 47. Port Connectivity Checks: "register:IR"
- 48. Post-Synthesis Netlist Statistics for Top Partition
- 49. Elapsed Time Per Partition
- 50. Analysis & Synthesis Messages
- 51. Analysis & Synthesis Suppressed Messages
+ 34. Port Connectivity Checks: "alu:ALU|subtraction:sub"
+ 35. Port Connectivity Checks: "alu:ALU|addition:adder"
+ 36. Port Connectivity Checks: "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op"
+ 37. Port Connectivity Checks: "encoder_32_5:BusEncoder"
+ 38. Port Connectivity Checks: "register:R15"
+ 39. Port Connectivity Checks: "register:R14"
+ 40. Port Connectivity Checks: "register:R13"
+ 41. Port Connectivity Checks: "register:R12"
+ 42. Port Connectivity Checks: "register:R11"
+ 43. Port Connectivity Checks: "register:R10"
+ 44. Port Connectivity Checks: "register:R9"
+ 45. Port Connectivity Checks: "register:R8"
+ 46. Port Connectivity Checks: "register:R1"
+ 47. Port Connectivity Checks: "register:R0"
+ 48. Port Connectivity Checks: "register:IR"
+ 49. Post-Synthesis Netlist Statistics for Top Partition
+ 50. Elapsed Time Per Partition
+ 51. Analysis & Synthesis Messages
+ 52. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -82,7 +83,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Feb 10 13:34:03 2025       ;
+; Analysis & Synthesis Status     ; Successful - Sat Feb 22 20:03:19 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; cpu_phase1                                  ;
 ; Top-level Entity Name           ; datapath                                    ;
@@ -227,6 +228,9 @@ refer to the applicable agreement for further details.
 ; shla_bits.v                      ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/shla_bits.v        ;         ;
 ; ror_bits.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/ror_bits.v         ;         ;
 ; rol_bits.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/rol_bits.v         ;         ;
+; or_bits.v                        ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/or_bits.v          ;         ;
+; and_bits.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/and_bits.v         ;         ;
+; subtraction.v                    ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/subtraction.v      ;         ;
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
 
 
@@ -573,6 +577,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:ALU|subtraction:sub"                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "alu:ALU|addition:adder"                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
@@ -731,7 +745,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Feb 10 13:33:45 2025
+    Info: Processing started: Sat Feb 22 20:02:58 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu_phase1 -c cpu_phase1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -795,6 +809,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file rol_tb.
     Info (12023): Found entity 1: rol_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/rol_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file rol_bits.v
     Info (12023): Found entity 1: rol_bits File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/rol_bits.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file or_tb.v
+    Info (12023): Found entity 1: or_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/or_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file or_bits.v
+    Info (12023): Found entity 1: or_bits File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/or_bits.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file and_bits.v
+    Info (12023): Found entity 1: and_bits File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/and_bits.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file and_tb.v
+    Info (12023): Found entity 1: and_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/and_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file subtraction_tb.v
+    Info (12023): Found entity 1: subtraction_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/subtraction_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file subtraction.v
+    Info (12023): Found entity 1: subtraction File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/subtraction.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at alu.v(49): created implicit net for "sub_cout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 49
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at datapath.v(45): object "InPortIn" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 45
 Warning (10036): Verilog HDL or VHDL warning at datapath.v(46): object "OutPortIn" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v Line: 46
@@ -816,12 +843,15 @@ Info (12128): Elaborating entity "addition" for hierarchy "alu:ALU|booth_multipl
 Info (12128): Elaborating entity "CLA16" for hierarchy "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op|CLA16:CLA_lower" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v Line: 20
 Info (12128): Elaborating entity "CLA4" for hierarchy "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op|CLA16:CLA_lower|CLA4:CLA_lower" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v Line: 49
 Info (12128): Elaborating entity "division" for hierarchy "alu:ALU|division:div_unit" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 34
-Info (12128): Elaborating entity "shr_bits" for hierarchy "alu:ALU|shr_bits:shr" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 58
-Info (12128): Elaborating entity "shra_bits" for hierarchy "alu:ALU|shra_bits:shra" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 64
-Info (12128): Elaborating entity "shl_bits" for hierarchy "alu:ALU|shl_bits:shl" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 70
-Info (12128): Elaborating entity "shla_bits" for hierarchy "alu:ALU|shla_bits:shla" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 76
-Info (12128): Elaborating entity "ror_bits" for hierarchy "alu:ALU|ror_bits:ror" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 82
-Info (12128): Elaborating entity "rol_bits" for hierarchy "alu:ALU|rol_bits:rol" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 88
+Info (12128): Elaborating entity "subtraction" for hierarchy "alu:ALU|subtraction:sub" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 50
+Info (12128): Elaborating entity "and_bits" for hierarchy "alu:ALU|and_bits:and_" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 56
+Info (12128): Elaborating entity "or_bits" for hierarchy "alu:ALU|or_bits:or_" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 62
+Info (12128): Elaborating entity "shr_bits" for hierarchy "alu:ALU|shr_bits:shr" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 78
+Info (12128): Elaborating entity "shra_bits" for hierarchy "alu:ALU|shra_bits:shra" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 84
+Info (12128): Elaborating entity "shl_bits" for hierarchy "alu:ALU|shl_bits:shl" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 90
+Info (12128): Elaborating entity "shla_bits" for hierarchy "alu:ALU|shla_bits:shla" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 96
+Info (12128): Elaborating entity "ror_bits" for hierarchy "alu:ALU|ror_bits:ror" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 102
+Info (12128): Elaborating entity "rol_bits" for hierarchy "alu:ALU|rol_bits:rol" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v Line: 108
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/output_files/cpu_phase1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -893,11 +923,11 @@ Warning (21074): Design contains 64 input pin(s) that do not drive logic
 Info (21057): Implemented 64 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 64 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 73 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 74 warnings
     Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Mon Feb 10 13:34:03 2025
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Processing ended: Sat Feb 22 20:03:19 2025
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+

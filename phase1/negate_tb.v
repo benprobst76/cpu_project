@@ -1,9 +1,9 @@
 `timescale 1ns / 10ps
 module negate_tb; 	
-	reg	PCout, ZHighout, ZLowOut, MDRout, R4out, R3out, R7out, R5out; // add any other signals to see in your simulation
+	reg	PCout, ZHighout, ZLowOut, MDRout, R4out, R3out, R7out, R5out, R2out, R6out; // add any other signals to see in your simulation
 	reg	MARin, ZHighIn, ZLowIn, PCin, MDRin, IRin, IRout, Yin, Yout;
-	reg 	IncPC, Read, MARout;
-	reg   R4in, R3in, R7in, R5in;
+	reg 	IncPC, Read, MARout, LOin, HIin;
+	reg   R4in, R3in, R7in, R5in, R2in, R6in;
 	reg	clock, clear;
 	reg	[31:0] Mdatain;
 
@@ -14,12 +14,14 @@ module negate_tb;
 	reg	[3:0] Present_state = Default;
 
 
-	datapath ADD_DUT( 
+	datapath NEG_DUT( 
 		.clock(clock),
 		.clear(clear),
 		.PCout(PCout),
 		.RZoutLo(ZLowOut),
 		.RZinLo(ZLowIn),
+		.RZinHi(ZHighIn),
+		.RZoutHi(ZHighout),
 		.MDRout(MDRout),
 		.MDRin(MDRin),
 		.MARin(MARin),
@@ -39,7 +41,13 @@ module negate_tb;
 		.R7out(R7out),
 		.Mdatain(Mdatain),
 		.R5in(R5in),
-		.R5out(R5out)
+		.R5out(R5out),
+		.R2in(R2in),
+		.R2out(R2out),
+		.R6in(R6in),
+		.R6out(R6out),
+		.LOin(LOin),
+		.HIin(HIin)
 	);
 	// add test logic here
 
@@ -69,11 +77,11 @@ module negate_tb;
 	begin
 		case (Present_state)              //assert the required signals in each clock cycle
 			Default: begin
-					PCout <= 0;   ZLowOut <= 0; ZHighout <= 0;  MDRout<= 0;   //initialize the signals
-					R3out <= 0;  R4out <= 0; R5out <= 0; R7out <= 0;   MARin <= 0;   ZLowIn <= 0;  
+					PCout <= 0;   ZLowOut <= 0; ZHighout <= 0;  ZHighIn <= 0; MDRout<= 0;   //initialize the signals
+					R3out <= 0;  R4out <= 0; R7out <= 0; R5out <= 0; R2out <= 0; R6out <= 0; MARin <= 0;   ZLowIn <= 0;  
 					PCin <=0;   MDRin <= 0;   IRin  <= 0;   Yin <= 0; Yout <= 0;  
-					IncPC <= 0;   Read <= 0; MARout <= 0; IRout <= 0;
-					R3in <= 0; R4in <= 0; R5in <= 0; R7in <= 0; Mdatain <= 32'h00000000;
+					IncPC <= 0;   Read <= 0; MARout <= 0; IRout <= 0; LOin <= 0; HIin <= 0;
+					R3in <= 0; R4in <= 0; R7in <= 0; R5in <= 0; R2in <= 0; R6in <= 0; Mdatain <= 32'h00000000;
 			end
 			Reg_load1a: begin 
 					Mdatain<= 32'h00000022;
