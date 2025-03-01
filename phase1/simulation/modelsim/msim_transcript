@@ -12,67 +12,67 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:36 on Feb 22,2025
+# Start time: 13:22:19 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 20:04:37 on Feb 22,2025, Elapsed time: 0:00:01
+# End time: 13:22:19 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/bus.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:37 on Feb 22,2025
+# Start time: 13:22:20 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/bus.v 
 # -- Compiling module bus
 # 
 # Top level modules:
 # 	bus
-# End time: 20:04:37 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:20 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:37 on Feb 22,2025
+# Start time: 13:22:20 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/alu.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 20:04:37 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:20 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:37 on Feb 22,2025
+# Start time: 13:22:20 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/datapath.v 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 20:04:37 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:20 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/booth_multiplier.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:37 on Feb 22,2025
+# Start time: 13:22:20 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/booth_multiplier.v 
 # -- Compiling module booth_multiplier
 # 
 # Top level modules:
 # 	booth_multiplier
-# End time: 20:04:37 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:20 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/division.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:37 on Feb 22,2025
+# Start time: 13:22:20 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/division.v 
 # -- Compiling module division
 # 
 # Top level modules:
 # 	division
-# End time: 20:04:37 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:20 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:37 on Feb 22,2025
+# Start time: 13:22:20 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/addition.v 
 # -- Compiling module addition
 # -- Compiling module CLA16
@@ -80,154 +80,154 @@
 # 
 # Top level modules:
 # 	addition
-# End time: 20:04:37 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:20 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/mux_2_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:38 on Feb 22,2025
+# Start time: 13:22:20 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/mux_2_1.v 
 # -- Compiling module mux_2_1
 # 
 # Top level modules:
 # 	mux_2_1
-# End time: 20:04:38 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:21 on Feb 24,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/encoder_32_5.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:38 on Feb 22,2025
+# Start time: 13:22:21 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/encoder_32_5.v 
 # -- Compiling module encoder_32_5
 # 
 # Top level modules:
 # 	encoder_32_5
-# End time: 20:04:38 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:21 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/negate_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:38 on Feb 22,2025
+# Start time: 13:22:21 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/negate_bits.v 
 # -- Compiling module negate_bits
 # 
 # Top level modules:
 # 	negate_bits
-# End time: 20:04:38 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:21 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/not_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:38 on Feb 22,2025
+# Start time: 13:22:21 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/not_bits.v 
 # -- Compiling module not_bits
 # 
 # Top level modules:
 # 	not_bits
-# End time: 20:04:38 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:21 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/shr_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:38 on Feb 22,2025
+# Start time: 13:22:21 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/shr_bits.v 
 # -- Compiling module shr_bits
 # 
 # Top level modules:
 # 	shr_bits
-# End time: 20:04:38 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:21 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/shra_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:38 on Feb 22,2025
+# Start time: 13:22:21 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/shra_bits.v 
 # -- Compiling module shra_bits
 # 
 # Top level modules:
 # 	shra_bits
-# End time: 20:04:38 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:21 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/shl_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:38 on Feb 22,2025
+# Start time: 13:22:21 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/shl_bits.v 
 # -- Compiling module shl_bits
 # 
 # Top level modules:
 # 	shl_bits
-# End time: 20:04:39 on Feb 22,2025, Elapsed time: 0:00:01
+# End time: 13:22:21 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/shla_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:39 on Feb 22,2025
+# Start time: 13:22:22 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/shla_bits.v 
 # -- Compiling module shla_bits
 # 
 # Top level modules:
 # 	shla_bits
-# End time: 20:04:39 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:22 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/ror_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:39 on Feb 22,2025
+# Start time: 13:22:22 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/ror_bits.v 
 # -- Compiling module ror_bits
 # 
 # Top level modules:
 # 	ror_bits
-# End time: 20:04:39 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:22 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/rol_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:39 on Feb 22,2025
+# Start time: 13:22:22 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/rol_bits.v 
 # -- Compiling module rol_bits
 # 
 # Top level modules:
 # 	rol_bits
-# End time: 20:04:39 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:22 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/or_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:39 on Feb 22,2025
+# Start time: 13:22:22 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/or_bits.v 
 # -- Compiling module or_bits
 # 
 # Top level modules:
 # 	or_bits
-# End time: 20:04:39 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:22 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/and_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:39 on Feb 22,2025
+# Start time: 13:22:22 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/and_bits.v 
 # -- Compiling module and_bits
 # 
 # Top level modules:
 # 	and_bits
-# End time: 20:04:39 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:22 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/subtraction.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:39 on Feb 22,2025
+# Start time: 13:22:22 on Feb 24,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/subtraction.v 
 # -- Compiling module subtraction
 # 
 # Top level modules:
 # 	subtraction
-# End time: 20:04:39 on Feb 22,2025, Elapsed time: 0:00:00
+# End time: 13:22:22 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/or_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/rol_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:39 on Feb 22,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/or_tb.v 
-# -- Compiling module or_tb
+# Start time: 13:22:22 on Feb 24,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1" C:/intelFPGA_lite/18.1/elec374/cpu_project/phase1/rol_tb.v 
+# -- Compiling module rol_tb
 # 
 # Top level modules:
-# 	or_tb
-# End time: 20:04:39 on Feb 22,2025, Elapsed time: 0:00:00
+# 	rol_tb
+# End time: 13:22:22 on Feb 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  or_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" or_tb 
-# Start time: 20:04:39 on Feb 22,2025
-# Loading work.or_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  rol_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" rol_tb 
+# Start time: 13:22:23 on Feb 24,2025
+# Loading work.rol_tb
 # Loading work.datapath
 # Loading work.register
 # Loading work.mux_2_1
@@ -257,8 +257,12 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 400 ns
-do or_tb
+rol_tb
+# couldn't execute ".\rol_tb": no such file or directory
+do rol_tb
 restart
+run 400na
+# Invalid time value: 400na
 run 400ns
-# End time: 20:07:54 on Feb 22,2025, Elapsed time: 0:03:15
-# Errors: 0, Warnings: 0
+# End time: 13:25:21 on Feb 24,2025, Elapsed time: 0:02:58
+# Errors: 2, Warnings: 0

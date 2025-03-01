@@ -1,0 +1,22 @@
+Warning (10268): Verilog HDL information at subtraction_tb.v(80): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/subtraction_tb.v Line: 80
+Warning (10268): Verilog HDL information at shr_tb.v(79): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shr_tb.v Line: 79
+Warning (10268): Verilog HDL information at shra_tb.v(79): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shra_tb.v Line: 79
+Warning (10268): Verilog HDL information at shl_tb.v(79): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shl_tb.v Line: 79
+Warning (10268): Verilog HDL information at shla_tb.v(79): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shla_tb.v Line: 79
+Warning (10268): Verilog HDL information at ror_tb.v(79): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ror_tb.v Line: 79
+Warning (10268): Verilog HDL information at rol_tb.v(79): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/rol_tb.v Line: 79
+Warning (10268): Verilog HDL information at or_tb.v(79): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/or_tb.v Line: 79
+Warning (10268): Verilog HDL information at not_tb.v(76): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/not_tb.v Line: 76
+Warning (10268): Verilog HDL information at negate_tb.v(76): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/negate_tb.v Line: 76
+Warning (10268): Verilog HDL information at multiplication_tb.v(81): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/multiplication_tb.v Line: 81
+Warning (10268): Verilog HDL information at division_tb.v(81): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/division_tb.v Line: 81
+Warning (10268): Verilog HDL information at and_tb.v(79): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/and_tb.v Line: 79
+Warning (10268): Verilog HDL information at alu.v(111): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 111
+Info (10281): Verilog HDL Declaration information at alu.v(11): object "SUB" differs only in case from object "sub" in the same scope File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 11
+Info (10281): Verilog HDL Declaration information at alu.v(12): object "SHR" differs only in case from object "shr" in the same scope File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 12
+Info (10281): Verilog HDL Declaration information at alu.v(12): object "SHRA" differs only in case from object "shra" in the same scope File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 12
+Info (10281): Verilog HDL Declaration information at alu.v(12): object "SHL" differs only in case from object "shl" in the same scope File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 12
+Info (10281): Verilog HDL Declaration information at alu.v(14): object "SHLA" differs only in case from object "shla" in the same scope File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 14
+Info (10281): Verilog HDL Declaration information at alu.v(11): object "ROR" differs only in case from object "ror" in the same scope File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 11
+Info (10281): Verilog HDL Declaration information at alu.v(12): object "ROL" differs only in case from object "rol" in the same scope File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 12
+Warning (10268): Verilog HDL information at addition_tb.v(80): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/addition_tb.v Line: 80
