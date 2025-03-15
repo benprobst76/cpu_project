@@ -1,0 +1,13 @@
+`timescale 1ns/10ps
+
+module ram(input [31:0] data_in, input [7:0] address, input write, read, output [31:0] data_out);
+	reg [31:0] ram[511:0];
+	
+	always @(write, read)
+	begin
+		if (write)
+			ram[address] <= data_in;
+		else if (read)
+			data_out = ram[address];
+	end
+endmodule
