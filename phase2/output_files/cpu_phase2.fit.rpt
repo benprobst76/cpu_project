@@ -1,5 +1,5 @@
 Fitter report for cpu_phase2
-Sat Mar 01 10:47:35 2025
+Thu Mar 20 15:10:22 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sat Mar 01 10:47:35 2025       ;
+; Fitter Status                   ; Successful - Thu Mar 20 15:10:22 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; cpu_phase2                                  ;
 ; Top-level Entity Name           ; datapath                                    ;
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 1 / 18,480 ( < 1 % )                        ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 64 / 224 ( 29 % )                           ;
+; Total pins                      ; 31 / 224 ( 14 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
 ; Total RAM Blocks                ; 0 / 308 ( 0 % )                             ;
@@ -155,19 +155,19 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Incremental Compilation Preservation Summary                                                     ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 129 ) ; 0.00 % ( 0 / 129 )         ; 0.00 % ( 0 / 129 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 129 ) ; 0.00 % ( 0 / 129 )         ; 0.00 % ( 0 / 129 )       ;
-;                     ;                    ;                            ;                          ;
-; Routing (by net)    ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-;     -- Achieved     ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-+---------------------+--------------------+----------------------------+--------------------------+
++-------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                    ;
++---------------------+-------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+-------------------+----------------------------+--------------------------+
+; Placement (by node) ;                   ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 63 ) ; 0.00 % ( 0 / 63 )          ; 0.00 % ( 0 / 63 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 63 ) ; 0.00 % ( 0 / 63 )          ; 0.00 % ( 0 / 63 )        ;
+;                     ;                   ;                            ;                          ;
+; Routing (by net)    ;                   ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+-------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -185,7 +185,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 129 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 63 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -238,8 +238,8 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ;         -- Routing optimization registers                   ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
-; I/O pins                                                    ; 64 / 224           ; 29 %  ;
-;     -- Clock pins                                           ; 3 / 9              ; 33 %  ;
+; I/O pins                                                    ; 31 / 224           ; 14 %  ;
+;     -- Clock pins                                           ; 1 / 9              ; 11 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 11             ; 0 %   ;
 ;                                                             ;                    ;       ;
 ; M10K blocks                                                 ; 0 / 308            ; 0 %   ;
@@ -265,8 +265,8 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; Peak interconnect usage (total/H/V)                         ; 0.0% / 0.0% / 0.0% ;       ;
 ; Maximum fan-out                                             ; 1                  ;       ;
 ; Highest non-global fan-out                                  ; 1                  ;       ;
-; Total fan-out                                               ; 64                 ;       ;
-; Average fan-out                                             ; 0.50               ;       ;
+; Total fan-out                                               ; 31                 ;       ;
+; Average fan-out                                             ; 0.49               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -316,7 +316,7 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ;                                                             ;                     ;                                ;
 ;                                                             ;                     ;                                ;
 ; Virtual pins                                                ; 0                   ; 0                              ;
-; I/O pins                                                    ; 64                  ; 0                              ;
+; I/O pins                                                    ; 31                  ; 0                              ;
 ; I/O registers                                               ; 0                   ; 0                              ;
 ; Total block memory bits                                     ; 0                   ; 0                              ;
 ; Total block memory implementation bits                      ; 0                   ; 0                              ;
@@ -328,7 +328,7 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ;     -- Registered Output Connections                        ; 0                   ; 0                              ;
 ;                                                             ;                     ;                                ;
 ; Internal Connections                                        ;                     ;                                ;
-;     -- Total Connections                                    ; 64                  ; 0                              ;
+;     -- Total Connections                                    ; 31                  ; 0                              ;
 ;     -- Registered Connections                               ; 0                   ; 0                              ;
 ;                                                             ;                     ;                                ;
 ; External Connections                                        ;                     ;                                ;
@@ -336,7 +336,7 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ;     -- hard_block:auto_generated_inst                       ; 0                   ; 0                              ;
 ;                                                             ;                     ;                                ;
 ; Partition Interface                                         ;                     ;                                ;
-;     -- Input Ports                                          ; 64                  ; 0                              ;
+;     -- Input Ports                                          ; 31                  ; 0                              ;
 ;     -- Output Ports                                         ; 0                   ; 0                              ;
 ;     -- Bidir Ports                                          ; 0                   ; 0                              ;
 ;                                                             ;                     ;                                ;
@@ -356,92 +356,59 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 +-------------------------------------------------------------+---------------------+--------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                                                 ;
-+-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
-+-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; HIin        ; F15   ; 7A       ; 46           ; 45           ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; IRin        ; Y14   ; 4A       ; 36           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; IRout       ; C9    ; 8A       ; 16           ; 45           ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; IncPC       ; L22   ; 5B       ; 54           ; 19           ; 54           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; LOin        ; R5    ; 3A       ; 10           ; 0            ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; MARin       ; T20   ; 5A       ; 54           ; 14           ; 94           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; MARout      ; J11   ; 7A       ; 40           ; 45           ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; MDRin       ; T8    ; 3A       ; 12           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; MDRout      ; T22   ; 5A       ; 54           ; 15           ; 37           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; MDRread     ; C13   ; 7A       ; 36           ; 45           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[0]  ; E9    ; 8A       ; 10           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[10] ; T17   ; 5A       ; 54           ; 14           ; 60           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[11] ; M6    ; 3A       ; 14           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[12] ; A5    ; 8A       ; 16           ; 45           ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[13] ; AB5   ; 3B       ; 16           ; 0            ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[14] ; W2    ; 2A       ; 0            ; 18           ; 60           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[15] ; B7    ; 8A       ; 14           ; 45           ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[16] ; F10   ; 8A       ; 22           ; 45           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[17] ; P8    ; 3B       ; 18           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[18] ; F9    ; 8A       ; 14           ; 45           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[19] ; R17   ; 5A       ; 54           ; 16           ; 20           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[1]  ; P12   ; 3B       ; 24           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[20] ; C2    ; 2A       ; 0            ; 21           ; 37           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[21] ; H8    ; 8A       ; 20           ; 45           ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[22] ; L8    ; 7A       ; 34           ; 45           ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[23] ; Y19   ; 4A       ; 48           ; 0            ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[24] ; K22   ; 5B       ; 54           ; 21           ; 54           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[25] ; E14   ; 7A       ; 40           ; 45           ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[26] ; E10   ; 8A       ; 14           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[27] ; E15   ; 7A       ; 46           ; 45           ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[28] ; AB20  ; 4A       ; 40           ; 0            ; 91           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[29] ; B13   ; 7A       ; 42           ; 45           ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[2]  ; J19   ; 7A       ; 48           ; 45           ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[30] ; A14   ; 7A       ; 46           ; 45           ; 91           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[31] ; G13   ; 7A       ; 38           ; 45           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[3]  ; D17   ; 7A       ; 50           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[4]  ; G18   ; 7A       ; 48           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[5]  ; G17   ; 7A       ; 50           ; 45           ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[6]  ; K16   ; 7A       ; 44           ; 45           ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[7]  ; D7    ; 8A       ; 10           ; 45           ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[8]  ; W8    ; 3A       ; 11           ; 0            ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; Mdatain[9]  ; G8    ; 8A       ; 20           ; 45           ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; PCin        ; T18   ; 5A       ; 54           ; 14           ; 43           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; PCout       ; T10   ; 3B       ; 23           ; 0            ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R2in        ; A8    ; 8A       ; 12           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R2out       ; M21   ; 5B       ; 54           ; 20           ; 54           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R3in        ; J9    ; 8A       ; 18           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R3out       ; U11   ; 3B       ; 24           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R4in        ; B5    ; 8A       ; 16           ; 45           ; 91           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R4out       ; C16   ; 7A       ; 52           ; 45           ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R5in        ; V13   ; 4A       ; 33           ; 0            ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R5out       ; U17   ; 4A       ; 52           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R6in        ; K9    ; 7A       ; 34           ; 45           ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R6out       ; A15   ; 7A       ; 46           ; 45           ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R7in        ; AA17  ; 4A       ; 43           ; 0            ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; R7out       ; V18   ; 4A       ; 51           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; RYin        ; AA14  ; 4A       ; 34           ; 0            ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; RYout       ; H10   ; 7A       ; 40           ; 45           ; 91           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; RZinHi      ; H13   ; 7A       ; 38           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; RZinLo      ; G11   ; 7A       ; 38           ; 45           ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; RZoutHi     ; H6    ; 8A       ; 8            ; 45           ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; RZoutLo     ; E16   ; 7A       ; 50           ; 45           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; clear       ; C8    ; 8A       ; 10           ; 45           ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; clock       ; G12   ; 7A       ; 34           ; 45           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-+-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                                              ;
++----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
+; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
++----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
+; BAout    ; E7    ; 8A       ; 8            ; 45           ; 91           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; CONin    ; F13   ; 7A       ; 40           ; 45           ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; Gra      ; AA9   ; 3B       ; 22           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; Grb      ; C2    ; 2A       ; 0            ; 21           ; 37           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; Grc      ; AA22  ; 4A       ; 46           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; HIin     ; R5    ; 3A       ; 10           ; 0            ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; IRin     ; K20   ; 7A       ; 52           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; IRout    ; F7    ; 8A       ; 8            ; 45           ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; IncPC    ; D13   ; 7A       ; 36           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; LOin     ; AB11  ; 3B       ; 25           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; MARin    ; A7    ; 8A       ; 12           ; 45           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; MARout   ; W22   ; 4A       ; 48           ; 0            ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; MDRin    ; K16   ; 7A       ; 44           ; 45           ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; MDRout   ; D3    ; 2A       ; 0            ; 20           ; 3            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; MDRread  ; AA12  ; 3B       ; 29           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; PCin     ; D17   ; 7A       ; 50           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; PCout    ; AA8   ; 3B       ; 19           ; 0            ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; R1in     ; T8    ; 3A       ; 12           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; R2in     ; L22   ; 5B       ; 54           ; 19           ; 54           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; RAMwrite ; J7    ; 8A       ; 20           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; RCout    ; G13   ; 7A       ; 38           ; 45           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; RYin     ; AA18  ; 4A       ; 43           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; RYout    ; D9    ; 8A       ; 10           ; 45           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; RZinHi   ; W2    ; 2A       ; 0            ; 18           ; 60           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; RZinLo   ; H6    ; 8A       ; 8            ; 45           ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; RZoutHi  ; U7    ; 3A       ; 10           ; 0            ; 91           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; RZoutLo  ; G11   ; 7A       ; 38           ; 45           ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; Rin      ; B12   ; 7A       ; 36           ; 45           ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; Rout     ; Y9    ; 3B       ; 23           ; 0            ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; clear    ; J8    ; 8A       ; 20           ; 45           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; clock    ; B6    ; 8A       ; 14           ; 45           ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
++----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
-+----------------------------------------------------------------------------+
-; I/O Bank Usage                                                             ;
-+----------+------------------+---------------+--------------+---------------+
-; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
-+----------+------------------+---------------+--------------+---------------+
-; 2A       ; 2 / 16 ( 13 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 3A       ; 4 / 16 ( 25 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 5 / 32 ( 16 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 8 / 48 ( 17 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 5 / 16 ( 31 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 5B       ; 3 / 16 ( 19 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 7A       ; 22 / 48 ( 46 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 15 / 32 ( 47 % ) ; 2.5V          ; --           ; 2.5V          ;
-+----------+------------------+---------------+--------------+---------------+
++---------------------------------------------------------------------------+
+; I/O Bank Usage                                                            ;
++----------+-----------------+---------------+--------------+---------------+
+; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
++----------+-----------------+---------------+--------------+---------------+
+; 2A       ; 3 / 16 ( 19 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 3A       ; 3 / 16 ( 19 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 5 / 32 ( 16 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 3 / 48 ( 6 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 0 / 16 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 5B       ; 1 / 16 ( 6 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 7A       ; 8 / 48 ( 17 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 8 / 32 ( 25 % ) ; 2.5V          ; --           ; 2.5V          ;
++----------+-----------------+---------------+--------------+---------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -453,17 +420,17 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; A2       ; 288        ; 9A       ; ^MSEL2                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A3       ;            ; --       ; VCCBAT                          ; power  ;              ; 1.2V                ; --           ;                 ; --       ; --           ;
 ; A4       ; 290        ; 9A       ; ^nCONFIG                        ;        ;              ;                     ; --           ;                 ; --       ; --           ;
-; A5       ; 264        ; 8A       ; Mdatain[12]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; A5       ; 264        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A6       ;            ; 8A       ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; A7       ; 273        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; A8       ; 271        ; 8A       ; R2in                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; A7       ; 273        ; 8A       ; MARin                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; A8       ; 271        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A9       ; 262        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A10      ; 260        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A11      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A12      ; 242        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A13      ; 230        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; A14      ; 218        ; 7A       ; Mdatain[30]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; A15      ; 216        ; 7A       ; R6out                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; A14      ; 218        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; A15      ; 216        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A16      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; A17      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A18      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -478,32 +445,32 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; AA5      ; 53         ; 3A       ; ^AS_DATA2, DATA2                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AA6      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA7      ; 79         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA8      ; 82         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA9      ; 89         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA8      ; 82         ; 3B       ; PCout                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA9      ; 89         ; 3B       ; Gra                             ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AA10     ; 87         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA11     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AA12     ; 105        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA12     ; 105        ; 3B       ; MDRread                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AA13     ; 113        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA14     ; 111        ; 4A       ; RYin                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA14     ; 111        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA15     ; 116        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA16     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AA17     ; 127        ; 4A       ; R7in                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AA18     ; 129        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA17     ; 127        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA18     ; 129        ; 4A       ; RYin                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AA19     ; 130        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA20     ; 132        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA21     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AA22     ; 137        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA22     ; 137        ; 4A       ; Grc                             ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AB1      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB2      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB3      ; 55         ; 3A       ; ^AS_DATA1, DATA1                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AB4      ; 57         ; 3A       ; ^AS_DATA0, ASDO, DATA0          ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
-; AB5      ; 76         ; 3B       ; Mdatain[13]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB5      ; 76         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB6      ; 74         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB7      ; 81         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB8      ; 84         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB9      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB10     ; 98         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AB11     ; 100        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AB11     ; 100        ; 3B       ; LOin                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AB12     ; 108        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB13     ; 106        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB14     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -512,22 +479,22 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; AB17     ; 119        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB18     ; 121        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB19     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AB20     ; 122        ; 4A       ; Mdatain[28]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB20     ; 122        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB21     ; 124        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB22     ; 135        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B3       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B4       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
-; B5       ; 266        ; 8A       ; R4in                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; B6       ; 268        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; B7       ; 270        ; 8A       ; Mdatain[15]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; B5       ; 266        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; B6       ; 268        ; 8A       ; clock                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; B7       ; 270        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B8       ;            ; 8A       ; VREFB8AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B9       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B10      ; 263        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B11      ; 250        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; B12      ; 240        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; B13      ; 228        ; 7A       ; Mdatain[29]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; B12      ; 240        ; 7A       ; Rin                             ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; B13      ; 228        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B15      ; 225        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B16      ; 204        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -538,21 +505,21 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; B21      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B22      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C1       ; 16         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; C2       ; 18         ; 2A       ; Mdatain[20]                     ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; C2       ; 18         ; 2A       ; Grb                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; C3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C5       ; 292        ; 9A       ; ^GND                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C6       ; 272        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C7       ;            ; 8A       ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; C8       ; 278        ; 8A       ; clear                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; C9       ; 265        ; 8A       ; IRout                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; C8       ; 278        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; C9       ; 265        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C10      ;            ; 7A, 8A   ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; C11      ; 248        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C12      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; C13      ; 241        ; 7A       ; MDRread                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; C13      ; 241        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C14      ;            ; 7A       ; VREFB7AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C15      ; 223        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; C16      ; 206        ; 7A       ; R4out                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; C16      ; 206        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C17      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C18      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C19      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -561,21 +528,21 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; C22      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; D2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; D3       ; 22         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; D3       ; 22         ; 2A       ; MDRout                          ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; D4       ;            ; 2A       ; VCCIO2A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; D6       ; 274        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; D7       ; 276        ; 8A       ; Mdatain[7]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; D7       ; 276        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D8       ;            ; 7A, 8A   ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; D9       ; 277        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; D9       ; 277        ; 8A       ; RYout                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; D10      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; D11      ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D12      ; 247        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; D13      ; 239        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; D13      ; 239        ; 7A       ; IncPC                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; D14      ;            ; 7A, 8A   ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D15      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D16      ;            ; 7A, 8A   ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; D17      ; 207        ; 7A       ; Mdatain[3]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; D17      ; 207        ; 7A       ; PCin                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; D18      ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D19      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; D20      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -587,16 +554,16 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; E4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E5       ; 289        ; 9A       ; ^MSEL3                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E6       ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; E7       ; 282        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; E7       ; 282        ; 8A       ; BAout                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; E8       ;            ; 8A       ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; E9       ; 275        ; 8A       ; Mdatain[0]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; E10      ; 267        ; 8A       ; Mdatain[26]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; E9       ; 275        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; E10      ; 267        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E11      ;            ; 7A, 8A   ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; E12      ; 249        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; E14      ; 231        ; 7A       ; Mdatain[25]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; E15      ; 215        ; 7A       ; Mdatain[27]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; E16      ; 209        ; 7A       ; RZoutLo                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; E14      ; 231        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; E15      ; 215        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; E16      ; 209        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E17      ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E18      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; E19      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -609,15 +576,15 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; F4       ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; F5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F6       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; F7       ; 280        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; F7       ; 280        ; 8A       ; IRout                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; F8       ;            ; --       ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
-; F9       ; 269        ; 8A       ; Mdatain[18]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; F10      ; 253        ; 8A       ; Mdatain[16]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; F9       ; 269        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; F10      ; 253        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F11      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; F12      ; 238        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; F13      ; 233        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; F13      ; 233        ; 7A       ; CONin                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; F14      ; 226        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; F15      ; 217        ; 7A       ; HIin                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; F15      ; 217        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F16      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F17      ; 202        ; 7A       ; ^GND                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F18      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -632,17 +599,17 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; G5       ; 287        ; 9A       ; ^nCE                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G6       ; 279        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G7       ;            ; 8A       ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; G8       ; 258        ; 8A       ; Mdatain[9]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; G8       ; 258        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G9       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G10      ; 251        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; G11      ; 236        ; 7A       ; RZinLo                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; G12      ; 245        ; 7A       ; clock                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; G13      ; 237        ; 7A       ; Mdatain[31]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; G11      ; 236        ; 7A       ; RZoutLo                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; G12      ; 245        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; G13      ; 237        ; 7A       ; RCout                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; G14      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; G15      ; 224        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G16      ; 210        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; G17      ; 208        ; 7A       ; Mdatain[5]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; G18      ; 211        ; 7A       ; Mdatain[4]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; G17      ; 208        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; G18      ; 211        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G19      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G20      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G21      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -652,14 +619,14 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; H3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; H4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; H5       ; 286        ; 9A       ; ^nSTATUS                        ;        ;              ;                     ; --           ;                 ; --       ; --           ;
-; H6       ; 281        ; 8A       ; RZoutHi                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; H6       ; 281        ; 8A       ; RZinLo                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; H7       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; H8       ; 256        ; 8A       ; Mdatain[21]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; H8       ; 256        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H9       ; 261        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; H10      ; 234        ; 7A       ; RYout                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; H10      ; 234        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H11      ; 243        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; H13      ; 235        ; 7A       ; RZinHi                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; H13      ; 235        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H14      ; 227        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H15      ; 221        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H16      ; 219        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -675,11 +642,11 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; J4       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; J5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J6       ; 285        ; 9A       ; ^MSEL1                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
-; J7       ; 255        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; J8       ; 257        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; J9       ; 259        ; 8A       ; R3in                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; J7       ; 255        ; 8A       ; RAMwrite                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; J8       ; 257        ; 8A       ; clear                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; J9       ; 259        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J10      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; J11      ; 232        ; 7A       ; MARout                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; J11      ; 232        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J12      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; J13      ; 229        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J14      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
@@ -687,7 +654,7 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; J16      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; J17      ; 220        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J18      ; 214        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; J19      ; 212        ; 7A       ; Mdatain[2]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; J19      ; 212        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J20      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J21      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J22      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -699,20 +666,20 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; K6       ; 284        ; 9A       ; ^CONF_DONE                      ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K7       ; 254        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; K8       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; K9       ; 246        ; 7A       ; R6in                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; K9       ; 246        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; K10      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K11      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; K12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K13      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; K14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; K16      ; 222        ; 7A       ; Mdatain[6]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; K16      ; 222        ; 7A       ; MDRin                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; K17      ; 178        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; K18      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; K19      ; 205        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; K20      ; 203        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; K20      ; 203        ; 7A       ; IRin                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; K21      ; 183        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; K22      ; 185        ; 5B       ; Mdatain[24]                     ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; K22      ; 185        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; L1       ; 21         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; L2       ; 23         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; L3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -720,7 +687,7 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; L5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L6       ; 283        ; 9A       ; ^MSEL0                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L7       ; 252        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; L8       ; 244        ; 7A       ; Mdatain[22]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; L8       ; 244        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; L9       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L10      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; L11      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -734,13 +701,13 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; L19      ; 182        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; L20      ;            ; 5B       ; VREFB5BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; L22      ; 177        ; 5B       ; IncPC                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L22      ; 177        ; 5B       ; R2in                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M3       ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; M4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M5       ; 48         ; 3A       ; #TDO                            ; output ;              ;                     ; --           ;                 ; --       ; --           ;
-; M6       ; 70         ; 3A       ; Mdatain[11]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; M6       ; 70         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; M7       ; 72         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; M8       ; 86         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; M9       ; 88         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -755,7 +722,7 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; M18      ; 176        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; M19      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; M20      ; 179        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; M21      ; 181        ; 5B       ; R2out                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M21      ; 181        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; M22      ; 175        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; N1       ; 24         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; N2       ; 26         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -786,11 +753,11 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; P5       ; 50         ; 3A       ; #TMS                            ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; P6       ; 62         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; P7       ; 73         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; P8       ; 78         ; 3B       ; Mdatain[17]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; P8       ; 78         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; P9       ; 102        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; P10      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; P11      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; P12      ; 97         ; 3B       ; Mdatain[1]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; P12      ; 97         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; P13      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; P14      ; 142        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; P15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
@@ -805,7 +772,7 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; R2       ;            ; 1A, 2A   ; VCCPD1A2A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; R3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; R4       ; 49         ; 3A       ; ^nCSO, DATA4                    ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
-; R5       ; 60         ; 3A       ; LOin                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R5       ; 60         ; 3A       ; HIin                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; R6       ; 58         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; R7       ; 71         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; R8       ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -817,7 +784,7 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; R14      ; 144        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; R15      ; 161        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; R16      ; 163        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; R17      ; 165        ; 5A       ; Mdatain[19]                     ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; R17      ; 165        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; R18      ;            ; 5A       ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; R19      ;            ; --       ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
 ; R20      ;            ; 5A       ; VREFB5AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -830,38 +797,38 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; T5       ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; T6       ;            ; 3A       ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; T7       ; 66         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; T8       ; 68         ; 3A       ; MDRin                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T8       ; 68         ; 3A       ; R1in                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; T9       ; 83         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; T10      ; 91         ; 3B       ; PCout                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T10      ; 91         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; T11      ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; T12      ; 110        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; T13      ; 112        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; T14      ; 126        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; T15      ; 159        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T16      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; T17      ; 157        ; 5A       ; Mdatain[10]                     ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; T18      ; 155        ; 5A       ; PCin                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; T17      ; 157        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; T18      ; 155        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T19      ; 154        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; T20      ; 156        ; 5A       ; MARin                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; T20      ; 156        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; T22      ; 158        ; 5A       ; MDRout                          ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; T22      ; 158        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; U1       ; 25         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; U2       ; 27         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; U3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; U4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; U5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; U6       ; 67         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; U7       ; 59         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; U7       ; 59         ; 3A       ; RZoutHi                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; U8       ; 61         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U9       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; U10      ; 85         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; U11      ; 94         ; 3B       ; R3out                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; U11      ; 94         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U12      ; 96         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U13      ; 109        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U14      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; U15      ; 128        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U16      ; 150        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; U17      ; 152        ; 4A       ; R5out                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; U17      ; 152        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U18      ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; U19      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; U20      ; 153        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -879,24 +846,24 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; V10      ; 77         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V11      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; V13      ; 107        ; 4A       ; R5in                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; V13      ; 107        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V14      ; 118        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V15      ; 120        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V16      ; 134        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V17      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; V18      ; 149        ; 4A       ; R7out                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; V18      ; 149        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V19      ; 147        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V20      ; 131        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V21      ; 148        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V22      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; W1       ;            ; 2A       ; VREFB2AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; W2       ; 28         ; 2A       ; Mdatain[14]                     ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; W2       ; 28         ; 2A       ; RZinHi                          ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; W3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; W4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; W5       ; 54         ; 3A       ; #TDI                            ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; W6       ;            ; 3A       ; VCCPD3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W7       ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; W8       ; 63         ; 3A       ; Mdatain[8]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; W8       ; 63         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W9       ; 65         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W10      ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W11      ;            ; 3B, 4A   ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -910,7 +877,7 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; W19      ; 133        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W20      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W21      ; 145        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; W22      ; 140        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; W22      ; 140        ; 4A       ; MARout                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; Y1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y3       ; 30         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -919,17 +886,17 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 ; Y6       ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y7       ;            ; 3A       ; VREFB3AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y8       ;            ; 3A       ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; Y9       ; 92         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; Y9       ; 92         ; 3B       ; Rout                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; Y10      ; 90         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y11      ; 103        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y12      ;            ; 3B       ; VREFB3BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y13      ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; Y14      ; 115        ; 4A       ; IRin                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y14      ; 115        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y15      ; 117        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y16      ; 123        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y17      ; 125        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y18      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; Y19      ; 141        ; 4A       ; Mdatain[23]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y19      ; 141        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y20      ; 139        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y21      ; 143        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y22      ; 138        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -937,140 +904,74 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/elec374/cpu_project/phas
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+---------------------------------------------+
-; I/O Assignment Warnings                     ;
-+-------------+-------------------------------+
-; Pin Name    ; Reason                        ;
-+-------------+-------------------------------+
-; clock       ; Incomplete set of assignments ;
-; clear       ; Incomplete set of assignments ;
-; RZinLo      ; Incomplete set of assignments ;
-; RZoutLo     ; Incomplete set of assignments ;
-; RZinHi      ; Incomplete set of assignments ;
-; RZoutHi     ; Incomplete set of assignments ;
-; IRin        ; Incomplete set of assignments ;
-; IRout       ; Incomplete set of assignments ;
-; RYin        ; Incomplete set of assignments ;
-; RYout       ; Incomplete set of assignments ;
-; HIin        ; Incomplete set of assignments ;
-; LOin        ; Incomplete set of assignments ;
-; R3in        ; Incomplete set of assignments ;
-; R3out       ; Incomplete set of assignments ;
-; R4in        ; Incomplete set of assignments ;
-; R4out       ; Incomplete set of assignments ;
-; R7in        ; Incomplete set of assignments ;
-; R7out       ; Incomplete set of assignments ;
-; R5in        ; Incomplete set of assignments ;
-; R5out       ; Incomplete set of assignments ;
-; R2in        ; Incomplete set of assignments ;
-; R2out       ; Incomplete set of assignments ;
-; R6in        ; Incomplete set of assignments ;
-; R6out       ; Incomplete set of assignments ;
-; PCout       ; Incomplete set of assignments ;
-; PCin        ; Incomplete set of assignments ;
-; IncPC       ; Incomplete set of assignments ;
-; MDRin       ; Incomplete set of assignments ;
-; MDRout      ; Incomplete set of assignments ;
-; MDRread     ; Incomplete set of assignments ;
-; Mdatain[0]  ; Incomplete set of assignments ;
-; Mdatain[1]  ; Incomplete set of assignments ;
-; Mdatain[2]  ; Incomplete set of assignments ;
-; Mdatain[3]  ; Incomplete set of assignments ;
-; Mdatain[4]  ; Incomplete set of assignments ;
-; Mdatain[5]  ; Incomplete set of assignments ;
-; Mdatain[6]  ; Incomplete set of assignments ;
-; Mdatain[7]  ; Incomplete set of assignments ;
-; Mdatain[8]  ; Incomplete set of assignments ;
-; Mdatain[9]  ; Incomplete set of assignments ;
-; Mdatain[10] ; Incomplete set of assignments ;
-; Mdatain[11] ; Incomplete set of assignments ;
-; Mdatain[12] ; Incomplete set of assignments ;
-; Mdatain[13] ; Incomplete set of assignments ;
-; Mdatain[14] ; Incomplete set of assignments ;
-; Mdatain[15] ; Incomplete set of assignments ;
-; Mdatain[16] ; Incomplete set of assignments ;
-; Mdatain[17] ; Incomplete set of assignments ;
-; Mdatain[18] ; Incomplete set of assignments ;
-; Mdatain[19] ; Incomplete set of assignments ;
-; Mdatain[20] ; Incomplete set of assignments ;
-; Mdatain[21] ; Incomplete set of assignments ;
-; Mdatain[22] ; Incomplete set of assignments ;
-; Mdatain[23] ; Incomplete set of assignments ;
-; Mdatain[24] ; Incomplete set of assignments ;
-; Mdatain[25] ; Incomplete set of assignments ;
-; Mdatain[26] ; Incomplete set of assignments ;
-; Mdatain[27] ; Incomplete set of assignments ;
-; Mdatain[28] ; Incomplete set of assignments ;
-; Mdatain[29] ; Incomplete set of assignments ;
-; Mdatain[30] ; Incomplete set of assignments ;
-; Mdatain[31] ; Incomplete set of assignments ;
-; MARin       ; Incomplete set of assignments ;
-; MARout      ; Incomplete set of assignments ;
-; clock       ; Missing location assignment   ;
-; clear       ; Missing location assignment   ;
-; RZinLo      ; Missing location assignment   ;
-; RZoutLo     ; Missing location assignment   ;
-; RZinHi      ; Missing location assignment   ;
-; RZoutHi     ; Missing location assignment   ;
-; IRin        ; Missing location assignment   ;
-; IRout       ; Missing location assignment   ;
-; RYin        ; Missing location assignment   ;
-; RYout       ; Missing location assignment   ;
-; HIin        ; Missing location assignment   ;
-; LOin        ; Missing location assignment   ;
-; R3in        ; Missing location assignment   ;
-; R3out       ; Missing location assignment   ;
-; R4in        ; Missing location assignment   ;
-; R4out       ; Missing location assignment   ;
-; R7in        ; Missing location assignment   ;
-; R7out       ; Missing location assignment   ;
-; R5in        ; Missing location assignment   ;
-; R5out       ; Missing location assignment   ;
-; R2in        ; Missing location assignment   ;
-; R2out       ; Missing location assignment   ;
-; R6in        ; Missing location assignment   ;
-; R6out       ; Missing location assignment   ;
-; PCout       ; Missing location assignment   ;
-; PCin        ; Missing location assignment   ;
-; IncPC       ; Missing location assignment   ;
-; MDRin       ; Missing location assignment   ;
-; MDRout      ; Missing location assignment   ;
-; MDRread     ; Missing location assignment   ;
-; Mdatain[0]  ; Missing location assignment   ;
-; Mdatain[1]  ; Missing location assignment   ;
-; Mdatain[2]  ; Missing location assignment   ;
-; Mdatain[3]  ; Missing location assignment   ;
-; Mdatain[4]  ; Missing location assignment   ;
-; Mdatain[5]  ; Missing location assignment   ;
-; Mdatain[6]  ; Missing location assignment   ;
-; Mdatain[7]  ; Missing location assignment   ;
-; Mdatain[8]  ; Missing location assignment   ;
-; Mdatain[9]  ; Missing location assignment   ;
-; Mdatain[10] ; Missing location assignment   ;
-; Mdatain[11] ; Missing location assignment   ;
-; Mdatain[12] ; Missing location assignment   ;
-; Mdatain[13] ; Missing location assignment   ;
-; Mdatain[14] ; Missing location assignment   ;
-; Mdatain[15] ; Missing location assignment   ;
-; Mdatain[16] ; Missing location assignment   ;
-; Mdatain[17] ; Missing location assignment   ;
-; Mdatain[18] ; Missing location assignment   ;
-; Mdatain[19] ; Missing location assignment   ;
-; Mdatain[20] ; Missing location assignment   ;
-; Mdatain[21] ; Missing location assignment   ;
-; Mdatain[22] ; Missing location assignment   ;
-; Mdatain[23] ; Missing location assignment   ;
-; Mdatain[24] ; Missing location assignment   ;
-; Mdatain[25] ; Missing location assignment   ;
-; Mdatain[26] ; Missing location assignment   ;
-; Mdatain[27] ; Missing location assignment   ;
-; Mdatain[28] ; Missing location assignment   ;
-; Mdatain[29] ; Missing location assignment   ;
-; Mdatain[30] ; Missing location assignment   ;
-; Mdatain[31] ; Missing location assignment   ;
-; MARin       ; Missing location assignment   ;
-; MARout      ; Missing location assignment   ;
-+-------------+-------------------------------+
++------------------------------------------+
+; I/O Assignment Warnings                  ;
++----------+-------------------------------+
+; Pin Name ; Reason                        ;
++----------+-------------------------------+
+; clock    ; Incomplete set of assignments ;
+; clear    ; Incomplete set of assignments ;
+; RZinLo   ; Incomplete set of assignments ;
+; RZoutLo  ; Incomplete set of assignments ;
+; RZinHi   ; Incomplete set of assignments ;
+; RZoutHi  ; Incomplete set of assignments ;
+; IRin     ; Incomplete set of assignments ;
+; IRout    ; Incomplete set of assignments ;
+; RYin     ; Incomplete set of assignments ;
+; RYout    ; Incomplete set of assignments ;
+; HIin     ; Incomplete set of assignments ;
+; LOin     ; Incomplete set of assignments ;
+; R2in     ; Incomplete set of assignments ;
+; R1in     ; Incomplete set of assignments ;
+; PCout    ; Incomplete set of assignments ;
+; PCin     ; Incomplete set of assignments ;
+; IncPC    ; Incomplete set of assignments ;
+; MDRin    ; Incomplete set of assignments ;
+; MDRout   ; Incomplete set of assignments ;
+; MDRread  ; Incomplete set of assignments ;
+; MARin    ; Incomplete set of assignments ;
+; MARout   ; Incomplete set of assignments ;
+; RAMwrite ; Incomplete set of assignments ;
+; Gra      ; Incomplete set of assignments ;
+; Grb      ; Incomplete set of assignments ;
+; Grc      ; Incomplete set of assignments ;
+; BAout    ; Incomplete set of assignments ;
+; Rin      ; Incomplete set of assignments ;
+; Rout     ; Incomplete set of assignments ;
+; RCout    ; Incomplete set of assignments ;
+; CONin    ; Incomplete set of assignments ;
+; clock    ; Missing location assignment   ;
+; clear    ; Missing location assignment   ;
+; RZinLo   ; Missing location assignment   ;
+; RZoutLo  ; Missing location assignment   ;
+; RZinHi   ; Missing location assignment   ;
+; RZoutHi  ; Missing location assignment   ;
+; IRin     ; Missing location assignment   ;
+; IRout    ; Missing location assignment   ;
+; RYin     ; Missing location assignment   ;
+; RYout    ; Missing location assignment   ;
+; HIin     ; Missing location assignment   ;
+; LOin     ; Missing location assignment   ;
+; R2in     ; Missing location assignment   ;
+; R1in     ; Missing location assignment   ;
+; PCout    ; Missing location assignment   ;
+; PCin     ; Missing location assignment   ;
+; IncPC    ; Missing location assignment   ;
+; MDRin    ; Missing location assignment   ;
+; MDRout   ; Missing location assignment   ;
+; MDRread  ; Missing location assignment   ;
+; MARin    ; Missing location assignment   ;
+; MARout   ; Missing location assignment   ;
+; RAMwrite ; Missing location assignment   ;
+; Gra      ; Missing location assignment   ;
+; Grb      ; Missing location assignment   ;
+; Grc      ; Missing location assignment   ;
+; BAout    ; Missing location assignment   ;
+; Rin      ; Missing location assignment   ;
+; Rout     ; Missing location assignment   ;
+; RCout    ; Missing location assignment   ;
+; CONin    ; Missing location assignment   ;
++----------+-------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1078,81 +979,48 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
-; |datapath                  ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 64   ; 0            ; |datapath           ; datapath    ; work         ;
+; |datapath                  ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 31   ; 0            ; |datapath           ; datapath    ; work         ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Delay Chain Summary                                                                                                      ;
-+-------------+----------+----+------+------+----+----+-------+--------+------------------------+--------------------------+
-; Name        ; Pin Type ; D1 ; D3_0 ; D3_1 ; D4 ; D5 ; D5 OE ; D5 OCT ; T11 (Postamble Gating) ; T11 (Postamble Ungating) ;
-+-------------+----------+----+------+------+----+----+-------+--------+------------------------+--------------------------+
-; clock       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; clear       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; RZinLo      ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; RZoutLo     ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; RZinHi      ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; RZoutHi     ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; IRin        ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; IRout       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; RYin        ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; RYout       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; HIin        ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; LOin        ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R3in        ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R3out       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R4in        ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R4out       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R7in        ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R7out       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R5in        ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R5out       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R2in        ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R2out       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R6in        ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; R6out       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; PCout       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; PCin        ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; IncPC       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; MDRin       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; MDRout      ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; MDRread     ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[0]  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[1]  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[2]  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[3]  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[4]  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[5]  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[6]  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[7]  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[8]  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[9]  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[10] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[11] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[12] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[13] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[14] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[15] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[16] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[17] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[18] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[19] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[20] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[21] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[22] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[23] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[24] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[25] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[26] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[27] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[28] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[29] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[30] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; Mdatain[31] ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; MARin       ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-; MARout      ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
-+-------------+----------+----+------+------+----+----+-------+--------+------------------------+--------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                                                   ;
++----------+----------+----+------+------+----+----+-------+--------+------------------------+--------------------------+
+; Name     ; Pin Type ; D1 ; D3_0 ; D3_1 ; D4 ; D5 ; D5 OE ; D5 OCT ; T11 (Postamble Gating) ; T11 (Postamble Ungating) ;
++----------+----------+----+------+------+----+----+-------+--------+------------------------+--------------------------+
+; clock    ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; clear    ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; RZinLo   ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; RZoutLo  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; RZinHi   ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; RZoutHi  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; IRin     ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; IRout    ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; RYin     ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; RYout    ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; HIin     ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; LOin     ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; R2in     ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; R1in     ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; PCout    ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; PCin     ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; IncPC    ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; MDRin    ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; MDRout   ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; MDRread  ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; MARin    ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; MARout   ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; RAMwrite ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; Gra      ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; Grb      ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; Grc      ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; BAout    ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; Rin      ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; Rout     ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; RCout    ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
+; CONin    ; Input    ; -- ; --   ; --   ; -- ; -- ; --    ; --     ; --                     ; --                       ;
++----------+----------+----+------+------+----+----+-------+--------+------------------------+--------------------------+
 
 
 +---------------------------------------------------+
@@ -1172,58 +1040,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; RYout               ;                   ;         ;
 ; HIin                ;                   ;         ;
 ; LOin                ;                   ;         ;
-; R3in                ;                   ;         ;
-; R3out               ;                   ;         ;
-; R4in                ;                   ;         ;
-; R4out               ;                   ;         ;
-; R7in                ;                   ;         ;
-; R7out               ;                   ;         ;
-; R5in                ;                   ;         ;
-; R5out               ;                   ;         ;
 ; R2in                ;                   ;         ;
-; R2out               ;                   ;         ;
-; R6in                ;                   ;         ;
-; R6out               ;                   ;         ;
+; R1in                ;                   ;         ;
 ; PCout               ;                   ;         ;
 ; PCin                ;                   ;         ;
 ; IncPC               ;                   ;         ;
 ; MDRin               ;                   ;         ;
 ; MDRout              ;                   ;         ;
 ; MDRread             ;                   ;         ;
-; Mdatain[0]          ;                   ;         ;
-; Mdatain[1]          ;                   ;         ;
-; Mdatain[2]          ;                   ;         ;
-; Mdatain[3]          ;                   ;         ;
-; Mdatain[4]          ;                   ;         ;
-; Mdatain[5]          ;                   ;         ;
-; Mdatain[6]          ;                   ;         ;
-; Mdatain[7]          ;                   ;         ;
-; Mdatain[8]          ;                   ;         ;
-; Mdatain[9]          ;                   ;         ;
-; Mdatain[10]         ;                   ;         ;
-; Mdatain[11]         ;                   ;         ;
-; Mdatain[12]         ;                   ;         ;
-; Mdatain[13]         ;                   ;         ;
-; Mdatain[14]         ;                   ;         ;
-; Mdatain[15]         ;                   ;         ;
-; Mdatain[16]         ;                   ;         ;
-; Mdatain[17]         ;                   ;         ;
-; Mdatain[18]         ;                   ;         ;
-; Mdatain[19]         ;                   ;         ;
-; Mdatain[20]         ;                   ;         ;
-; Mdatain[21]         ;                   ;         ;
-; Mdatain[22]         ;                   ;         ;
-; Mdatain[23]         ;                   ;         ;
-; Mdatain[24]         ;                   ;         ;
-; Mdatain[25]         ;                   ;         ;
-; Mdatain[26]         ;                   ;         ;
-; Mdatain[27]         ;                   ;         ;
-; Mdatain[28]         ;                   ;         ;
-; Mdatain[29]         ;                   ;         ;
-; Mdatain[30]         ;                   ;         ;
-; Mdatain[31]         ;                   ;         ;
 ; MARin               ;                   ;         ;
 ; MARout              ;                   ;         ;
+; RAMwrite            ;                   ;         ;
+; Gra                 ;                   ;         ;
+; Grb                 ;                   ;         ;
+; Grc                 ;                   ;         ;
+; BAout               ;                   ;         ;
+; Rin                 ;                   ;         ;
+; Rout                ;                   ;         ;
+; RCout               ;                   ;         ;
+; CONin               ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
@@ -1306,9 +1141,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 ; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 64        ; 0            ; 0            ; 64        ; 64        ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 31        ; 0            ; 0            ; 31        ; 31        ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Inapplicable ; 64           ; 64           ; 64           ; 64           ; 64           ; 0         ; 64           ; 64           ; 0         ; 0         ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ; 64           ;
+; Total Inapplicable ; 31           ; 31           ; 31           ; 31           ; 31           ; 0         ; 31           ; 31           ; 0         ; 0         ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ; 31           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; clock              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; clear              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
@@ -1322,58 +1157,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; RYout              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; HIin               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; LOin               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; R3in               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; R3out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; R4in               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; R4out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; R7in               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; R7out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; R5in               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; R5out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; R2in               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; R2out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; R6in               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; R6out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; R1in               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; PCout              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; PCin               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; IncPC              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; MDRin              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; MDRout             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; MDRread            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[0]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[1]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[2]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[3]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[4]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[5]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[6]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[7]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[8]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[9]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[10]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[11]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[12]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[13]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[14]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[15]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[16]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[17]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[18]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[19]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[20]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[21]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[22]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[23]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[24]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[25]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[26]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[27]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[28]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[29]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[30]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; Mdatain[31]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; MARin              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; MARout             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; RAMwrite           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; Gra                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; Grb                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; Grc                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; BAout              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; Rin                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; Rout               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; RCout              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; CONin              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
@@ -1431,7 +1233,7 @@ Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 64 pins of 64 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Critical Warning (169085): No exact pin location assignment(s) for 31 pins of 31 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (184020): Starting Fitter periphery placement operations
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
@@ -1447,7 +1249,7 @@ Info (332154): The derive_clock_uncertainty command did not apply clock uncertai
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:03
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
@@ -1458,18 +1260,18 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.12 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/output_files/cpu_phase2.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 7483 megabytes
-    Info: Processing ended: Sat Mar 01 10:47:36 2025
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:56
+    Info: Peak virtual memory: 7481 megabytes
+    Info: Processing ended: Thu Mar 20 15:10:22 2025
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:01:30
 
 
 +----------------------------+

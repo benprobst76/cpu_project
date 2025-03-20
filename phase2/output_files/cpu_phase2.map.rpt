@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cpu_phase2
-Sat Mar 15 10:21:43 2025
+Thu Mar 20 15:12:31 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,49 +10,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: register:RZHi
- 10. Parameter Settings for User Entity Instance: register:RZLo
- 11. Parameter Settings for User Entity Instance: register:RY
- 12. Parameter Settings for User Entity Instance: register:HI
- 13. Parameter Settings for User Entity Instance: register:LO
- 14. Parameter Settings for User Entity Instance: register:PC
- 15. Parameter Settings for User Entity Instance: register:IR
- 16. Parameter Settings for User Entity Instance: register:MAR
- 17. Parameter Settings for User Entity Instance: register:R0
- 18. Parameter Settings for User Entity Instance: register:R1
- 19. Parameter Settings for User Entity Instance: register:R2
- 20. Parameter Settings for User Entity Instance: register:R3
- 21. Parameter Settings for User Entity Instance: register:R4
- 22. Parameter Settings for User Entity Instance: register:R5
- 23. Parameter Settings for User Entity Instance: register:R6
- 24. Parameter Settings for User Entity Instance: register:R7
- 25. Parameter Settings for User Entity Instance: register:R8
- 26. Parameter Settings for User Entity Instance: register:R9
- 27. Parameter Settings for User Entity Instance: register:R10
- 28. Parameter Settings for User Entity Instance: register:R11
- 29. Parameter Settings for User Entity Instance: register:R12
- 30. Parameter Settings for User Entity Instance: register:R13
- 31. Parameter Settings for User Entity Instance: register:R14
- 32. Parameter Settings for User Entity Instance: register:R15
- 33. Parameter Settings for User Entity Instance: register:MDRreg
- 34. Parameter Settings for User Entity Instance: alu:ALU
- 35. Port Connectivity Checks: "select_and_encode:S_and_E"
- 36. Port Connectivity Checks: "alu:ALU|subtraction:sub"
- 37. Port Connectivity Checks: "alu:ALU|addition:adder"
- 38. Port Connectivity Checks: "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op"
- 39. Port Connectivity Checks: "encoder_32_5:BusEncoder"
- 40. Port Connectivity Checks: "register:R2"
- 41. Port Connectivity Checks: "register:R0"
- 42. Port Connectivity Checks: "register:MAR"
- 43. Port Connectivity Checks: "register:PC"
- 44. Post-Synthesis Netlist Statistics for Top Partition
- 45. Elapsed Time Per Partition
- 46. Analysis & Synthesis Messages
- 47. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -75,27 +34,22 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Mar 15 10:21:43 2025       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; cpu_phase2                                  ;
-; Top-level Entity Name           ; datapath                                    ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 29                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Thu Mar 20 15:12:31 2025           ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name               ; cpu_phase2                                  ;
+; Top-level Entity Name       ; datapath                                    ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -201,510 +155,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                          ; Library ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------+---------+
-; subtraction.v                    ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/subtraction.v       ;         ;
-; shr_bits.v                       ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shr_bits.v          ;         ;
-; shra_bits.v                      ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shra_bits.v         ;         ;
-; shl_bits.v                       ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shl_bits.v          ;         ;
-; shla_bits.v                      ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shla_bits.v         ;         ;
-; ror_bits.v                       ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ror_bits.v          ;         ;
-; rol_bits.v                       ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/rol_bits.v          ;         ;
-; register.v                       ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/register.v          ;         ;
-; or_bits.v                        ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/or_bits.v           ;         ;
-; not_bits.v                       ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/not_bits.v          ;         ;
-; negate_bits.v                    ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/negate_bits.v       ;         ;
-; mux_2_1.v                        ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/mux_2_1.v           ;         ;
-; encoder_32_5.v                   ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/encoder_32_5.v      ;         ;
-; division.v                       ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/division.v          ;         ;
-; datapath.v                       ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v          ;         ;
-; bus.v                            ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/bus.v               ;         ;
-; booth_multiplier.v               ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/booth_multiplier.v  ;         ;
-; and_bits.v                       ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/and_bits.v          ;         ;
-; alu.v                            ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v               ;         ;
-; addition.v                       ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/addition.v          ;         ;
-; ram.v                            ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ram.v               ;         ;
-; ram.mem                          ; yes             ; User Memory Initialization File  ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ram.mem             ;         ;
-; decoder_4_16.v                   ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/decoder_4_16.v      ;         ;
-; select_and_encode.v              ; yes             ; User Verilog HDL File            ; C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/select_and_encode.v ;         ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 29    ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 29    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |datapath                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 29   ; 0            ; |datapath           ; datapath    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:RZHi          ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:RZLo          ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:RY            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:HI            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:LO            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:PC            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:IR            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:MAR           ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R0            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R1            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R2            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R3            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R4            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R5            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R6            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R7            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R8            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R9            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R10           ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R11           ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R12           ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R13           ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R14           ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:R15           ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:MDRreg        ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH     ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------+
-; Parameter Settings for User Entity Instance: alu:ALU ;
-+----------------+-------+-----------------------------+
-; Parameter Name ; Value ; Type                        ;
-+----------------+-------+-----------------------------+
-; ADD            ; 00011 ; Unsigned Binary             ;
-; SUB            ; 00100 ; Unsigned Binary             ;
-; AND            ; 00101 ; Unsigned Binary             ;
-; OR             ; 00110 ; Unsigned Binary             ;
-; ROR            ; 00111 ; Unsigned Binary             ;
-; ROL            ; 01000 ; Unsigned Binary             ;
-; SHR            ; 01001 ; Unsigned Binary             ;
-; SHRA           ; 01010 ; Unsigned Binary             ;
-; SHL            ; 01011 ; Unsigned Binary             ;
-; ADDI           ; 01100 ; Unsigned Binary             ;
-; ANDI           ; 01101 ; Unsigned Binary             ;
-; ORI            ; 01110 ; Unsigned Binary             ;
-; DIV            ; 01111 ; Unsigned Binary             ;
-; MUL            ; 10000 ; Unsigned Binary             ;
-; NEG            ; 10001 ; Unsigned Binary             ;
-; NOT            ; 10010 ; Unsigned Binary             ;
-; SHLA           ; 10011 ; Unsigned Binary             ;
-; LOAD           ; 00000 ; Unsigned Binary             ;
-+----------------+-------+-----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "select_and_encode:S_and_E"                                                                 ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; R0_15in[13] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:ALU|subtraction:sub"                                                            ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:ALU|addition:adder"                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op"                 ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; RB[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; RB[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; cin       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cout      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Port Connectivity Checks: "encoder_32_5:BusEncoder" ;
-+-------------------+-------+----------+--------------+
-; Port              ; Type  ; Severity ; Details      ;
-+-------------------+-------+----------+--------------+
-; EncoderIn[31..24] ; Input ; Info     ; Stuck at GND ;
-; EncoderIn[7..6]   ; Input ; Info     ; Stuck at GND ;
-; EncoderIn[1]      ; Input ; Info     ; Stuck at GND ;
-+-------------------+-------+----------+--------------+
-
-
-+----------------------------------------------------+
-; Port Connectivity Checks: "register:R2"            ;
-+------------------+-------+----------+--------------+
-; Port             ; Type  ; Severity ; Details      ;
-+------------------+-------+----------+--------------+
-; BusMuxOut[6..3]  ; Input ; Info     ; Stuck at VCC ;
-; BusMuxOut[31..7] ; Input ; Info     ; Stuck at GND ;
-; BusMuxOut[2..0]  ; Input ; Info     ; Stuck at GND ;
-+------------------+-------+----------+--------------+
-
-
-+---------------------------------------------+
-; Port Connectivity Checks: "register:R0"     ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; BusMuxOut ; Input ; Info     ; Stuck at GND ;
-+-----------+-------+----------+--------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "register:MAR"                                                                                  ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; BusMuxIn[31..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------+
-; Port Connectivity Checks: "register:PC"     ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; BusMuxOut ; Input ; Info     ; Stuck at GND ;
-+-----------+-------+----------+--------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 29                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Mar 15 10:21:23 2025
+    Info: Processing started: Thu Mar 20 15:12:22 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu_phase2 -c cpu_phase2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -790,80 +247,40 @@ Info (12021): Found 1 design units, including 1 entities, in source file select_
     Info (12023): Found entity 1: select_and_encode File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/select_and_encode.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file ldi_tb.v
     Info (12023): Found entity 1: ldi_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ldi_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file con_logic.v
+    Info (12023): Found entity 1: con_logic File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/con_logic.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_2_4.v
+    Info (12023): Found entity 1: decoder_2_4 File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/decoder_2_4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file br_tb.v
+    Info (12023): Found entity 1: br_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/br_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file ff_logic.v
+    Info (12023): Found entity 1: ff_logic File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ff_logic.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at alu.v(49): created implicit net for "sub_cout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 49
-Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at datapath.v(25): object "InPortIn" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-Warning (10036): Verilog HDL or VHDL warning at datapath.v(26): object "OutPortIn" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 26
-Warning (10036): Verilog HDL or VHDL warning at datapath.v(26): object "OutPortOut" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 26
-Info (12128): Elaborating entity "register" for hierarchy "register:RZHi" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 42
-Info (12128): Elaborating entity "mux_2_1" for hierarchy "mux_2_1:MDRmux" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 68
-Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:BusEncoder" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 74
-Warning (10762): Verilog HDL Case Statement warning at encoder_32_5.v(6): can't check case statement for completeness because the case expression has too many possible states File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/encoder_32_5.v Line: 6
-Info (10264): Verilog HDL Case Statement information at encoder_32_5.v(6): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/encoder_32_5.v Line: 6
-Info (12128): Elaborating entity "bus" for hierarchy "bus:Bus" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 83
-Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 94
-Info (12128): Elaborating entity "booth_multiplier" for hierarchy "alu:ALU|booth_multiplier:mul_unit" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 27
-Warning (10199): Verilog HDL Case Statement warning at booth_multiplier.v(29): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/booth_multiplier.v Line: 29
-Warning (10199): Verilog HDL Case Statement warning at booth_multiplier.v(31): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/booth_multiplier.v Line: 31
-Info (12128): Elaborating entity "negate_bits" for hierarchy "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/booth_multiplier.v Line: 15
-Info (12128): Elaborating entity "not_bits" for hierarchy "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|not_bits:not_op" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/negate_bits.v Line: 9
-Info (12128): Elaborating entity "addition" for hierarchy "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/negate_bits.v Line: 10
-Info (12128): Elaborating entity "CLA16" for hierarchy "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op|CLA16:CLA_lower" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/addition.v Line: 20
-Info (12128): Elaborating entity "CLA4" for hierarchy "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op|CLA16:CLA_lower|CLA4:CLA_lower" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/addition.v Line: 49
-Info (12128): Elaborating entity "division" for hierarchy "alu:ALU|division:div_unit" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 34
-Info (12128): Elaborating entity "subtraction" for hierarchy "alu:ALU|subtraction:sub" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 50
-Info (12128): Elaborating entity "and_bits" for hierarchy "alu:ALU|and_bits:and_" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 56
-Info (12128): Elaborating entity "or_bits" for hierarchy "alu:ALU|or_bits:or_" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 62
-Info (12128): Elaborating entity "shr_bits" for hierarchy "alu:ALU|shr_bits:shr" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 78
-Info (12128): Elaborating entity "shra_bits" for hierarchy "alu:ALU|shra_bits:shra" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 84
-Info (12128): Elaborating entity "shl_bits" for hierarchy "alu:ALU|shl_bits:shl" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 90
-Info (12128): Elaborating entity "shla_bits" for hierarchy "alu:ALU|shla_bits:shla" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 96
-Info (12128): Elaborating entity "ror_bits" for hierarchy "alu:ALU|ror_bits:ror" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 102
-Info (12128): Elaborating entity "rol_bits" for hierarchy "alu:ALU|rol_bits:rol" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 108
-Info (12128): Elaborating entity "ram" for hierarchy "ram:RAM" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 103
-Info (12128): Elaborating entity "select_and_encode" for hierarchy "select_and_encode:S_and_E" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 117
-Info (12128): Elaborating entity "decoder_4_16" for hierarchy "select_and_encode:S_and_E|decoder_4_16:decoder" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/select_and_encode.v Line: 10
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(114): object "ResultLo" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 114
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(115): object "ResultHi" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 115
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(119): object "ResultLo" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 119
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(120): object "ResultHi" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 120
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(124): object "ResultLo" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 124
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(125): object "ResultHi" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 125
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(129): object "ResultLo" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 129
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(130): object "ResultHi" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 130
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(134): object "ResultLo" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 134
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(135): object "ResultHi" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 135
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(139): object "ResultLo" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 139
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(140): object "ResultHi" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 140
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(144): object "ResultLo" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 144
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(145): object "ResultHi" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 145
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(149): object "ResultLo" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 149
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(150): object "ResultHi" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 150
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(154): object "ResultLo" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 154
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(155): object "ResultHi" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 155
+Error (10137): Verilog HDL Procedural Assignment error at alu.v(159): object "ResultLo" on left-hand side of assignment must have a variable data type File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 159
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/output_files/cpu_phase2.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 29 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "clear" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RZinLo" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 6
-    Warning (15610): No output dependent on input pin "RZoutLo" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 6
-    Warning (15610): No output dependent on input pin "RZinHi" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 7
-    Warning (15610): No output dependent on input pin "RZoutHi" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 7
-    Warning (15610): No output dependent on input pin "IRin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 8
-    Warning (15610): No output dependent on input pin "IRout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 8
-    Warning (15610): No output dependent on input pin "RYin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 9
-    Warning (15610): No output dependent on input pin "RYout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 9
-    Warning (15610): No output dependent on input pin "HIin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 10
-    Warning (15610): No output dependent on input pin "LOin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 10
-    Warning (15610): No output dependent on input pin "R2in" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 11
-    Warning (15610): No output dependent on input pin "PCout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 13
-    Warning (15610): No output dependent on input pin "PCin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 13
-    Warning (15610): No output dependent on input pin "IncPC" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 14
-    Warning (15610): No output dependent on input pin "MDRin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 16
-    Warning (15610): No output dependent on input pin "MDRout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 16
-    Warning (15610): No output dependent on input pin "MDRread" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 16
-    Warning (15610): No output dependent on input pin "MARin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 18
-    Warning (15610): No output dependent on input pin "MARout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 18
-    Warning (15610): No output dependent on input pin "RAMwrite" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 18
-    Warning (15610): No output dependent on input pin "Gra" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "Grb" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "Grc" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "BAout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "Rin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "Rout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "RCout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 22
-Info (21057): Implemented 29 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 29 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 4813 megabytes
-    Info: Processing ended: Sat Mar 15 10:21:43 2025
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:21
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 19 errors, 2 warnings
+    Error: Peak virtual memory: 4774 megabytes
+    Error: Processing ended: Thu Mar 20 15:12:31 2025
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+

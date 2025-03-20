@@ -2,10 +2,10 @@
 04E80063 //ld  R6, 0x63(R2)  ;(0xDB) = 0x46
 05800054 //ldi R4, 0x54 
 04E80063 //ldi R6, 0x63(R2)   ;R2 = 0x78
-00000000
-00000000
-00000000
-00000000
+9F00001B //brzr R1, 27	;if zero
+9F20001B //brnz R1, 27  ;if nonzero
+9F40001B //brpl R1, 27  ;if positive
+9F60001B //brmi R1, 27  ;if negative
 00000000
 00000000
 00000000

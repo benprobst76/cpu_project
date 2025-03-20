@@ -12,6 +12,7 @@ RYout => ~NO_FANOUT~
 HIin => HIin.IN1
 LOin => LOin.IN1
 R2in => R2in.IN1
+R1in => ~NO_FANOUT~
 PCout => PCout.IN1
 PCin => PCin.IN1
 IncPC => IncPC.IN2
@@ -28,6 +29,7 @@ BAout => BAout.IN1
 Rin => Rin.IN1
 Rout => Rout.IN1
 RCout => RCout.IN1
+CONin => CONin.IN1
 
 
 |datapath|register:RZHi
@@ -5978,6 +5980,7 @@ BusMuxControl[4] => Mux31.IN32
 |datapath|alu:ALU
 clock => clock.IN1
 clear => ~NO_FANOUT~
+Branch => ~NO_FANOUT~
 RA[0] => RA[0].IN12
 RA[1] => RA[1].IN12
 RA[2] => RA[2].IN12
@@ -11657,5 +11660,62 @@ DecoderOut[12] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 DecoderOut[13] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 DecoderOut[14] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 DecoderOut[15] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|con_logic:con
+C2[0] => C2[0].IN1
+C2[1] => C2[1].IN1
+C2[2] => ~NO_FANOUT~
+C2[3] => ~NO_FANOUT~
+Bus[0] => Equal0.IN31
+Bus[1] => Equal0.IN30
+Bus[2] => Equal0.IN29
+Bus[3] => Equal0.IN28
+Bus[4] => Equal0.IN27
+Bus[5] => Equal0.IN26
+Bus[6] => Equal0.IN25
+Bus[7] => Equal0.IN24
+Bus[8] => Equal0.IN23
+Bus[9] => Equal0.IN22
+Bus[10] => Equal0.IN21
+Bus[11] => Equal0.IN20
+Bus[12] => Equal0.IN19
+Bus[13] => Equal0.IN18
+Bus[14] => Equal0.IN17
+Bus[15] => Equal0.IN16
+Bus[16] => Equal0.IN15
+Bus[17] => Equal0.IN14
+Bus[18] => Equal0.IN13
+Bus[19] => Equal0.IN12
+Bus[20] => Equal0.IN11
+Bus[21] => Equal0.IN10
+Bus[22] => Equal0.IN9
+Bus[23] => Equal0.IN8
+Bus[24] => Equal0.IN7
+Bus[25] => Equal0.IN6
+Bus[26] => Equal0.IN5
+Bus[27] => Equal0.IN4
+Bus[28] => Equal0.IN3
+Bus[29] => Equal0.IN2
+Bus[30] => Equal0.IN1
+Bus[31] => Equal0.IN0
+Bus[31] => xor_in[2].IN1
+Bus[31] => xor_in[3].IN1
+Flag <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|con_logic:con|decoder_2_4:decoder
+DecoderIn[0] => Decoder0.IN1
+DecoderIn[1] => Decoder0.IN0
+DecoderOut[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ff_logic:flipflop
+clock => ~NO_FANOUT~
+D => Q.DATAIN
+Q <= D.DB_MAX_OUTPUT_PORT_TYPE
 
 
