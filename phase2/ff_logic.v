@@ -4,7 +4,7 @@ module ff_logic(input wire clock, input wire D, output reg Q);
 		Q <= 0;
 		Qnot <= 1;
 	end
-	always@(clock) 
+	always@(negedge clock) 
 	begin
 		Q <= D;
 		Qnot <= !D;

@@ -46,12 +46,12 @@ module datapath (
 	 register RY (.clear(clear), .clock(clock), .enable(RYin), .BusMuxOut(BusMuxOut), .BusMuxIn(RYOutput));
     register HI (.clear(clear), .clock(clock), .enable(HIin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInHI));
     register LO (.clear(clear), .clock(clock), .enable(LOin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInLO));
-	 register PC (.clear(IncPC), .clock(clock), .enable(PCin), .BusMuxOut({32'h00000004}), .BusMuxIn(BusMuxInPC));
+	 register PC (.clear(IncPC), .clock(clock), .enable(PCin), .BusMuxOut({32'h00000007}), .BusMuxIn(BusMuxInPC));
 	 register IR (.clear(IncPC), .clock(clock), .enable(IRin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInIR));
 	 register MAR (.clear(clear), .clock(clock), .enable(MARin), .BusMuxOut(BusMuxOut), .BusMuxIn(RAMAddressIN));
 	 // Instantiate General Purpose Registers
 	 register R0 (.clear(clear), .clock(clock), .enable(R0_15in[15]), .BusMuxOut({32'h00000000}), .BusMuxIn(BusMuxInR0));
-	 register R1 (.clear(clear), .clock(clock), .enable(R0_15in[14]), .BusMuxOut({32'h00000000}), .BusMuxIn(BusMuxInR1));
+	 register R1 (.clear(clear), .clock(clock), .enable(R1in), .BusMuxOut({32'h0FFFFFF7}), .BusMuxIn(BusMuxInR1));
 	 register R2 (.clear(clear), .clock(clock), .enable(R2in), .BusMuxOut({32'h00000078}), .BusMuxIn(BusMuxInR2));
 	 register R3 (.clear(clear), .clock(clock), .enable(R0_15in[12]), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR3));
 	 register R4 (.clear(clear), .clock(clock), .enable(R0_15in[11]), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR4));
