@@ -1,0 +1,109 @@
+`timescale 1ns / 10ps
+module al_tb; 	
+	reg	PCout, ZHighout, ZLowOut, MDRout, Gra, Grb, Grc, BAout, Rin, Rout; // add any other signals to see in your simulation
+	reg	MARin, ZHighIn, ZLowIn, PCin, MDRin, IRin, IRout, Yin, Yout;
+	reg 	IncPC, Read, Write, MARout, LOin, HIin, RCout, R2in, R1in, R5in, R6in, R8in, CONin;
+	reg	clock, clear, OutPortIn, InPortIn;
+
+	parameter	Default = 4'b0000, T0= 4'b0111, T1= 4'b1000,T2= 4'b1001, T3= 4'b1010, T4= 4'b1011, T5= 4'b1100, T6 = 4'b1101, T7 = 4'b1110;
+
+	reg	[3:0] Present_state = Default;
+
+
+	datapath JAL_DUT( 
+		.clock(clock),
+		.clear(clear),
+		.PCout(PCout),
+		.RZoutLo(ZLowOut),
+		.RZinLo(ZLowIn),
+		.RZinHi(ZHighIn),
+		.RZoutHi(ZHighout),
+		.MDRout(MDRout),
+		.MDRin(MDRin),
+		.MARin(MARin),
+		.MARout(MARout),
+		.PCin(PCin),
+		.IncPC(IncPC),
+		.IRin(IRin),
+		.IRout(IRout),
+		.RYin(Yin),
+		.RYout(Yout),
+		.MDRread(Read),
+		.LOin(LOin),
+		.HIin(HIin),
+		.RAMwrite(Write),
+		.Gra(Gra),
+		.Grb(Grb),
+		.Grc(Grc),
+		.BAout(BAout),
+		.Rin(Rin),
+		.Rout(Rout),
+		.RCout(RCout),
+		.R2in(R2in),
+		.R1in(R1in),
+		.R5in(R5in),
+		.R6in(R6in),
+		.R8in(R8in),
+		.CONin(CONin),
+		.OutPortIn(OutPortIn),
+		.InPortIn(InPortIn)
+	);
+	// add test logic here
+
+	initial 
+		begin
+			clock = 0;
+			clear = 0;
+			forever #10 clock = ~ clock;
+	end
+
+	
+	always @(posedge clock) // finite state machine; if clock rising-edge
+	begin
+		case (Present_state)
+			Default			:	Present_state = T0;
+			T0					:	Present_state = T1;
+			T1					:	Present_state = T2;
+			T2					:	Present_state = T3;
+			T3					:	Present_state = T4;
+			T4					:	Present_state = T5;
+			T5					:	Present_state = T6;
+			T6					:	Present_state = T7;
+
+			endcase
+		end
+
+	always @(Present_state) // do the required job in each state
+	begin
+		case (Present_state)              //assert the required signals in each clock cycle
+			Default: begin
+					PCout <= 0;   ZLowOut <= 0; ZHighout <= 0;  ZHighIn <= 0; MDRout<= 0; CONin <= 0;
+					MARin <= 0;   ZLowIn <= 0;  Rin <= 0; Rout <= 0; Gra <= 0; Grb <= 0; Grc <= 0; BAout <= 0; 
+					PCin <= 0;   MDRin <= 0; IRin  <= 0; Yin <= 0; Yout <= 0; Write <= 0; R2in <= 0; R1in <= 0; R5in <= 0; R6in <= 0; R8in <= 0;
+					IncPC <= 0;   Read <= 0; MARout <= 0; IRout <= 0; LOin <= 0; HIin <= 0; RCout <= 0; InPortIn <= 0; OutPortIn <= 0;
+			end
+			T0: begin			// initiate the program counter and Registers
+					#5 PCin<= 1; R8in <= 1;
+					#15 PCin<= 0; R8in <= 0; 
+			end
+			T1: begin			// fetch the instruction from memory
+					#5 PCout<= 1; MARin <= 1; 
+					#15 PCout<= 0; MARin <= 0;
+			end
+			T2: begin         // load instruction into MDR
+					#5 Read <= 1; MDRin <= 1; PCin <= 1; 
+					#15 Read <= 0; MDRin <= 0; PCin <= 0;
+					
+			end
+			T3: begin         // Put instruction into IR
+					#5 MDRout <= 1; IRin <= 1;
+					#15 MDRout <= 0; IRin <= 0;
+			end
+			
+			T4: begin         // Get the value in RA and put in Output Register
+					#5 Gra <= 1; Rout <= 1; PCin <= 1;
+					#15 Gra <= 0; Rout <= 0; PCin <= 0;
+			end
+		endcase
+	end
+endmodule

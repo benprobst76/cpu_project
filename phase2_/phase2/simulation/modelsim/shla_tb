@@ -1,0 +1,60 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /shla_tb/PCout
+add wave -noupdate /shla_tb/ZHighout
+add wave -noupdate /shla_tb/ZLowOut
+add wave -noupdate /shla_tb/MDRout
+add wave -noupdate /shla_tb/R4out
+add wave -noupdate /shla_tb/R3out
+add wave -noupdate /shla_tb/R7out
+add wave -noupdate /shla_tb/R5out
+add wave -noupdate /shla_tb/R2out
+add wave -noupdate /shla_tb/R6out
+add wave -noupdate /shla_tb/MARin
+add wave -noupdate /shla_tb/ZHighIn
+add wave -noupdate /shla_tb/ZLowIn
+add wave -noupdate /shla_tb/PCin
+add wave -noupdate /shla_tb/MDRin
+add wave -noupdate /shla_tb/IRin
+add wave -noupdate /shla_tb/IRout
+add wave -noupdate /shla_tb/Yin
+add wave -noupdate /shla_tb/Yout
+add wave -noupdate /shla_tb/IncPC
+add wave -noupdate /shla_tb/Read
+add wave -noupdate /shla_tb/MARout
+add wave -noupdate /shla_tb/LOin
+add wave -noupdate /shla_tb/HIin
+add wave -noupdate /shla_tb/R4in
+add wave -noupdate /shla_tb/R3in
+add wave -noupdate /shla_tb/R7in
+add wave -noupdate /shla_tb/R5in
+add wave -noupdate /shla_tb/R2in
+add wave -noupdate /shla_tb/R6in
+add wave -noupdate /shla_tb/clock
+add wave -noupdate /shla_tb/clear
+add wave -noupdate /shla_tb/Mdatain
+add wave -noupdate /shla_tb/Present_state
+add wave -noupdate -radix hexadecimal /shla_tb/SHLA_DUT/R3/BusMuxIn
+add wave -noupdate /shla_tb/SHLA_DUT/R3/enable
+add wave -noupdate -radix hexadecimal /shla_tb/SHLA_DUT/R4/BusMuxIn
+add wave -noupdate /shla_tb/SHLA_DUT/R4/enable
+add wave -noupdate -radix hexadecimal /shla_tb/SHLA_DUT/R7/BusMuxIn
+add wave -noupdate /shla_tb/SHLA_DUT/R7/enable
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {399705 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 235
+configure wave -valuecolwidth 293
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ns
+update
+WaveRestoreZoom {0 ps} {420 ns}

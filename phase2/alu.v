@@ -11,7 +11,7 @@ module alu (
     parameter ADD = 5'b00011, SUB = 5'b00100, AND = 5'b00101, OR = 5'b00110, ROR = 5'b00111,
 				  ROL = 5'b01000, SHR = 5'b01001, SHRA = 5'b01010, SHL = 5'b01011, ADDI = 5'b01100,
 				  ANDI = 5'b01101, ORI = 5'b01110, DIV = 5'b01111, MUL = 5'b10000, NEG = 5'b10001,
-				  NOT = 5'b10010, SHLA = 5'b11111, LOAD = 5'b00000, BR = 5'b10011;
+				  NOT = 5'b10010, SHLA = 5'b11111, LOAD = 5'b00000, BR = 5'b10011, MFLO = 5'b11000;
 
     // Wires for multiplication and division Z_Regs
     wire [31:0]adder_sum, sub_diff, and_out, or_out, negate_out, not_out, shr_out, shra_out, shl_out, shla_out, ror_out, rol_out;
@@ -194,6 +194,21 @@ module alu (
 						ResultLo[31:0] <= RA;
 						ResultHi[31:0] <= 32'd0;
 					end 
+				end
+				
+				ADDI: begin
+					ResultLo[31:0] <= adder_sum[31:0];
+					ResultHi[31:0] <= 32'd0;
+				end
+				
+				ORI: begin
+					ResultLo[31:0] <= or_out[31:0];
+					ResultHi[31:0] <= 32'd0;
+				end
+				
+				ANDI: begin
+					ResultLo[31:0] <= and_out[31:0];
+					ResultHi[31:0] <= 32'd0;
 				end
 				
             default: begin 

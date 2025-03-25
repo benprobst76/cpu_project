@@ -2,8 +2,8 @@
 module br_tb; 	
 	reg	PCout, ZHighout, ZLowOut, MDRout, Gra, Grb, Grc, BAout, Rin, Rout; // add any other signals to see in your simulation
 	reg	MARin, ZHighIn, ZLowIn, PCin, MDRin, IRin, IRout, Yin, Yout;
-	reg 	IncPC, Read, Write, MARout, LOin, HIin, RCout, R2in, R1in, CONin;
-	reg	clock, clear;
+	reg 	IncPC, Read, Write, MARout, LOin, HIin, RCout, R2in, R1in, R5in, R6in, CONin;
+	reg	clock, clear, OutPortIn, InPortIn, InPortOut, LOout, HIout;
 
 	parameter	Default = 4'b0000, T0= 4'b0111, T1= 4'b1000,T2= 4'b1001, T3= 4'b1010, T4= 4'b1011, T5= 4'b1100, T6 = 4'b1101, T7 = 4'b1110;
 
@@ -41,7 +41,13 @@ module br_tb;
 		.RCout(RCout),
 		.R2in(R2in),
 		.R1in(R1in),
-		.CONin(CONin)		
+		.R6in(R6in),
+		.CONin(CONin),
+		.OutPortIn(OutPortIn),
+		.InPortIn(InPortIn),
+		.InPortOut(InPortOut),
+		.LOout(LOout),
+		.HIout(HIout)	
 	);
 	// add test logic here
 
@@ -74,8 +80,8 @@ module br_tb;
 			Default: begin
 					PCout <= 0;   ZLowOut <= 0; ZHighout <= 0;  ZHighIn <= 0; MDRout<= 0; CONin <= 0;
 					MARin <= 0;   ZLowIn <= 0;  Rin <= 0; Rout <= 0; Gra <= 0; Grb <= 0; Grc <= 0; BAout <= 0; 
-					PCin <= 0;   MDRin <= 0;   IRin  <= 0;   Yin <= 0; Yout <= 0; Write <= 0; R2in <= 0; R1in <= 0;
-					IncPC <= 0;   Read <= 0; MARout <= 0; IRout <= 0; LOin <= 0; HIin <= 0; RCout <= 0;
+					PCin <= 0;   MDRin <= 0; IRin  <= 0; Yin <= 0; Yout <= 0; Write <= 0; R2in <= 0; R1in <= 0; R5in <= 0; R6in <= 0;
+					IncPC <= 0;   Read <= 0; MARout <= 0; IRout <= 0; LOin <= 0; HIin <= 0; RCout <= 0; InPortIn <= 0; OutPortIn <= 0; InPortOut <= 0; HIout <= 0; LOout <= 0;
 			end
 			T0: begin			// initiate the program counter and R1
 					#5 PCin<= 1; R1in <= 1;

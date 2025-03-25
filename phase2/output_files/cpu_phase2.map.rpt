@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cpu_phase2
-Sat Mar 22 19:25:01 2025
+Mon Mar 24 14:03:46 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -38,19 +38,28 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  30. Parameter Settings for User Entity Instance: register:R13
  31. Parameter Settings for User Entity Instance: register:R14
  32. Parameter Settings for User Entity Instance: register:R15
- 33. Parameter Settings for User Entity Instance: register:MDRreg
- 34. Parameter Settings for User Entity Instance: alu:ALU
- 35. Port Connectivity Checks: "select_and_encode:S_and_E"
- 36. Port Connectivity Checks: "alu:ALU|subtraction:sub"
- 37. Port Connectivity Checks: "alu:ALU|addition:adder"
- 38. Port Connectivity Checks: "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op"
- 39. Port Connectivity Checks: "encoder_32_5:BusEncoder"
- 40. Port Connectivity Checks: "register:R0"
- 41. Port Connectivity Checks: "register:MAR"
- 42. Post-Synthesis Netlist Statistics for Top Partition
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
- 45. Analysis & Synthesis Suppressed Messages
+ 33. Parameter Settings for User Entity Instance: register:inputPort
+ 34. Parameter Settings for User Entity Instance: register:outputPort
+ 35. Parameter Settings for User Entity Instance: register:MDRreg
+ 36. Parameter Settings for User Entity Instance: alu:ALU
+ 37. Port Connectivity Checks: "select_and_encode:S_and_E"
+ 38. Port Connectivity Checks: "alu:ALU|subtraction:sub"
+ 39. Port Connectivity Checks: "alu:ALU|addition:adder"
+ 40. Port Connectivity Checks: "alu:ALU|booth_multiplier:mul_unit|negate_bits:negate_ra|addition:add_op"
+ 41. Port Connectivity Checks: "encoder_32_5:BusEncoder"
+ 42. Port Connectivity Checks: "register:outputPort"
+ 43. Port Connectivity Checks: "register:inputPort"
+ 44. Port Connectivity Checks: "register:R6"
+ 45. Port Connectivity Checks: "register:R2"
+ 46. Port Connectivity Checks: "register:R1"
+ 47. Port Connectivity Checks: "register:R0"
+ 48. Port Connectivity Checks: "register:MAR"
+ 49. Port Connectivity Checks: "register:PC"
+ 50. Port Connectivity Checks: "register:LO"
+ 51. Post-Synthesis Netlist Statistics for Top Partition
+ 52. Elapsed Time Per Partition
+ 53. Analysis & Synthesis Messages
+ 54. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -76,14 +85,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Mar 22 19:25:01 2025       ;
+; Analysis & Synthesis Status     ; Successful - Mon Mar 24 14:03:46 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; cpu_phase2                                  ;
 ; Top-level Entity Name           ; datapath                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 63                                          ;
+; Total pins                      ; 37                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -250,13 +259,13 @@ refer to the applicable agreement for further details.
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 63    ;
+; I/O pins                                    ; 37    ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; clock ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 63    ;
+; Total fan-out                               ; 37    ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -266,7 +275,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |datapath                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 63   ; 0            ; |datapath           ; datapath    ; work         ;
+; |datapath                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 37   ; 0            ; |datapath           ; datapath    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -551,6 +560,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:inputPort     ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH     ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:outputPort    ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH     ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: register:MDRreg        ;
 +----------------+----------------------------------+-----------------+
 ; Parameter Name ; Value                            ; Type            ;
@@ -585,17 +616,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; SHLA           ; 11111 ; Unsigned Binary             ;
 ; LOAD           ; 00000 ; Unsigned Binary             ;
 ; BR             ; 10011 ; Unsigned Binary             ;
+; MFLO           ; 11000 ; Unsigned Binary             ;
 +----------------+-------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "select_and_encode:S_and_E"                                                                 ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; R0_15in[13] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "select_and_encode:S_and_E"                                                                     ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; R0_15in[14..13] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; R0_15in[9]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -636,8 +669,71 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port              ; Type  ; Severity ; Details      ;
 +-------------------+-------+----------+--------------+
 ; EncoderIn[31..24] ; Input ; Info     ; Stuck at GND ;
-; EncoderIn[7..6]   ; Input ; Info     ; Stuck at GND ;
-; EncoderIn[1]      ; Input ; Info     ; Stuck at GND ;
++-------------------+-------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:outputPort"                                                                    ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; BusMuxIn ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "register:inputPort"      ;
++-------------------+-------+----------+--------------+
+; Port              ; Type  ; Severity ; Details      ;
++-------------------+-------+----------+--------------+
+; BusMuxOut[9..8]   ; Input ; Info     ; Stuck at VCC ;
+; BusMuxOut[31..15] ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[13..10] ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[7..6]   ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[4..1]   ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[14]     ; Input ; Info     ; Stuck at VCC ;
+; BusMuxOut[5]      ; Input ; Info     ; Stuck at VCC ;
+; BusMuxOut[0]      ; Input ; Info     ; Stuck at VCC ;
++-------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "register:R6"             ;
++-------------------+-------+----------+--------------+
+; Port              ; Type  ; Severity ; Details      ;
++-------------------+-------+----------+--------------+
+; BusMuxOut[5..4]   ; Input ; Info     ; Stuck at VCC ;
+; BusMuxOut[31..13] ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[11..10] ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[8..6]   ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[1..0]   ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[12]     ; Input ; Info     ; Stuck at VCC ;
+; BusMuxOut[9]      ; Input ; Info     ; Stuck at VCC ;
+; BusMuxOut[3]      ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[2]      ; Input ; Info     ; Stuck at VCC ;
++-------------------+-------+----------+--------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "register:R2"            ;
++------------------+-------+----------+--------------+
+; Port             ; Type  ; Severity ; Details      ;
++------------------+-------+----------+--------------+
+; BusMuxOut[6..3]  ; Input ; Info     ; Stuck at VCC ;
+; BusMuxOut[31..7] ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[2..0]  ; Input ; Info     ; Stuck at GND ;
++------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "register:R1"             ;
++-------------------+-------+----------+--------------+
+; Port              ; Type  ; Severity ; Details      ;
++-------------------+-------+----------+--------------+
+; BusMuxOut[27..4]  ; Input ; Info     ; Stuck at VCC ;
+; BusMuxOut[2..0]   ; Input ; Info     ; Stuck at VCC ;
+; BusMuxOut[31..28] ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[3]      ; Input ; Info     ; Stuck at GND ;
 +-------------------+-------+----------+--------------+
 
 
@@ -659,12 +755,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------+
+; Port Connectivity Checks: "register:PC"            ;
++------------------+-------+----------+--------------+
+; Port             ; Type  ; Severity ; Details      ;
++------------------+-------+----------+--------------+
+; BusMuxOut[3..2]  ; Input ; Info     ; Stuck at VCC ;
+; BusMuxOut[31..4] ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[1]     ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[0]     ; Input ; Info     ; Stuck at VCC ;
++------------------+-------+----------+--------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "register:LO"            ;
++------------------+-------+----------+--------------+
+; Port             ; Type  ; Severity ; Details      ;
++------------------+-------+----------+--------------+
+; BusMuxOut[31..3] ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[2]     ; Input ; Info     ; Stuck at VCC ;
+; BusMuxOut[1]     ; Input ; Info     ; Stuck at GND ;
+; BusMuxOut[0]     ; Input ; Info     ; Stuck at VCC ;
++------------------+-------+----------+--------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-------------------+---------------------------------+
 ; Type              ; Count                           ;
 +-------------------+---------------------------------+
-; boundary_port     ; 63                              ;
+; boundary_port     ; 37                              ;
 ;                   ;                                 ;
 ; Max LUT depth     ; 0.00                            ;
 ; Average LUT depth ; 0.00                            ;
@@ -686,7 +806,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Mar 22 19:24:38 2025
+    Info: Processing started: Mon Mar 24 14:03:24 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu_phase2 -c cpu_phase2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -780,18 +900,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file br_tb.v
     Info (12023): Found entity 1: br_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/br_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file ff_logic.v
     Info (12023): Found entity 1: ff_logic File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ff_logic.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file out_tb.v
+    Info (12023): Found entity 1: out_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/out_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file in_tb.v
+    Info (12023): Found entity 1: in_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/in_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file addi_tb.v
+    Info (12023): Found entity 1: addi_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/addi_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file ori_tb.v
+    Info (12023): Found entity 1: ori_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ori_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file andi_tb.v
+    Info (12023): Found entity 1: andi_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/andi_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mflo_tb.v
+    Info (12023): Found entity 1: mflo_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/mflo_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mfhi_tb.v
+    Info (12023): Found entity 1: mfhi_tb File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/mfhi_tb.v Line: 2
 Warning (10236): Verilog HDL Implicit Net warning at alu.v(49): created implicit net for "sub_cout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 49
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at datapath.v(28): object "InPortIn" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 28
-Warning (10036): Verilog HDL or VHDL warning at datapath.v(29): object "OutPortIn" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 29
-Warning (10036): Verilog HDL or VHDL warning at datapath.v(29): object "OutPortOut" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 29
-Info (12128): Elaborating entity "register" for hierarchy "register:RZHi" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 45
-Info (12128): Elaborating entity "mux_2_1" for hierarchy "mux_2_1:MDRmux" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 71
-Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:BusEncoder" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 77
+Warning (10036): Verilog HDL or VHDL warning at datapath.v(26): object "OutPortOut" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 26
+Info (12128): Elaborating entity "register" for hierarchy "register:RZHi" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 43
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "mux_2_1:MDRmux" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 72
+Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:BusEncoder" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 78
 Warning (10762): Verilog HDL Case Statement warning at encoder_32_5.v(6): can't check case statement for completeness because the case expression has too many possible states File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/encoder_32_5.v Line: 6
 Info (10264): Verilog HDL Case Statement information at encoder_32_5.v(6): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/encoder_32_5.v Line: 6
-Info (12128): Elaborating entity "bus" for hierarchy "bus:Bus" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 86
-Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 98
+Info (12128): Elaborating entity "bus" for hierarchy "bus:Bus" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 87
+Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 99
 Info (12128): Elaborating entity "booth_multiplier" for hierarchy "alu:ALU|booth_multiplier:mul_unit" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 27
 Warning (10199): Verilog HDL Case Statement warning at booth_multiplier.v(29): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/booth_multiplier.v Line: 29
 Warning (10199): Verilog HDL Case Statement warning at booth_multiplier.v(31): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/booth_multiplier.v Line: 31
@@ -810,19 +942,17 @@ Info (12128): Elaborating entity "shl_bits" for hierarchy "alu:ALU|shl_bits:shl"
 Info (12128): Elaborating entity "shla_bits" for hierarchy "alu:ALU|shla_bits:shla" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 96
 Info (12128): Elaborating entity "ror_bits" for hierarchy "alu:ALU|ror_bits:ror" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 102
 Info (12128): Elaborating entity "rol_bits" for hierarchy "alu:ALU|rol_bits:rol" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v Line: 108
-Info (12128): Elaborating entity "ram" for hierarchy "ram:RAM" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 107
-Info (12128): Elaborating entity "select_and_encode" for hierarchy "select_and_encode:S_and_E" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 121
+Info (12128): Elaborating entity "ram" for hierarchy "ram:RAM" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 108
+Info (12128): Elaborating entity "select_and_encode" for hierarchy "select_and_encode:S_and_E" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 122
 Info (12128): Elaborating entity "decoder_4_16" for hierarchy "select_and_encode:S_and_E|decoder_4_16:decoder" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/select_and_encode.v Line: 10
-Info (12128): Elaborating entity "con_logic" for hierarchy "con_logic:con" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 128
+Info (12128): Elaborating entity "con_logic" for hierarchy "con_logic:con" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 129
 Info (12128): Elaborating entity "decoder_2_4" for hierarchy "con_logic:con|decoder_2_4:decoder" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/con_logic.v Line: 11
-Info (12128): Elaborating entity "ff_logic" for hierarchy "ff_logic:flipflop" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 135
+Info (12128): Elaborating entity "ff_logic" for hierarchy "ff_logic:flipflop" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 136
 Warning (10036): Verilog HDL or VHDL warning at ff_logic.v(2): object "Qnot" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ff_logic.v Line: 2
-Warning (10235): Verilog HDL Always Construct warning at ff_logic.v(9): variable "D" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ff_logic.v Line: 9
-Warning (10235): Verilog HDL Always Construct warning at ff_logic.v(10): variable "D" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ff_logic.v Line: 10
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/output_files/cpu_phase2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 63 input pin(s) that do not drive logic
+Warning (21074): Design contains 37 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clock" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 4
     Warning (15610): No output dependent on input pin "clear" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 4
     Warning (15610): No output dependent on input pin "RZinLo" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 6
@@ -835,65 +965,39 @@ Warning (21074): Design contains 63 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "RYout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 9
     Warning (15610): No output dependent on input pin "HIin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 10
     Warning (15610): No output dependent on input pin "LOin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "HIout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "LOout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 10
     Warning (15610): No output dependent on input pin "R2in" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 11
     Warning (15610): No output dependent on input pin "R1in" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 11
-    Warning (15610): No output dependent on input pin "PCout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 13
-    Warning (15610): No output dependent on input pin "PCin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 13
-    Warning (15610): No output dependent on input pin "IncPC" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 14
-    Warning (15610): No output dependent on input pin "MDRin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 16
-    Warning (15610): No output dependent on input pin "MDRout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 16
-    Warning (15610): No output dependent on input pin "MDRread" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 16
-    Warning (15610): No output dependent on input pin "MARin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 18
-    Warning (15610): No output dependent on input pin "MARout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 18
-    Warning (15610): No output dependent on input pin "RAMwrite" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 18
-    Warning (15610): No output dependent on input pin "Gra" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "Grb" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "Grc" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "BAout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "Rin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "Rout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "RCout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "CONin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "BusMuxOut[0]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[1]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[2]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[3]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[4]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[5]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[6]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[7]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[8]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[9]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[10]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[11]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[12]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[13]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[14]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[15]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[16]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[17]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[18]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[19]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[20]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[21]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[22]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[23]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[24]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[25]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[26]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[27]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[28]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[29]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[30]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "BusMuxOut[31]" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 25
-Info (21057): Implemented 63 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 63 input pins
+    Warning (15610): No output dependent on input pin "R6in" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 11
+    Warning (15610): No output dependent on input pin "OutPortIn" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 13
+    Warning (15610): No output dependent on input pin "InPortIn" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 13
+    Warning (15610): No output dependent on input pin "InPortOut" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 13
+    Warning (15610): No output dependent on input pin "PCout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 14
+    Warning (15610): No output dependent on input pin "PCin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 14
+    Warning (15610): No output dependent on input pin "IncPC" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 15
+    Warning (15610): No output dependent on input pin "MDRin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 17
+    Warning (15610): No output dependent on input pin "MDRout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 17
+    Warning (15610): No output dependent on input pin "MDRread" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 17
+    Warning (15610): No output dependent on input pin "MARin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 19
+    Warning (15610): No output dependent on input pin "MARout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 19
+    Warning (15610): No output dependent on input pin "RAMwrite" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 19
+    Warning (15610): No output dependent on input pin "Gra" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 21
+    Warning (15610): No output dependent on input pin "Grb" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 21
+    Warning (15610): No output dependent on input pin "Grc" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 21
+    Warning (15610): No output dependent on input pin "BAout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 21
+    Warning (15610): No output dependent on input pin "Rin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 21
+    Warning (15610): No output dependent on input pin "Rout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 21
+    Warning (15610): No output dependent on input pin "RCout" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 21
+    Warning (15610): No output dependent on input pin "CONin" File: C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v Line: 24
+Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 37 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 75 warnings
-    Info: Peak virtual memory: 4812 megabytes
-    Info: Processing ended: Sat Mar 22 19:25:01 2025
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:47
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
+    Info: Peak virtual memory: 4813 megabytes
+    Info: Processing ended: Mon Mar 24 14:03:46 2025
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:46
 
 
 +------------------------------------------+

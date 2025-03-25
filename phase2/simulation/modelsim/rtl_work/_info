@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/simulation/modelsim
 vaddition
-Z1 !s110 1742733981
+Z1 !s110 1742867864
 !i10b 1
 !s100 kl1<>5@I1dgl<EXPNd4i:0
 Ig:`W@1`OfJ;7DXX@JjDc?2
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1742733981.000000
+Z7 !s108 1742867864.000000
 Z8 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/addition.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/addition.v|
 !i113 1
@@ -33,11 +33,11 @@ Z12 tCvgOpt 0
 valu
 R1
 !i10b 1
-!s100 dV4GbH`GiB2G:k`]0HPTl2
-IIRILn]MR5h40XMf[S[eCD2
+!s100 9I?oY5JDlNjJ8HKCFl0C01
+II;i8YU]7QG]aHa>jgLJIT0
 R2
 R0
-w1742498411
+w1742838569
 8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v
 FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/alu.v
 L0 3
@@ -92,28 +92,6 @@ r1
 R7
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/booth_multiplier.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/booth_multiplier.v|
-!i113 1
-R10
-R11
-R12
-vbr_tb
-Z13 !s110 1742733982
-!i10b 1
-!s100 R7ZNU3NX38JeXO@hTL@hW3
-I==9W4UZAEVcnIkjTIBbfm2
-R2
-R0
-w1742691523
-8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/br_tb.v
-FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/br_tb.v
-L0 2
-R6
-r1
-!s85 0
-31
-Z14 !s108 1742733982.000000
-!s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/br_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/br_tb.v|
 !i113 1
 R10
 R11
@@ -209,13 +187,13 @@ R10
 R11
 R12
 vdatapath
-Z15 !s110 1742733980
+R1
 !i10b 1
-!s100 67D13H>4`LYaA<SAcSg_@1
-IK7PJQ@V4[D:Bhb1Y]MAK61
+!s100 Gc0kne2:?b94QDO`^[Abn0
+I38?M>58d1[5j^R7FRS0OX3
 R2
 R0
-w1742733969
+w1742867856
 8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v
 FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v
 L0 3
@@ -223,7 +201,7 @@ R6
 r1
 !s85 0
 31
-Z16 !s108 1742733980.000000
+Z13 !s108 1742867863.000000
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/datapath.v|
 !i113 1
@@ -231,7 +209,7 @@ R10
 R11
 R12
 vdecoder_2_4
-R13
+R1
 !i10b 1
 !s100 X0j3mza`^Pfnmz6R_;aE50
 I7a6WUX7V]86]^BaK3@QMW1
@@ -245,7 +223,7 @@ R6
 r1
 !s85 0
 31
-R14
+R7
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/decoder_2_4.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/decoder_2_4.v|
 !i113 1
@@ -275,7 +253,7 @@ R10
 R11
 R12
 vdivision
-R15
+Z14 !s110 1742867863
 !i10b 1
 !s100 Km;0YR>BVlEi@5KGbiM6V2
 IPBzFSNn2Il9ZEW7Z?n[U`0
@@ -289,7 +267,7 @@ R6
 r1
 !s85 0
 31
-R16
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/division.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/division.v|
 !i113 1
@@ -297,7 +275,7 @@ R10
 R11
 R12
 vencoder_32_5
-R15
+R14
 !i10b 1
 !s100 =]CQS@AejHaZE8Xa2L6J;2
 IZEXaYDKD8]0VJTWX^iJ9J0
@@ -311,7 +289,7 @@ R6
 r1
 !s85 0
 31
-R16
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/encoder_32_5.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/encoder_32_5.v|
 !i113 1
@@ -319,7 +297,7 @@ R10
 R11
 R12
 vff_logic
-R13
+R1
 !i10b 1
 !s100 :EjN6=WC@ME=U0<=oBYz11
 I^Xi;KNWC@dUj3Gj`J6Q=l1
@@ -333,15 +311,37 @@ R6
 r1
 !s85 0
 31
-R14
+R7
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ff_logic.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ff_logic.v|
 !i113 1
 R10
 R11
 R12
+vld_tb
+R1
+!i10b 1
+!s100 lee:<m>nAQZ8`7o9WCn]m2
+IR9_j9Q;7`?0G<alSAPRDR3
+R2
+R0
+w1742840040
+8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ld_tb.v
+FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ld_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ld_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ld_tb.v|
+!i113 1
+R10
+R11
+R12
 vmux_2_1
-R15
+R14
 !i10b 1
 !s100 2LY<F;?N0T0ZBLD]XKVd;3
 I4Fk1nM_[BojjoNzTlT76K0
@@ -355,7 +355,7 @@ R6
 r1
 !s85 0
 31
-R16
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/mux_2_1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/mux_2_1.v|
 !i113 1
@@ -363,7 +363,7 @@ R10
 R11
 R12
 vnegate_bits
-R15
+R14
 !i10b 1
 !s100 deElGO3gzi?0EEE5`[CA^3
 IM?Hi5`zV2G1XV>gbTa:7K0
@@ -377,7 +377,7 @@ R6
 r1
 !s85 0
 31
-R16
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/negate_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/negate_bits.v|
 !i113 1
@@ -385,13 +385,13 @@ R10
 R11
 R12
 vnot_bits
-R15
+R14
 !i10b 1
 !s100 I;ZeZbShBXWE6=L_]L?LI3
 IBF@OcO8dLCni6caAPzhch0
 R2
 R0
-Z17 w1738009164
+Z15 w1738009164
 8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/not_bits.v
 FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/not_bits.v
 L0 3
@@ -399,7 +399,7 @@ R6
 r1
 !s85 0
 31
-R16
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/not_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/not_bits.v|
 !i113 1
@@ -407,7 +407,7 @@ R10
 R11
 R12
 vor_bits
-R15
+R14
 !i10b 1
 !s100 j8cK9^@I4[CjN`0Xjm8GS1
 I^AID0RS5_@@Bl1k@cLlRe0
@@ -421,7 +421,7 @@ R6
 r1
 !s85 0
 31
-R16
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/or_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/or_bits.v|
 !i113 1
@@ -429,7 +429,7 @@ R10
 R11
 R12
 vram
-R13
+R1
 !i10b 1
 !s100 XF>aM<NJ^<`86E1GB25`b1
 IA?]k1C:8JPmH[DN8iQL=<0
@@ -443,7 +443,7 @@ R6
 r1
 !s85 0
 31
-R14
+R7
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ram.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ram.v|
 !i113 1
@@ -451,13 +451,13 @@ R10
 R11
 R12
 vregister
-R15
+R14
 !i10b 1
 !s100 >fdYhNo]:=XkeSdmfXiX=1
 I@eb8l3O68e_g1;1AaAL^b3
 R2
 R0
-R17
+R15
 8C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/register.v
 FC:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/register.v
 L0 3
@@ -465,7 +465,7 @@ R6
 r1
 !s85 0
 31
-Z18 !s108 1742733979.000000
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/register.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/register.v|
 !i113 1
@@ -473,7 +473,7 @@ R10
 R11
 R12
 vrol_bits
-Z19 !s110 1742733979
+R14
 !i10b 1
 !s100 bOhQDf>RTH3R7[mOfo]ML2
 IHU[1IDeOX]]^D_Fi5eSL;2
@@ -487,7 +487,7 @@ R6
 r1
 !s85 0
 31
-R18
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/rol_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/rol_bits.v|
 !i113 1
@@ -495,7 +495,7 @@ R10
 R11
 R12
 vror_bits
-R19
+R14
 !i10b 1
 !s100 4`B[TCbT;T3BGc5;8WBAA1
 IncjJ<MXnW`;ZOGlWV8[1o1
@@ -509,7 +509,7 @@ R6
 r1
 !s85 0
 31
-R18
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ror_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ror_bits.v|
 !i113 1
@@ -539,7 +539,7 @@ R10
 R11
 R12
 vshl_bits
-R19
+R14
 !i10b 1
 !s100 1bN^?@CWP^B@_@[Z_>b4A2
 IR5dD^OIFJ3gV;Z^CEQT@N2
@@ -553,7 +553,7 @@ R6
 r1
 !s85 0
 31
-R18
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shl_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shl_bits.v|
 !i113 1
@@ -561,7 +561,7 @@ R10
 R11
 R12
 vshla_bits
-R19
+R14
 !i10b 1
 !s100 ohW:SMkm5kK[1edb6^iBG1
 IeRPn5<K[klAOhAHcfhb>o2
@@ -575,7 +575,7 @@ R6
 r1
 !s85 0
 31
-R18
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shla_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shla_bits.v|
 !i113 1
@@ -583,7 +583,7 @@ R10
 R11
 R12
 vshr_bits
-R19
+R14
 !i10b 1
 !s100 UoFAzJY_hMI1`N^263Y530
 I7nNL3a=jAV[o3d[o`DnH92
@@ -597,7 +597,7 @@ R6
 r1
 !s85 0
 31
-R18
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shr_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shr_bits.v|
 !i113 1
@@ -605,7 +605,7 @@ R10
 R11
 R12
 vshra_bits
-R19
+R14
 !i10b 1
 !s100 1i:BObG;cdehU?@C]Ofb;0
 I:8FThB5<D7eW_SC1VDYP_2
@@ -619,7 +619,7 @@ R6
 r1
 !s85 0
 31
-R18
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shra_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/shra_bits.v|
 !i113 1
@@ -627,7 +627,7 @@ R10
 R11
 R12
 vsubtraction
-R19
+R14
 !i10b 1
 !s100 WY?PWc3oY9VBoY9fNmbf^3
 I@R3K2=_Fe8>[;N6DCmV;^3
@@ -641,7 +641,7 @@ R6
 r1
 !s85 0
 31
-R18
+R13
 !s107 C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/subtraction.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2|C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/subtraction.v|
 !i113 1

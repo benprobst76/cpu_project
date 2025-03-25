@@ -7,9 +7,10 @@ module datapath (
 	 input wire RZinHi, RZoutHi,          // Control signals for Z register
 	 input wire IRin, IRout,				  // Instruction register
 	 input wire RYin, RYout,
-	 input wire HIin, LOin,
-	 input wire R2in, R1in,
+	 input wire HIin, LOin, HIout, LOout, 
+	 input wire R2in, R1in, R6in,
     // I/O registers
+	 input wire OutPortIn, InPortIn, InPortOut,
 	 input wire	PCout, PCin,
 	 input wire IncPC,
 	 //MDR unit
@@ -21,13 +22,11 @@ module datapath (
 	 // CON FF
 	 input wire CONin
 );
-	 wire HIout = 0;              // Control signals for HI register
-    wire LOout = 0;              // Control signals for LO register
-	 wire InPortIn = 0, InPortOut = 0;
-	 wire OutPortIn = 0, OutPortOut = 0;
+             // Control signals for LO register
+	 wire OutPortOut = 0;
 	 wire branchFlag, CON;
 
-	 wire [31:0] BusMuxOut;        // Bus output
+	 wire [31:0] BusMuxOut, OutputUnitIn;        // Bus output
     // Internal wire inputs to the bus's 32-to_1 multiplexer
     wire [31:0] BusMuxInRZHi, BusMuxInRZLo, BusMuxInHI, BusMuxInLO;
 	 wire [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4;
@@ -44,9 +43,9 @@ module datapath (
     register RZHi (.clear(clear), .clock(clock), .enable(RZinHi), .BusMuxOut(RZHiOut), .BusMuxIn(BusMuxInRZHi));
 	 register RZLo (.clear(clear), .clock(clock), .enable(RZinLo), .BusMuxOut(RZLoOut), .BusMuxIn(BusMuxInRZLo));
 	 register RY (.clear(clear), .clock(clock), .enable(RYin), .BusMuxOut(BusMuxOut), .BusMuxIn(RYOutput));
-    register HI (.clear(clear), .clock(clock), .enable(HIin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInHI));
-    register LO (.clear(clear), .clock(clock), .enable(LOin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInLO));
-	 register PC (.clear(IncPC), .clock(clock), .enable(PCin), .BusMuxOut({32'h00000007}), .BusMuxIn(BusMuxInPC));
+    register HI (.clear(clear), .clock(clock), .enable(HIin), .BusMuxOut({32'h00000000}), .BusMuxIn(BusMuxInHI));
+    register LO (.clear(clear), .clock(clock), .enable(LOin), .BusMuxOut({32'h00000005}), .BusMuxIn(BusMuxInLO));
+	 register PC (.clear(IncPC), .clock(clock), .enable(PCin), .BusMuxOut({32'h000000000}), .BusMuxIn(BusMuxInPC));
 	 register IR (.clear(IncPC), .clock(clock), .enable(IRin), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInIR));
 	 register MAR (.clear(clear), .clock(clock), .enable(MARin), .BusMuxOut(BusMuxOut), .BusMuxIn(RAMAddressIN));
 	 // Instantiate General Purpose Registers
@@ -66,6 +65,9 @@ module datapath (
 	 register R13 (.clear(clear), .clock(clock), .enable(R0_15in[2]), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR13));
 	 register R14 (.clear(clear), .clock(clock), .enable(R0_15in[1]), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR14));
 	 register R15 (.clear(clear), .clock(clock), .enable(R0_15in[0]), .BusMuxOut(BusMuxOut), .BusMuxIn(BusMuxInR15));
+	 // Instantiate I/O
+	 register inputPort (.clear(clear), .clock(clock), .enable(InPortIn), .BusMuxOut({32'h00004321}), .BusMuxIn(BusMuxInInPort));
+	 register outputPort (.clear(clear), .clock(clock), .enable(OutPortIn), .BusMuxOut(BusMuxOut), .BusMuxIn(OutputUnitIn));
 	 //instantiate MDR
 	 mux_2_1  MDRmux (.MuxIn1(BusMuxOut), .MuxIn2(Mdatain), .control(MDRread), .MuxOut(MDRmuxOut));
 	 register MDRreg (.clear(clear), .clock(clock), .enable(MDRin), .BusMuxOut(MDRmuxOut), .BusMuxIn(BusMuxInMDR));

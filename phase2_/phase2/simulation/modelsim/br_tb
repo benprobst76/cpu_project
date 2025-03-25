@@ -1,0 +1,123 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /br_tb/PCout
+add wave -noupdate /br_tb/ZHighout
+add wave -noupdate /br_tb/ZLowOut
+add wave -noupdate /br_tb/MDRout
+add wave -noupdate /br_tb/Gra
+add wave -noupdate /br_tb/Grb
+add wave -noupdate /br_tb/Grc
+add wave -noupdate /br_tb/BAout
+add wave -noupdate /br_tb/Rin
+add wave -noupdate /br_tb/Rout
+add wave -noupdate /br_tb/MARin
+add wave -noupdate /br_tb/ZHighIn
+add wave -noupdate /br_tb/ZLowIn
+add wave -noupdate /br_tb/PCin
+add wave -noupdate /br_tb/MDRin
+add wave -noupdate /br_tb/IRin
+add wave -noupdate /br_tb/IRout
+add wave -noupdate /br_tb/Yin
+add wave -noupdate /br_tb/Yout
+add wave -noupdate /br_tb/IncPC
+add wave -noupdate /br_tb/Read
+add wave -noupdate /br_tb/Write
+add wave -noupdate /br_tb/MARout
+add wave -noupdate /br_tb/LOin
+add wave -noupdate /br_tb/HIin
+add wave -noupdate /br_tb/RCout
+add wave -noupdate /br_tb/R2in
+add wave -noupdate /br_tb/R1in
+add wave -noupdate /br_tb/CONin
+add wave -noupdate /br_tb/clock
+add wave -noupdate /br_tb/clear
+add wave -noupdate /br_tb/Present_state
+add wave -noupdate /br_tb/PCout
+add wave -noupdate /br_tb/ZHighout
+add wave -noupdate /br_tb/ZLowOut
+add wave -noupdate /br_tb/MDRout
+add wave -noupdate /br_tb/Gra
+add wave -noupdate /br_tb/Grb
+add wave -noupdate /br_tb/Grc
+add wave -noupdate /br_tb/BAout
+add wave -noupdate /br_tb/Rin
+add wave -noupdate /br_tb/Rout
+add wave -noupdate /br_tb/MARin
+add wave -noupdate /br_tb/ZHighIn
+add wave -noupdate /br_tb/ZLowIn
+add wave -noupdate /br_tb/PCin
+add wave -noupdate /br_tb/MDRin
+add wave -noupdate /br_tb/IRin
+add wave -noupdate /br_tb/IRout
+add wave -noupdate /br_tb/Yin
+add wave -noupdate /br_tb/Yout
+add wave -noupdate /br_tb/IncPC
+add wave -noupdate /br_tb/Read
+add wave -noupdate /br_tb/Write
+add wave -noupdate /br_tb/MARout
+add wave -noupdate /br_tb/LOin
+add wave -noupdate /br_tb/HIin
+add wave -noupdate /br_tb/RCout
+add wave -noupdate /br_tb/R2in
+add wave -noupdate /br_tb/R1in
+add wave -noupdate /br_tb/CONin
+add wave -noupdate /br_tb/clock
+add wave -noupdate /br_tb/clear
+add wave -noupdate /br_tb/Present_state
+add wave -noupdate -radix hexadecimal /br_tb/BR_DUT/Bus/BusMuxOut
+add wave -noupdate -radix hexadecimal /br_tb/BR_DUT/R1/BusMuxIn
+add wave -noupdate /br_tb/BR_DUT/R1/enable
+add wave -noupdate -radix hexadecimal /br_tb/BR_DUT/PC/BusMuxIn
+add wave -noupdate /br_tb/BR_DUT/PC/enable
+add wave -noupdate -radix hexadecimal /br_tb/BR_DUT/MAR/BusMuxIn
+add wave -noupdate /br_tb/BR_DUT/MAR/enable
+add wave -noupdate /br_tb/BR_DUT/MDRreg/enable
+add wave -noupdate -radix hexadecimal /br_tb/BR_DUT/MDRreg/BusMuxIn
+add wave -noupdate -radix hexadecimal /br_tb/BR_DUT/IR/BusMuxIn
+add wave -noupdate /br_tb/BR_DUT/IR/enable
+add wave -noupdate /br_tb/BR_DUT/con/C2
+add wave -noupdate /br_tb/BR_DUT/con/Bus
+add wave -noupdate /br_tb/BR_DUT/con/Flag
+add wave -noupdate /br_tb/BR_DUT/con/DecoderOut
+add wave -noupdate /br_tb/BR_DUT/con/zero
+add wave -noupdate /br_tb/BR_DUT/con/nonzero
+add wave -noupdate /br_tb/BR_DUT/con/positive
+add wave -noupdate /br_tb/BR_DUT/con/negative
+add wave -noupdate /br_tb/BR_DUT/con/xor_in
+add wave -noupdate /br_tb/BR_DUT/flipflop/clock
+add wave -noupdate /br_tb/BR_DUT/flipflop/D
+add wave -noupdate /br_tb/BR_DUT/flipflop/Q
+add wave -noupdate /br_tb/BR_DUT/flipflop/Qnot
+add wave -noupdate -radix decimal /br_tb/BR_DUT/RY/BusMuxIn
+add wave -noupdate /br_tb/BR_DUT/RY/enable
+add wave -noupdate -radix decimal /br_tb/BR_DUT/S_and_E/C_sign_extended
+add wave -noupdate -radix decimal /br_tb/BR_DUT/RZLo/BusMuxIn
+add wave -noupdate /br_tb/BR_DUT/RZLo/enable
+add wave -noupdate -radix hexadecimal /br_tb/BR_DUT/ALU/adder/RA
+add wave -noupdate -radix decimal /br_tb/BR_DUT/ALU/adder/RB
+add wave -noupdate /br_tb/BR_DUT/ALU/adder/cin
+add wave -noupdate -radix decimal /br_tb/BR_DUT/ALU/adder/sum
+add wave -noupdate /br_tb/BR_DUT/ALU/adder/cout
+add wave -noupdate /br_tb/BR_DUT/ALU/adder/cout16
+add wave -noupdate /br_tb/BR_DUT/ALU/Branch
+add wave -noupdate -radix decimal /br_tb/BR_DUT/ALU/ResultLo
+add wave -noupdate /br_tb/BR_DUT/ALU/Op
+add wave -noupdate -radix decimal /br_tb/BR_DUT/ALU/RA
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {142676 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 211
+configure wave -valuecolwidth 138
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ps
+update
+WaveRestoreZoom {0 ps} {389426 ps}
