@@ -2,7 +2,7 @@
 
 module ram(input [31:0] data_in, input [7:0] address, input write, read, output [31:0] data_out);
 	reg [31:0] memory[511:0];
-	initial $readmemh("C:/intelFPGA_lite/18.1/elec374/cpu_project/phase2/ram.mem", memory);
+	initial $readmemh("C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3/ram.mem", memory);
 	reg [31:0] temp = 32'b0;
 
 	always @(posedge write, posedge read)
