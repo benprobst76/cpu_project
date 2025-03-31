@@ -32,6 +32,7 @@ vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3/ff_logic.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3/control_unit.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3/pc_register.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3/zero_register.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3/ram.v}
 
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3 {C:/intelFPGA_lite/18.1/elec374/cpu_project/phase3/control_unit_tb.v}

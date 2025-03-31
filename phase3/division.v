@@ -1,6 +1,6 @@
 module division (
-    input wire [31:0] RA,       // Dividend
-    input wire [31:0] RB,      // Divisor
+    input wire [31:0] RA,       // Divisor
+    input wire [31:0] RB,      // Dividend
     output reg [63:0] RZ		 // Remainder + Quotient 
 );
 
@@ -8,9 +8,9 @@ module division (
     reg [31:0] temp;
     integer i;
 
-    always @(RA or RB) begin
-        dividend = RA;
-        divisor = RB;
+    always @(*) begin
+        dividend = RB;
+        divisor = RA;
         RZ = {32'b0, dividend};
 
         for (i = 0; i < 32; i = i + 1) begin

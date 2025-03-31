@@ -67,11 +67,35 @@ add wave -noupdate /control_unit_tb/Phase3_DUT/R5/enable
 add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/R6/BusMuxIn
 add wave -noupdate /control_unit_tb/Phase3_DUT/R6/enable
 add wave -noupdate -radix hexadecimal {/control_unit_tb/Phase3_DUT/RAM/memory[146]}
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/LO/BusMuxIn
+add wave -noupdate /control_unit_tb/Phase3_DUT/LO/enable
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/ALU/mul_unit/RA
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/ALU/mul_unit/RB
+add wave -noupdate -radix hexadecimal -radixshowbase 0 /control_unit_tb/Phase3_DUT/ALU/mul_unit/product
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/ALU/mul_unit/RZ
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/RZHi/BusMuxIn
+add wave -noupdate /control_unit_tb/Phase3_DUT/RZHi/enable
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/RZLo/BusMuxIn
+add wave -noupdate /control_unit_tb/Phase3_DUT/RZLo/enable
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/R7/BusMuxIn
+add wave -noupdate /control_unit_tb/Phase3_DUT/R7/enable
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/ALU/div_unit/RA
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/ALU/div_unit/RB
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/ALU/div_unit/RZ
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/HI/BusMuxIn
+add wave -noupdate /control_unit_tb/Phase3_DUT/HI/enable
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/R10/BusMuxIn
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/R11/BusMuxIn
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/R12/BusMuxIn
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/R13/BusMuxIn
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/R14/BusMuxIn
+add wave -noupdate -radix hexadecimal /control_unit_tb/Phase3_DUT/R15/BusMuxIn
+add wave -noupdate /control_unit_tb/Phase3_DUT/R8/BusMuxIn
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {2776728 ps} 0}
+WaveRestoreCursors {{Cursor 1} {5328332 ps} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 308
-configure wave -valuecolwidth 100
+configure wave -namecolwidth 298
+configure wave -valuecolwidth 107
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -84,4 +108,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {2522895 ps} {3025111 ps}
+WaveRestoreZoom {5087918 ps} {5521689 ps}

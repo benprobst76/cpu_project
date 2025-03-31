@@ -20,7 +20,7 @@ parameter Reset_state = 8'b00000000, fetch0 = 8'b00000001, fetch1 = 8'b00000010,
 			 andi3 = 8'b00111010, andi4 = 8'b00111011, andi5 = 8'b00111100, ori3 = 8'b00111101, ori4 = 8'b00111110, ori5 = 8'b00111111,
 			 br3 = 8'b01000000, br4 = 8'b01000001, br5 = 8'b01000010, br6 = 8'b01000011, br7 = 8'b11111111, jr3 = 8'b01000100, jal3 = 8'b01000101, 
 			 jal4 = 8'b01000110, mfhi3 = 8'b01000111, mflo3 = 8'b01001000, in3 = 8'b01001001, out3 = 8'b01001010, nop3 = 8'b01001011, 
-			 halt3 = 8'b01001100, shra3 = 8'b01001101, shra4 = 8'b01001111, shra5 = 8'b01010000;
+			 halt3 = 8'b01001100, shra3 = 8'b01001101, shra4 = 8'b01001111, shra5 = 8'b01010000, mul7 = 8'b01010001, div7 = 8'b01010010;
 
 reg		[7:0] Present_state = Reset_state;
 
@@ -79,12 +79,14 @@ always @(negedge Clock, posedge Reset, posedge Stop)
 			mul3				: 	Present_state = mul4;
 			mul4				: 	Present_state = mul5;
 			mul5				: 	Present_state = mul6;
-			mul6           :	Present_state = fetch0; 
+			mul6				: 	Present_state = mul7;
+			mul7           :	Present_state = fetch0; 
 			
 			div3				: 	Present_state = div4;
 			div4				: 	Present_state = div5;
 			div5				: 	Present_state = div6;
-			div6				:	Present_state = fetch0;
+			div6				: 	Present_state = div7;
+			div7				:	Present_state = fetch0;
 			
 			or3				: 	Present_state = or4;
 			or4				: 	Present_state = or5;
@@ -179,7 +181,7 @@ begin
 			#10 Clear <= 0;
 		end
 		fetch0: begin
-			ZLowout <= 0; Gra <= 0; Rin <= 0; PCin <= 0; MDRout <= 0; HIout <= 0; LOout<= 0; RAMwrite <= 0; 
+			ZLowout <= 0; Gra <= 0; Rin <= 0; PCin <= 0; MDRout <= 0; HIout <= 0; LOout<= 0; RAMwrite <= 0; ZHighout<= 0; HIin <= 0; Rout <= 0;
 			PCout <= 1; MARin <= 1;
 		end 
 		fetch1: begin
@@ -224,17 +226,21 @@ begin
 		end
 		mul4, div4: begin
 			Grb <= 0; Rout <= 0; Yin <= 0;
-			Grc<=1; Rout <= 1;ZHighIn <= 1;  ZLowIn <= 1;
+			Gra <=1; Rout <= 1; 
+			#10 ZHighIn <= 1; ZLowIn <= 1;
 				
 		end
 		mul5, div5: begin
-			Grb<=0;Rout<=0;ZHighIn <= 0;  ZLowIn <= 0;
-			ZLowout<=1; LOin <= 1;
+			#10 Gra <=0; Rout<=0; ZHighIn <= 0;  ZLowIn <= 0;
+			#10 ZLowout<=1; LOin <= 1;
 				
 		end
 		mul6, div6: begin
-			ZLowout<= 0; LOin <= 0;
+			#10 ZLowout<= 0; LOin <= 0;
 			ZHighout<= 1; HIin <= 1; 
+		end
+		mul7, div7: begin
+			#10 ZHighout<= 0; HIin <= 0; 
 		end
 		//***********************************************
 		not3, neg3: begin	
@@ -362,11 +368,11 @@ begin
 		//***********************************************
 		jal3: begin
 			MDRout <= 0; IRin <= 0; PCin <= 0;IncPC <= 0;	
-			PCout <= 1; Rin <= 16'h4000; 
+			PCout <= 1; Rin <= 1; Grb <= 1;
 		end
 
 		jal4: begin
-			Rin <= 16'h0000; PCout <= 0;		
+			Rin <= 0; PCout <= 0;		
 			Gra <= 1; Rout <= 1; PCin <= 1;
 		end
 		//***********************************************
