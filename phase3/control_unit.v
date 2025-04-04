@@ -192,7 +192,7 @@ begin
 			MDRin <= 0; MDRread<=0; ZLowout <= 0; 
 			MDRout <= 1; IRin <= 1; IncPC <= 1;	
 		end 
-		//***********************************************
+		
 		add3, sub3: begin	
 			MDRout <= 0; IRin <= 0; PCin <= 0; IncPC <= 0;
 			Grb <= 1; Rout <= 1; Yin <= 1;
@@ -205,7 +205,7 @@ begin
 				Grc<=0; Rout <= 0; ZHighIn <= 0;  ZLowIn <= 0;
 				ZLowout <= 1;Gra<=1;Rin<=1;
 		end
-		//***********************************************
+		
 		or3, and3, shl3, shr3, rol3, ror3, shra3: begin	
 			MDRout <= 0; IRin <= 0;PCin <= 0; IncPC <= 0;
 			Grb<=1;Rout<=1;Yin<=1;
@@ -218,7 +218,7 @@ begin
 			Grc<=0; Rout <= 0; ZHighIn <= 0;  ZLowIn <= 0;
 			ZLowout <= 1;Gra<=1;Rin<=1;
 		end
-		//***********************************************
+		
 		mul3, div3: begin	
 			MDRout <= 0; IRin <= 0;PCin <= 0; IncPC <= 0;
 			Grb <= 1; Rout <= 1;Yin <= 1;  
@@ -242,7 +242,7 @@ begin
 		mul7, div7: begin
 			#10 ZHighout<= 0; HIin <= 0; 
 		end
-		//***********************************************
+		
 		not3, neg3: begin	
 			MDRout <= 0; IRin <= 0;PCin <= 0; IncPC <= 0;
 			Grb<=1; Rout <= 1;ZHighIn <= 1;  ZLowIn <= 1;
@@ -252,7 +252,7 @@ begin
 			ZLowout <= 1;Gra<=1;Rin<=1;
 		end
 
-		//***********************************************
+		
 		andi3: begin
 			MDRout <= 0; IRin <= 0;		PCin <= 0; IncPC <= 0;	
 			Grb<=1;Rout<=1;Yin<=1;
@@ -267,7 +267,7 @@ begin
 			RCout<=0; ZHighIn <= 0;  ZLowIn <= 0;
 			ZLowout <= 1;Gra<=1;Rin<=1;
 		end
-		//***********************************************
+		
 		addi3: begin
 			MDRout <= 0; IRin <= 0;		PCin <= 0; IncPC <= 0;	
 			Grb<=1;Rout<=1;Yin<=1;
@@ -282,7 +282,7 @@ begin
 			RCout<=0; ZHighIn <= 0; ZLowIn <= 0;
 			ZLowout <= 1; Gra <= 1; Rin <= 1;
 		end
-		//***********************************************
+		
 		ori3: begin
 			MDRout <= 0; IRin <= 0;	PCin <= 0; IncPC <= 0;		
 			Grb<=1;Rout<=1;Yin<=1;
@@ -297,7 +297,7 @@ begin
 			RCout<=0; ZHighIn <= 0;  ZLowIn <= 0;
 			ZLowout <= 1;Gra<=1;Rin<=1;
 		end
-		//***********************************************
+		
 		ld3: begin
 			MDRout <= 0; IRin <= 0;		PCin <= 0; IncPC <= 0;	
 			Grb<=1;BAout<=1;Yin<=1;
@@ -321,7 +321,7 @@ begin
 			MDRread <= 0; MDRin <= 0;
 			MDRout <= 1; Gra <= 1; Rin <= 1;
 		end
-		//***********************************************
+		
 		ldi3: begin
 			MDRout <= 0; IRin <= 0;PCin <= 0; IncPC <= 0;			
 			Grb <= 1; BAout <= 1;Yin <= 1;
@@ -336,7 +336,7 @@ begin
 			RCout<=0; ZHighIn <= 0;  ZLowIn <= 0;
 			ZLowout <= 1;Gra<=1;Rin<=1; 
 		end
-		//***********************************************
+		
 		st3: begin
 			MDRout <= 0; IRin <= 0;	PCin <= 0; IncPC <= 0;		
 			Grb<=1;BAout<=1;Yin<=1;
@@ -360,12 +360,12 @@ begin
 			Gra <= 0; Rout <= 0; MDRin <= 0;
 			RAMwrite <= 1; 
 		end
-		//***********************************************
+		
 		jr3: begin
 			MDRout <= 0; IRin <= 0;	PCin <= 0; IncPC <= 0;				
 			Gra<=1;Rout<=1; PCin <= 1;
 		end
-		//***********************************************
+		
 		jal3: begin
 			MDRout <= 0; IRin <= 0; PCin <= 0;IncPC <= 0;	
 			PCout <= 1; Rin <= 1; Grb <= 1;
@@ -375,27 +375,27 @@ begin
 			Rin <= 0; PCout <= 0;		
 			Gra <= 1; Rout <= 1; PCin <= 1;
 		end
-		//***********************************************
+		
 		mfhi3: begin
 			MDRout <= 0; IRin <= 0;		PCin <= 0; IncPC <= 0;	
 			Gra<=1;Rin<=1; HIout<=1;
 		end
-		//***********************************************
+		
 		mflo3: begin
 			MDRout <= 0; IRin <= 0;		PCin <= 0; IncPC <= 0;	
 			Gra<=1;Rin<=1; LOout<=1;
 		end
-		//***********************************************
+		
 		in3: begin
 			MDRout <= 0; IRin <= 0;			PCin <= 0; IncPC <= 0;
 			Gra<=1;Rin<=1; InPortout <= 1;
 		end
-		//***********************************************
+		
 		out3: begin
 			MDRout <= 0; IRin <= 0;		PCin <= 0; IncPC <= 0;	
 			Gra<=1;Rout<=1;Yin<=1; OutPortin <= 1;
 		end
-		//***********************************************
+		
 		br3: begin
 			MDRout <= 0; IRin <= 0;	PCin <= 0; IncPC <= 0;		
 			Gra <=1; Rout <=1; CONin <=1;
@@ -419,11 +419,11 @@ begin
 			ZLowout<=0; PCin<=0;
 			PCout<=1; 
 		end
-		//***********************************************
+		
 		nop3: begin
 			MDRout <= 0; IRin <= 0; IncPC <= 0;	
 		end
-		//***********************************************
+		
 		halt3: begin
 			Run <= 0; 
 		end

@@ -41,7 +41,7 @@
  @26 0E380001 // ldi R12, 1(R7)    ; R12 = 0xB9
  @27 0EA00004 // ldi R13, 4(R4)    ; R13 = 4
  @28 A6400000 // jal R12           ; address of subroutine subA in R12 - return address in R8
- @29 B2000000 // in R4             ; set 8 switches (SW[0] to SW[7]) to 0xC0 – read it into the lower 8 bits
+ @29 0A0000C0 // ldi R4, 0xC0      ; set 8 switches (SW[0] to SW[7]) to 0xC0 – read it into the lower 8 bits
  @2A 12000055 // st 0x55, R4       ; of R4 (set other input bits to 0), and save it for the next loop
  @2B 0880002E // ldi R1, 0x2E      ; address of loop in R1
  @2C 0B800001 // ldi R7, 1         ; R7 = 1
